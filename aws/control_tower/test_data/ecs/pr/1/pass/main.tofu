@@ -1,5 +1,5 @@
-resource "aws_ecs_service" "valid_without_version" {
-  name        = "valid-service-without-platform-version"
+resource "aws_ecs_service" "valid_default" {
+  name        = "example-service"
   launch_type = "FARGATE"
 
   cluster         = var.cluster_id
@@ -12,8 +12,8 @@ resource "aws_ecs_service" "valid_without_version" {
   }
 }
 
-resource "aws_ecs_service" "valid_with_latest_version" {
-  name             = "valid-service-with-latest-platform-version"
+resource "aws_ecs_service" "valid_explicit" {
+  name             = "example-service"
   launch_type      = "FARGATE"
   platform_version = "LATEST"
 
