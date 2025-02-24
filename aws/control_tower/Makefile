@@ -6,7 +6,7 @@ debug:
 	@echo $(MOCK_FILES)
 
 .PHONY: test
-test:
+test: mocks.json
 	opa test -v .
 
 # In Makefile
