@@ -70,6 +70,15 @@ deny contains {
 }
 
 deny contains {
+	"control": "CT.ECS.PR.6",
+	"reason": "Task containers should have read-only root filesystems",
+} if {
+	some resource in resources_after_change("aws_ecs_task_definition")
+	some container in json.unmarshal(resource.container_definitions)
+	not container.readonlyRootFilesystem
+}
+
+deny contains {
 	"control": "CT.ECS.PR.8",
 	"reason": "Task definitions should have secure networking modes and user definitions",
 } if {
