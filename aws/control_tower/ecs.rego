@@ -48,6 +48,18 @@ deny contains {
 	is_root_user(container)
 }
 
+deny contains {"control": "CT.ECS.PR.4", "reason": "Tasks should use 'awsvpc' networking mode"} if {
+	some resource in resources_after_change("aws_ecs_task_definition")
+	resource.network_mode != "awsvpc"
+}
+
+# Task networking mode doesn't default to awsvpc, so the case where it isn't set
+# is also denied.
+deny contains {"control": "CT.ECS.PR.4", "reason": "Tasks should use 'awsvpc' networking mode"} if {
+	some resource in resources_after_change("aws_ecs_task_definition")
+	not resource.network_mode
+}
+
 deny contains {
 	"control": "CT.ECS.PR.8",
 	"reason": "Task definitions should have secure networking modes and user definitions",
