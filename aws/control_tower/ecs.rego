@@ -14,36 +14,45 @@ is_root_user(container) if {
 	not container.user
 }
 
-resource_after_change(type) := result if {
-	some resource in tfplan.resource_changes
-	resource.type == type
-	some action in resource.change.actions
+resources_after_change(type) := [result.change.after |
+	some result in tfplan.resource_changes
+	result.type == type
+	some action in result.change.actions
 	action in {"create", "update"}
-	result := resource.change.after
-}
+]
 
 deny contains {
 	"control": "CT.ECS.PR.1",
 	"reason": "Require Amazon ECS Fargate Services to run on the latest Fargate platform version",
 } if {
-	resource := resource_after_change("aws_ecs_service")
+	some resource in resources_after_change("aws_ecs_service")
 	resource.launch_type == "FARGATE"
 	resource.platform_version != "LATEST"
 }
 
 deny contains {
-	"control": "ecs.2",
+	"control": "CT.ECS.PR.2",
 	"reason": "Public IP should not be assigned to ECS service",
 } if {
-	resource := resource_after_change("aws_ecs_service")
-	resource.network_configuration[_].assign_public_ip == true
+	some resource in resources_after_change("aws_ecs_service")
+	some network in resource.network_configuration
+	network.assign_public_ip == true
+}
+
+deny contains {
+	"control": "CT.ECS.PR.3",
+	"reason": "Task definitions should not run as root",
+} if {
+	some resource in resources_after_change("aws_ecs_task_definition")
+	some container in json.unmarshal(resource.container_definitions)
+	is_root_user(container)
 }
 
 deny contains {
 	"control": "CT.ECS.PR.8",
 	"reason": "Task definitions should have secure networking modes and user definitions",
 } if {
-	resource := resource_after_change("aws_ecs_task_definition")
+	some resource in resources_after_change("aws_ecs_task_definition")
 	resource.network_mode == "host"
 	some container in json.unmarshal(resource.container_definitions)
 	not container.privileged
