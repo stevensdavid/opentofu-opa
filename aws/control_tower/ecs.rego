@@ -79,6 +79,15 @@ deny contains {
 }
 
 deny contains {
+	"control": "CT.ECS.PR.7",
+	"reason": "Task containers should specify memory usage limits",
+} if {
+	some resource in resources_after_change("aws_ecs_task_definition")
+	some container in json.unmarshal(resource.container_definitions)
+	not container.memory
+}
+
+deny contains {
 	"control": "CT.ECS.PR.8",
 	"reason": "Task definitions should have secure networking modes and user definitions",
 } if {

@@ -82,6 +82,19 @@ test_ecs_pr_6_invalid_input if {
 	rule.control == "CT.ECS.PR.6"
 }
 
+test_ecs_pr_7_valid_input if {
+	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["7"].pass
+	every rule in denied_rules {
+		rule.control != "CT.ECS.PR.7"
+	}
+}
+
+test_ecs_pr_7_invalid_input if {
+	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["7"].fail
+	some rule in denied_rules
+	rule.control == "CT.ECS.PR.7"
+}
+
 test_ecs_pr_8_valid_input if {
 	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["8"].pass
 	every rule in denied_rules {
