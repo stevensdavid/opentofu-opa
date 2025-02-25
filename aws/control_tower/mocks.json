@@ -1980,6 +1980,380 @@
             "errored": false
           }
         },
+        "10": {
+          "pass": {
+            "format_version": "1.2",
+            "terraform_version": "1.9.0",
+            "planned_values": {
+              "root_module": {
+                "child_modules": [
+                  {
+                    "resources": [
+                      {
+                        "address": "module.pass.aws_ecs_task_definition.valid",
+                        "mode": "managed",
+                        "type": "aws_ecs_task_definition",
+                        "name": "valid",
+                        "provider_name": "registry.opentofu.org/hashicorp/aws",
+                        "schema_version": 1,
+                        "values": {
+                          "container_definitions": "[{\"essential\":true,\"image\":\"nginx:latest\",\"name\":\"SampleContainer\"}]",
+                          "cpu": null,
+                          "ephemeral_storage": [],
+                          "execution_role_arn": null,
+                          "family": "valid",
+                          "inference_accelerator": [],
+                          "ipc_mode": null,
+                          "memory": "512",
+                          "pid_mode": "task",
+                          "placement_constraints": [],
+                          "proxy_configuration": [],
+                          "requires_compatibilities": null,
+                          "runtime_platform": [],
+                          "skip_destroy": false,
+                          "tags": null,
+                          "task_role_arn": null,
+                          "track_latest": false,
+                          "volume": []
+                        },
+                        "sensitive_values": {
+                          "ephemeral_storage": [],
+                          "inference_accelerator": [],
+                          "placement_constraints": [],
+                          "proxy_configuration": [],
+                          "runtime_platform": [],
+                          "tags_all": {},
+                          "volume": []
+                        }
+                      }
+                    ],
+                    "address": "module.pass"
+                  }
+                ]
+              }
+            },
+            "resource_changes": [
+              {
+                "address": "module.pass.aws_ecs_task_definition.valid",
+                "module_address": "module.pass",
+                "mode": "managed",
+                "type": "aws_ecs_task_definition",
+                "name": "valid",
+                "provider_name": "registry.opentofu.org/hashicorp/aws",
+                "change": {
+                  "actions": [
+                    "create"
+                  ],
+                  "before": null,
+                  "after": {
+                    "container_definitions": "[{\"essential\":true,\"image\":\"nginx:latest\",\"name\":\"SampleContainer\"}]",
+                    "cpu": null,
+                    "ephemeral_storage": [],
+                    "execution_role_arn": null,
+                    "family": "valid",
+                    "inference_accelerator": [],
+                    "ipc_mode": null,
+                    "memory": "512",
+                    "pid_mode": "task",
+                    "placement_constraints": [],
+                    "proxy_configuration": [],
+                    "requires_compatibilities": null,
+                    "runtime_platform": [],
+                    "skip_destroy": false,
+                    "tags": null,
+                    "task_role_arn": null,
+                    "track_latest": false,
+                    "volume": []
+                  },
+                  "after_unknown": {
+                    "arn": true,
+                    "arn_without_revision": true,
+                    "enable_fault_injection": true,
+                    "ephemeral_storage": [],
+                    "id": true,
+                    "inference_accelerator": [],
+                    "network_mode": true,
+                    "placement_constraints": [],
+                    "proxy_configuration": [],
+                    "revision": true,
+                    "runtime_platform": [],
+                    "tags_all": true,
+                    "volume": []
+                  },
+                  "before_sensitive": false,
+                  "after_sensitive": {
+                    "ephemeral_storage": [],
+                    "inference_accelerator": [],
+                    "placement_constraints": [],
+                    "proxy_configuration": [],
+                    "runtime_platform": [],
+                    "tags_all": {},
+                    "volume": []
+                  }
+                }
+              }
+            ],
+            "configuration": {
+              "provider_config": {
+                "aws": {
+                  "name": "aws",
+                  "full_name": "registry.opentofu.org/hashicorp/aws",
+                  "expressions": {
+                    "region": {
+                      "constant_value": "eu-north-1"
+                    }
+                  }
+                }
+              },
+              "root_module": {
+                "module_calls": {
+                  "fail": {
+                    "source": "./fail",
+                    "module": {
+                      "resources": [
+                        {
+                          "address": "aws_ecs_task_definition.invalid",
+                          "mode": "managed",
+                          "type": "aws_ecs_task_definition",
+                          "name": "invalid",
+                          "provider_config_key": "aws",
+                          "expressions": {
+                            "container_definitions": {},
+                            "family": {
+                              "constant_value": "invalid-because-host-pid"
+                            },
+                            "memory": {
+                              "constant_value": 512
+                            },
+                            "pid_mode": {
+                              "constant_value": "host"
+                            }
+                          },
+                          "schema_version": 1
+                        }
+                      ]
+                    }
+                  },
+                  "pass": {
+                    "source": "./pass",
+                    "module": {
+                      "resources": [
+                        {
+                          "address": "aws_ecs_task_definition.valid",
+                          "mode": "managed",
+                          "type": "aws_ecs_task_definition",
+                          "name": "valid",
+                          "provider_config_key": "aws",
+                          "expressions": {
+                            "container_definitions": {},
+                            "family": {
+                              "constant_value": "valid"
+                            },
+                            "memory": {
+                              "constant_value": 512
+                            },
+                            "pid_mode": {
+                              "constant_value": "task"
+                            }
+                          },
+                          "schema_version": 1
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "timestamp": "2025-02-25T12:27:54Z",
+            "errored": false
+          },
+          "fail": {
+            "format_version": "1.2",
+            "terraform_version": "1.9.0",
+            "planned_values": {
+              "root_module": {
+                "child_modules": [
+                  {
+                    "resources": [
+                      {
+                        "address": "module.fail.aws_ecs_task_definition.invalid",
+                        "mode": "managed",
+                        "type": "aws_ecs_task_definition",
+                        "name": "invalid",
+                        "provider_name": "registry.opentofu.org/hashicorp/aws",
+                        "schema_version": 1,
+                        "values": {
+                          "container_definitions": "[{\"essential\":true,\"image\":\"nginx:latest\",\"name\":\"SampleContainer\"}]",
+                          "cpu": null,
+                          "ephemeral_storage": [],
+                          "execution_role_arn": null,
+                          "family": "invalid-because-host-pid",
+                          "inference_accelerator": [],
+                          "ipc_mode": null,
+                          "memory": "512",
+                          "pid_mode": "host",
+                          "placement_constraints": [],
+                          "proxy_configuration": [],
+                          "requires_compatibilities": null,
+                          "runtime_platform": [],
+                          "skip_destroy": false,
+                          "tags": null,
+                          "task_role_arn": null,
+                          "track_latest": false,
+                          "volume": []
+                        },
+                        "sensitive_values": {
+                          "ephemeral_storage": [],
+                          "inference_accelerator": [],
+                          "placement_constraints": [],
+                          "proxy_configuration": [],
+                          "runtime_platform": [],
+                          "tags_all": {},
+                          "volume": []
+                        }
+                      }
+                    ],
+                    "address": "module.fail"
+                  }
+                ]
+              }
+            },
+            "resource_changes": [
+              {
+                "address": "module.fail.aws_ecs_task_definition.invalid",
+                "module_address": "module.fail",
+                "mode": "managed",
+                "type": "aws_ecs_task_definition",
+                "name": "invalid",
+                "provider_name": "registry.opentofu.org/hashicorp/aws",
+                "change": {
+                  "actions": [
+                    "create"
+                  ],
+                  "before": null,
+                  "after": {
+                    "container_definitions": "[{\"essential\":true,\"image\":\"nginx:latest\",\"name\":\"SampleContainer\"}]",
+                    "cpu": null,
+                    "ephemeral_storage": [],
+                    "execution_role_arn": null,
+                    "family": "invalid-because-host-pid",
+                    "inference_accelerator": [],
+                    "ipc_mode": null,
+                    "memory": "512",
+                    "pid_mode": "host",
+                    "placement_constraints": [],
+                    "proxy_configuration": [],
+                    "requires_compatibilities": null,
+                    "runtime_platform": [],
+                    "skip_destroy": false,
+                    "tags": null,
+                    "task_role_arn": null,
+                    "track_latest": false,
+                    "volume": []
+                  },
+                  "after_unknown": {
+                    "arn": true,
+                    "arn_without_revision": true,
+                    "enable_fault_injection": true,
+                    "ephemeral_storage": [],
+                    "id": true,
+                    "inference_accelerator": [],
+                    "network_mode": true,
+                    "placement_constraints": [],
+                    "proxy_configuration": [],
+                    "revision": true,
+                    "runtime_platform": [],
+                    "tags_all": true,
+                    "volume": []
+                  },
+                  "before_sensitive": false,
+                  "after_sensitive": {
+                    "ephemeral_storage": [],
+                    "inference_accelerator": [],
+                    "placement_constraints": [],
+                    "proxy_configuration": [],
+                    "runtime_platform": [],
+                    "tags_all": {},
+                    "volume": []
+                  }
+                }
+              }
+            ],
+            "configuration": {
+              "provider_config": {
+                "aws": {
+                  "name": "aws",
+                  "full_name": "registry.opentofu.org/hashicorp/aws",
+                  "expressions": {
+                    "region": {
+                      "constant_value": "eu-north-1"
+                    }
+                  }
+                }
+              },
+              "root_module": {
+                "module_calls": {
+                  "fail": {
+                    "source": "./fail",
+                    "module": {
+                      "resources": [
+                        {
+                          "address": "aws_ecs_task_definition.invalid",
+                          "mode": "managed",
+                          "type": "aws_ecs_task_definition",
+                          "name": "invalid",
+                          "provider_config_key": "aws",
+                          "expressions": {
+                            "container_definitions": {},
+                            "family": {
+                              "constant_value": "invalid-because-host-pid"
+                            },
+                            "memory": {
+                              "constant_value": 512
+                            },
+                            "pid_mode": {
+                              "constant_value": "host"
+                            }
+                          },
+                          "schema_version": 1
+                        }
+                      ]
+                    }
+                  },
+                  "pass": {
+                    "source": "./pass",
+                    "module": {
+                      "resources": [
+                        {
+                          "address": "aws_ecs_task_definition.valid",
+                          "mode": "managed",
+                          "type": "aws_ecs_task_definition",
+                          "name": "valid",
+                          "provider_config_key": "aws",
+                          "expressions": {
+                            "container_definitions": {},
+                            "family": {
+                              "constant_value": "valid"
+                            },
+                            "memory": {
+                              "constant_value": 512
+                            },
+                            "pid_mode": {
+                              "constant_value": "task"
+                            }
+                          },
+                          "schema_version": 1
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            },
+            "timestamp": "2025-02-25T12:27:56Z",
+            "errored": false
+          }
+        },
         "2": {
           "pass": {
             "format_version": "1.2",

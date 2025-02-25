@@ -129,3 +129,11 @@ deny contains {
 	some network in resource.network_configuration
 	network.assign_public_ip == true
 }
+
+deny contains {
+	"control": "CT.ECS.PR.10",
+	"reason": "ECS tasks should not use the host's process namespace",
+} if {
+	some resource in resources_after_change("aws_ecs_task_definition")
+	resource.pid_mode == "host"
+}
