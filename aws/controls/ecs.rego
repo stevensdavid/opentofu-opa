@@ -1,4 +1,4 @@
-package aws.control_tower
+package aws.controls
 
 import rego.v1
 
@@ -22,7 +22,8 @@ resources_after_change(type) := [result.change.after |
 ]
 
 deny contains {
-	"control": "CT.ECS.PR.1",
+	"id": {"control_tower": "CT.ECS.PR.1", "fsbp": "ECS.10"},
+	"severity": "medium",
 	"reason": "Require Amazon ECS Fargate Services to run on the latest Fargate platform version",
 } if {
 	some resource in resources_after_change("aws_ecs_service")
@@ -33,7 +34,8 @@ deny contains {
 # This rule has three cases that lead to failure:
 # 1. The setting is present and not enabled
 deny contains {
-	"control": "CT.ECS.PR.2",
+	"id": {"control_tower": "CT.ECS.PR.2", "fsbp": "ECS.12"},
+	"severity": "medium",
 	"reason": "ECS clusters should enable container insights",
 } if {
 	some resource in resources_after_change("aws_ecs_cluster")
@@ -44,7 +46,7 @@ deny contains {
 
 # 2. The setting is not present
 deny contains {
-	"control": "CT.ECS.PR.2",
+	"id": {"control_tower": "CT.ECS.PR.2"},
 	"reason": "ECS clusters should enable container insights",
 } if {
 	some resource in resources_after_change("aws_ecs_cluster")
@@ -55,7 +57,7 @@ deny contains {
 
 # 3. No settings are set
 deny contains {
-	"control": "CT.ECS.PR.2",
+	"id": {"control_tower": "CT.ECS.PR.2"},
 	"reason": "ECS clusters should enable container insights",
 } if {
 	some resource in resources_after_change("aws_ecs_cluster")
@@ -63,7 +65,7 @@ deny contains {
 }
 
 deny contains {
-	"control": "CT.ECS.PR.3",
+	"id": {"control_tower": "CT.ECS.PR.3"},
 	"reason": "Task definitions should not run as root",
 } if {
 	some resource in resources_after_change("aws_ecs_task_definition")
@@ -71,20 +73,21 @@ deny contains {
 	is_root_user(container)
 }
 
-deny contains {"control": "CT.ECS.PR.4", "reason": "Tasks should use 'awsvpc' networking mode"} if {
+deny contains {"id": {"control_tower": "CT.ECS.PR.4"}, "reason": "Tasks should use 'awsvpc' networking mode"} if {
 	some resource in resources_after_change("aws_ecs_task_definition")
 	resource.network_mode != "awsvpc"
 }
 
 # Task networking mode doesn't default to awsvpc, so the case where it isn't set
 # is also denied.
-deny contains {"control": "CT.ECS.PR.4", "reason": "Tasks should use 'awsvpc' networking mode"} if {
+deny contains {"id": {"control_tower": "CT.ECS.PR.4"}, "reason": "Tasks should use 'awsvpc' networking mode"} if {
 	some resource in resources_after_change("aws_ecs_task_definition")
 	not resource.network_mode
 }
 
 deny contains {
-	"control": "CT.ECS.PR.5",
+	"id": {"control_tower": "CT.ECS.PR.5", "fsbp": "ECS.9"},
+	"severity": "high",
 	"reason": "Task containers must have a logging configuration",
 } if {
 	some resource in resources_after_change("aws_ecs_task_definition")
@@ -93,7 +96,8 @@ deny contains {
 }
 
 deny contains {
-	"control": "CT.ECS.PR.6",
+	"id": {"control_tower": "CT.ECS.PR.6", "fsbp": "ECS.5"},
+	"severity": "high",
 	"reason": "Task containers should have read-only root filesystems",
 } if {
 	some resource in resources_after_change("aws_ecs_task_definition")
@@ -102,7 +106,7 @@ deny contains {
 }
 
 deny contains {
-	"control": "CT.ECS.PR.7",
+	"id": {"control_tower": "CT.ECS.PR.7"},
 	"reason": "Task containers should specify memory usage limits",
 } if {
 	some resource in resources_after_change("aws_ecs_task_definition")
@@ -111,7 +115,8 @@ deny contains {
 }
 
 deny contains {
-	"control": "CT.ECS.PR.8",
+	"id": {"control_tower": "CT.ECS.PR.8", "fsbp": "ECS.1"},
+	"severity": "high",
 	"reason": "Task definitions should have secure networking modes and user definitions",
 } if {
 	some resource in resources_after_change("aws_ecs_task_definition")
@@ -122,7 +127,8 @@ deny contains {
 }
 
 deny contains {
-	"control": "CT.ECS.PR.9",
+	"id": {"control_tower": "CT.ECS.PR.9", "fsbp": "ECS.2"},
+	"severity": "high",
 	"reason": "Public IP should not be assigned to ECS service",
 } if {
 	some resource in resources_after_change("aws_ecs_service")
@@ -131,7 +137,8 @@ deny contains {
 }
 
 deny contains {
-	"control": "CT.ECS.PR.10",
+	"id": {"control_tower": "CT.ECS.PR.10", "fsbp": "ECS.3"},
+	"severity": "high",
 	"reason": "ECS tasks should not use the host's process namespace",
 } if {
 	some resource in resources_after_change("aws_ecs_task_definition")
@@ -139,8 +146,9 @@ deny contains {
 }
 
 deny contains {
-	"control": "CT.ECS.PR.11",
-	"reason": "ECS tasks should run as non-priveleged",
+	"id": {"control_tower": "CT.ECS.PR.11", "fsbp": "ECS.4"},
+	"severity": "high",
+	"reason": "ECS tasks should run as non-privileged",
 } if {
 	some resource in resources_after_change("aws_ecs_task_definition")
 	some container in json.unmarshal(resource.container_definitions)
@@ -148,7 +156,8 @@ deny contains {
 }
 
 deny contains {
-	"control": "CT.ECS.PR.12",
+	"id": {"control_tower": "CT.ECS.PR.12", "fsbp": "ECS.8"},
+	"severity": "high",
 	"reason": "ECS tasks do not pass secrets as container environment variables",
 } if {
 	some resource in resources_after_change("aws_ecs_task_definition")
