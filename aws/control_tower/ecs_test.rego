@@ -146,3 +146,16 @@ test_ecs_pr_11_invalid_input if {
 	some rule in denied_rules
 	rule.control == "CT.ECS.PR.11"
 }
+
+test_ecs_pr_12_valid_input if {
+	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["12"].pass
+	every rule in denied_rules {
+		rule.control != "CT.ECS.PR.12"
+	}
+}
+
+test_ecs_pr_12_invalid_input if {
+	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["12"].fail
+	some rule in denied_rules
+	rule.control == "CT.ECS.PR.12"
+}

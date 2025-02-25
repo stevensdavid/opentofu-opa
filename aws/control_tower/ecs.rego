@@ -146,3 +146,13 @@ deny contains {
 	some container in json.unmarshal(resource.container_definitions)
 	container.privileged
 }
+
+deny contains {
+	"control": "CT.ECS.PR.12",
+	"reason": "ECS tasks do not pass secrets as container environment variables",
+} if {
+	some resource in resources_after_change("aws_ecs_task_definition")
+	some container in json.unmarshal(resource.container_definitions)
+	some variable in container.environment
+	variable.name in {"AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "ECS_ENGINE_AUTH_DATA"}
+}
