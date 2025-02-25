@@ -30,6 +30,38 @@ deny contains {
 	resource.platform_version != "LATEST"
 }
 
+# This rule has three cases that lead to failure:
+# 1. The setting is present and not enabled
+deny contains {
+	"control": "CT.ECS.PR.2",
+	"reason": "ECS clusters should enable container insights",
+} if {
+	some resource in resources_after_change("aws_ecs_cluster")
+	some setting in resource.setting
+	setting.name == "containerInsights"
+	setting.value != "enabled"
+}
+
+# 2. The setting is not present
+deny contains {
+	"control": "CT.ECS.PR.2",
+	"reason": "ECS clusters should enable container insights",
+} if {
+	some resource in resources_after_change("aws_ecs_cluster")
+	every setting in resource.setting {
+		setting.name != "containerInsights"
+	}
+}
+
+# 3. No settings are set
+deny contains {
+	"control": "CT.ECS.PR.2",
+	"reason": "ECS clusters should enable container insights",
+} if {
+	some resource in resources_after_change("aws_ecs_cluster")
+	not resource.setting
+}
+
 deny contains {
 	"control": "CT.ECS.PR.3",
 	"reason": "Task definitions should not run as root",
