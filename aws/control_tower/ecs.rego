@@ -31,15 +31,6 @@ deny contains {
 }
 
 deny contains {
-	"control": "CT.ECS.PR.2",
-	"reason": "Public IP should not be assigned to ECS service",
-} if {
-	some resource in resources_after_change("aws_ecs_service")
-	some network in resource.network_configuration
-	network.assign_public_ip == true
-}
-
-deny contains {
 	"control": "CT.ECS.PR.3",
 	"reason": "Task definitions should not run as root",
 } if {
@@ -96,4 +87,13 @@ deny contains {
 	some container in json.unmarshal(resource.container_definitions)
 	not container.privileged
 	is_root_user(container)
+}
+
+deny contains {
+	"control": "CT.ECS.PR.9",
+	"reason": "Public IP should not be assigned to ECS service",
+} if {
+	some resource in resources_after_change("aws_ecs_service")
+	some network in resource.network_configuration
+	network.assign_public_ip == true
 }
