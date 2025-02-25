@@ -137,3 +137,12 @@ deny contains {
 	some resource in resources_after_change("aws_ecs_task_definition")
 	resource.pid_mode == "host"
 }
+
+deny contains {
+	"control": "CT.ECS.PR.11",
+	"reason": "ECS tasks should run as non-priveleged",
+} if {
+	some resource in resources_after_change("aws_ecs_task_definition")
+	some container in json.unmarshal(resource.container_definitions)
+	container.privileged
+}
