@@ -61,6 +61,15 @@ deny contains {"control": "CT.ECS.PR.4", "reason": "Tasks should use 'awsvpc' ne
 }
 
 deny contains {
+	"control": "CT.ECS.PR.5",
+	"reason": "Task containers must have a logging configuration",
+} if {
+	some resource in resources_after_change("aws_ecs_task_definition")
+	some container in json.unmarshal(resource.container_definitions)
+	not container.logConfiguration
+}
+
+deny contains {
 	"control": "CT.ECS.PR.8",
 	"reason": "Task definitions should have secure networking modes and user definitions",
 } if {
