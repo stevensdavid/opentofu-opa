@@ -22,13 +22,11 @@ for file in "$@"; do
     # Since this is being run from one directory up, the path parts are going to be
     # 0: test_data (static string that we discard)
     # 1: SERVICE
-    # 2: CONTROL_TYPE
-    # 3: CONTROL_NUMBER
+    # 2: CONTROL_NUMBER
     output=$(echo "$output" | jq --arg content "$content" \
-        --arg ecs "${path_parts[1]}" \
-        --arg pr "${path_parts[2]}" \
-        --arg num "${path_parts[3]}" '
-        .mocks[$ecs][$pr][$num] = ($content | fromjson)
+        --arg service "${path_parts[1]}" \
+        --arg num "${path_parts[2]}" '
+        .mocks[$service][$num] = ($content | fromjson)
     ')
 done
 echo "$output"

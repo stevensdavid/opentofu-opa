@@ -1,161 +1,161 @@
-package aws.control_tower_test
+package aws.controls_test
 
 import rego.v1
 
-import data.aws.control_tower
+import data.aws.controls
 
-test_ecs_pr_1_valid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["1"].pass
+test_ecs_1_valid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["1"].pass
 	every rule in denied_rules {
-		rule.id.control_tower != "CT.ECS.PR.1"
+		rule.id.opa != "aws.controls.ecs.1"
 	}
 }
 
-test_ecs_pr_1_invalid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["1"].fail
+test_ecs_1_invalid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["1"].fail
 	some rule in denied_rules
-	rule.id.control_tower == "CT.ECS.PR.1"
+	rule.id.opa == "aws.controls.ecs.1"
 }
 
-test_ecs_pr_2_valid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["2"].pass
+test_ecs_2_valid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["2"].pass
 	every rule in denied_rules {
-		rule.id.control_tower != "CT.ECS.PR.2"
+		rule.id.opa != "aws.controls.ecs.2"
 	}
 }
 
-test_ecs_pr_2_invalid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["2"].fail
+test_ecs_2_invalid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["2"].fail
 	some rule in denied_rules
-	rule.id.control_tower == "CT.ECS.PR.2"
+	rule.id.opa == "aws.controls.ecs.2"
 }
 
-test_ecs_pr_3_valid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["3"].pass
+test_ecs_3_valid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["3"].pass
 	every rule in denied_rules {
-		rule.id.control_tower != "CT.ECS.PR.3"
+		rule.id.opa != "aws.controls.ecs.3"
 	}
 }
 
-test_ecs_pr_3_invalid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["3"].fail
+test_ecs_3_invalid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["3"].fail
 	some rule in denied_rules
-	rule.id.control_tower == "CT.ECS.PR.3"
+	rule.id.opa == "aws.controls.ecs.3"
 }
 
-test_ecs_pr_4_valid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["4"].pass
+test_ecs_4_valid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["4"].pass
 	every rule in denied_rules {
-		rule.id.control_tower != "CT.ECS.PR.4"
+		rule.id.opa != "aws.controls.ecs.4"
 	}
 }
 
-test_ecs_pr_4_invalid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["4"].fail
+test_ecs_4_invalid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["4"].fail
 	some rule in denied_rules
-	rule.id.control_tower == "CT.ECS.PR.4"
+	rule.id.opa == "aws.controls.ecs.4"
 }
 
-test_ecs_pr_5_valid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["5"].pass
+test_ecs_5_valid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["5"].pass
 	every rule in denied_rules {
-		rule.id.control_tower != "CT.ECS.PR.5"
+		rule.id.opa != "aws.controls.ecs.5"
 	}
 }
 
-test_ecs_pr_5_invalid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["5"].fail
+test_ecs_5_invalid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["5"].fail
 	some rule in denied_rules
-	rule.id.control_tower == "CT.ECS.PR.5"
+	rule.id.opa == "aws.controls.ecs.5"
 }
 
-test_ecs_pr_6_valid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["6"].pass
+test_ecs_6_valid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["6"].pass
 	every rule in denied_rules {
-		rule.id.control_tower != "CT.ECS.PR.6"
+		rule.id.opa != "aws.controls.ecs.6"
 	}
 }
 
-test_ecs_pr_6_invalid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["6"].fail
+test_ecs_6_invalid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["6"].fail
 	some rule in denied_rules
-	rule.id.control_tower == "CT.ECS.PR.6"
+	rule.id.opa == "aws.controls.ecs.6"
 }
 
-test_ecs_pr_7_valid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["7"].pass
+test_ecs_7_valid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["7"].pass
 	every rule in denied_rules {
-		rule.id.control_tower != "CT.ECS.PR.7"
+		rule.id.opa != "aws.controls.ecs.7"
 	}
 }
 
-test_ecs_pr_7_invalid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["7"].fail
+test_ecs_7_invalid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["7"].fail
 	some rule in denied_rules
-	rule.id.control_tower == "CT.ECS.PR.7"
+	rule.id.opa == "aws.controls.ecs.7"
 }
 
-test_ecs_pr_8_valid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["8"].pass
+test_ecs_8_valid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["8"].pass
 	every rule in denied_rules {
-		rule.id.control_tower != "CT.ECS.PR.8"
+		rule.id.opa != "aws.controls.ecs.8"
 	}
 }
 
-test_ecs_pr_8_invalid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["8"].fail
+test_ecs_8_invalid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["8"].fail
 	some rule in denied_rules
-	rule.id.control_tower == "CT.ECS.PR.8"
+	rule.id.opa == "aws.controls.ecs.8"
 }
 
-test_ecs_pr_9_valid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["9"].pass
+test_ecs_9_valid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["9"].pass
 	every rule in denied_rules {
-		rule.id.control_tower != "CT.ECS.PR.9"
+		rule.id.opa != "aws.controls.ecs.9"
 	}
 }
 
-test_ecs_pr_9_invalid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["9"].fail
+test_ecs_9_invalid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["9"].fail
 	some rule in denied_rules
-	rule.id.control_tower == "CT.ECS.PR.9"
+	rule.id.opa == "aws.controls.ecs.9"
 }
 
-test_ecs_pr_10_valid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["10"].pass
+test_ecs_10_valid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["10"].pass
 	every rule in denied_rules {
-		rule.id.control_tower != "CT.ECS.PR.10"
+		rule.id.opa != "aws.controls.ecs.10"
 	}
 }
 
-test_ecs_pr_10_invalid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["10"].fail
+test_ecs_10_invalid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["10"].fail
 	some rule in denied_rules
-	rule.id.control_tower == "CT.ECS.PR.10"
+	rule.id.opa == "aws.controls.ecs.10"
 }
 
-test_ecs_pr_11_valid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["11"].pass
+test_ecs_11_valid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["11"].pass
 	every rule in denied_rules {
-		rule.id.control_tower != "CT.ECS.PR.11"
+		rule.id.opa != "aws.controls.ecs.11"
 	}
 }
 
-test_ecs_pr_11_invalid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["11"].fail
+test_ecs_11_invalid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["11"].fail
 	some rule in denied_rules
-	rule.id.control_tower == "CT.ECS.PR.11"
+	rule.id.opa == "aws.controls.ecs.11"
 }
 
-test_ecs_pr_12_valid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["12"].pass
+test_ecs_12_valid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["12"].pass
 	every rule in denied_rules {
-		rule.id.control_tower != "CT.ECS.PR.12"
+		rule.id.opa != "aws.controls.ecs.12"
 	}
 }
 
-test_ecs_pr_12_invalid_input if {
-	denied_rules := control_tower.deny with input as data.mocks.ecs.pr["12"].fail
+test_ecs_12_invalid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["12"].fail
 	some rule in denied_rules
-	rule.id.control_tower == "CT.ECS.PR.12"
+	rule.id.opa == "aws.controls.ecs.12"
 }

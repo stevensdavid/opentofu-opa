@@ -1,4 +1,4 @@
-MOCK_DIRS := $(dir $(wildcard test_data/*/*/*/main.tofu))
+MOCK_DIRS := $(dir $(wildcard test_data/*/*/main.tofu))
 MOCK_FILES := $(addsuffix mock.json,$(MOCK_DIRS))
 
 debug:
