@@ -48,6 +48,7 @@ deny contains {
 deny contains {
 	"id": {"control_tower": "CT.ECS.PR.2", "fsbp": "ECS.12", "opa": "aws.controls.ecs.2"},
 	"reason": "ECS clusters should enable container insights",
+	"severity": "medium",
 } if {
 	some resource in resources_after_change("aws_ecs_cluster")
 	every setting in resource.setting {
@@ -59,6 +60,7 @@ deny contains {
 deny contains {
 	"id": {"control_tower": "CT.ECS.PR.2", "fsbp": "ECS.12", "opa": "aws.controls.ecs.2"},
 	"reason": "ECS clusters should enable container insights",
+	"severity": "medium",
 } if {
 	some resource in resources_after_change("aws_ecs_cluster")
 	not resource.setting
