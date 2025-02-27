@@ -41,3 +41,13 @@ test_${service}_${control_number}_invalid_input if {
 	rule.id.opa == "$control_id"
 }
 EOF
+
+cat <<EOF >>"../${service}.rego"
+
+deny contains {
+    "id": {"opa": "$control_id"},
+    "reason": "",
+} if {
+    {}
+}
+EOF
