@@ -171,3 +171,13 @@ deny contains {
 	some variable in container.environment
 	variable.name in {"AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "ECS_ENGINE_AUTH_DATA"}
 }
+
+deny contains {
+	"id": {"fsbp": "ECS.16", "opa": "aws.controls.ecs.13"},
+	"reason": "ECS task sets should not automatically assign public IP addresses",
+	"severity": "high",
+} if {
+	some resource in resources_after_change("aws_ecs_task_set")
+	some network in resource.network_configuration
+	network.assign_public_ip == true
+}

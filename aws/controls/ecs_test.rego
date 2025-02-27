@@ -159,3 +159,16 @@ test_ecs_12_invalid_input if {
 	some rule in denied_rules
 	rule.id.opa == "aws.controls.ecs.12"
 }
+
+test_ecs_13_valid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["13"].pass
+	every rule in denied_rules {
+		rule.id.opa != "aws.controls.ecs.13"
+	}
+}
+
+test_ecs_13_invalid_input if {
+	denied_rules := controls.deny with input as data.mocks.ecs["13"].fail
+	some rule in denied_rules
+	rule.id.opa == "aws.controls.ecs.13"
+}
