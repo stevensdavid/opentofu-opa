@@ -1,4 +1,4 @@
-package aws.controls
+package aws.controls.ecs
 
 import rego.v1
 
@@ -20,7 +20,7 @@ resources(plan, type) := [
 	action in {"create", "update"}
 ]
 
-evaluate_ecs(plan) := ((((((((((((((({rule |
+evaluate(plan) := ((((((((((((((({rule |
 	some resource in resources(plan, "aws_ecs_service")
 	resource.configuration.launch_type == "FARGATE"
 	resource.configuration.platform_version != "LATEST"
