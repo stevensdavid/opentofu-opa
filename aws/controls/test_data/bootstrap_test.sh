@@ -24,7 +24,7 @@ module "fail" {
 EOF
 
 touch "$path/pass/main.tofu" "$path/fail/main.tofu"
-control_id=$(echo "aws.controls.$service.$control_number" | tr '[:lower:]' '[:upper:]')
+control_id="aws.controls.$service.$control_number"
 
 cat <<EOF >>"../${service}_test.rego"
 
