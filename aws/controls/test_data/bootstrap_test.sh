@@ -26,28 +26,27 @@ EOF
 touch "$path/pass/main.tofu" "$path/fail/main.tofu"
 control_id="aws.controls.$service.$control_number"
 
-cat <<EOF >>"../${service}_test.rego"
+function_name="evaluate_${service}_${control_number}"
 
-test_${service}_${control_number}_valid_input if {
-	denied_rules := controls.deny with input as data.mocks.${service}["${control_number}"].pass
-	every rule in denied_rules {
-		rule.id.opa != "$control_id"
+cat <<EOF >>"../${service}/policies_test.rego"
+
+test_${function_name}_valid_input if count(${service}.$function_name(controls.mocks.${service}["$control_number"].pass)) == 0
+
+test_${function_name}_invalid_input if ${service}.$function_name(controls.mocks.${service}["$control_number"].fail)
+EOF
+
+cat <<EOF >>"../${service}/policies.rego"
+
+$function_name(plan) := {violation |
+	some resource in utils.resources(plan, "aws_")
+
+	violation := {
+		"id": {"opa": "$control_id"},
+		"reason": "",
+		"resource": resource.address,
 	}
 }
-
-test_${service}_${control_number}_invalid_input if {
-	denied_rules := controls.deny with input as data.mocks.${service}["$control_number"].fail
-	some rule in denied_rules
-	rule.id.opa == "$control_id"
-}
 EOF
 
-cat <<EOF >>"../${service}.rego"
-
-deny contains {
-    "id": {"opa": "$control_id"},
-    "reason": "",
-} if {
-    {}
-}
-EOF
+# Use sed to insert the new function into the existing tofu file
+sed -i "s/\)\$/, $function_name(plan))" "../${service}/main.rego"
