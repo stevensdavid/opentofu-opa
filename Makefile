@@ -1,4 +1,4 @@
-MOCK_DIRS := $(dir $(wildcard test_data/*/*/main.tofu))
+MOCK_DIRS := $(dir $(wildcard aws/controls/test_data/*/*/main.tofu))
 MOCK_FILES := $(addsuffix mock.json,$(MOCK_DIRS))
 
 debug:
@@ -10,8 +10,8 @@ test: mocks.json
 	opa test -v .
 
 # In Makefile
-mocks.json: $(MOCK_FILES) test_data/combine_mocks.sh
-	./test_data/combine_mocks.sh $^ > $@
+mocks.json: $(MOCK_FILES) aws/controls/test_data/combine_mocks.sh
+	./aws/controls/test_data/combine_mocks.sh $^ > $@
 
 %/.terraform:
 	cd $* && tofu init
