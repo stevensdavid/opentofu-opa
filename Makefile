@@ -6,11 +6,11 @@ debug:
 	@echo $(MOCK_FILES)
 
 .PHONY: test
-test: mocks.json
+test: aws/controls/mocks.json
 	opa test -v .
 
 # In Makefile
-mocks.json: $(MOCK_FILES) aws/controls/test_data/combine_mocks.sh
+aws/controls/mocks.json: $(MOCK_FILES) aws/controls/test_data/combine_mocks.sh
 	./aws/controls/test_data/combine_mocks.sh $^ > $@
 
 %/.terraform:
