@@ -48,5 +48,10 @@ $function_name(plan) := {violation |
 }
 EOF
 
-# Use sed to insert the new function into the existing tofu file
-sed -i "s/\)\$/, $function_name(plan))" "../${service}/main.rego"
+# sed has different syntax on macOS
+os=$(uname)
+if [ "$os" == "Darwin" ]; then
+    sed -i '' 's/}/, '"$function_name"'(plan)}/' "../${service}/main.rego"
+else
+    sed -i "s/}/, $function_name(plan)}/" "../${service}/main.rego"
+fi

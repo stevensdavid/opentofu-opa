@@ -23,9 +23,12 @@ for file in "$@"; do
     # 0: test_data (static string that we discard)
     # 1: SERVICE
     # 2: CONTROL_NUMBER
+    path_length=${#path_parts[@]}
+    service="${path_parts[path_length - 3]}"
+    num="${path_parts[path_length - 2]}"
     output=$(echo "$output" | jq --arg content "$content" \
-        --arg service "${path_parts[1]}" \
-        --arg num "${path_parts[2]}" '
+        --arg service "$service" \
+        --arg num "$num" '
         .mocks[$service][$num] = ($content | fromjson)
     ')
 done
