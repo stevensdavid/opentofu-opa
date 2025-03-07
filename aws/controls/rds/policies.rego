@@ -14,13 +14,27 @@ evaluate_rds_1(plan) := {violation |
 	}
 }
 
+misconfigured_monitoring(resource) if {
+	# The case of invalid monitoring intervals is handled by the Terraform provider,
+	# and the provider defaults the field to 0. We only have to check the = 0 case
+	# and missing roles.
+	resource.configuration.monitoring_interval == 0
+}
+
+misconfigured_monitoring(resource) if {
+	resource.configuration.monitoring_role_arn == ""
+}
+
+misconfigured_monitoring(resource) if {
+	is_null(resource.configuration.monitoring_role_arn)
+}
+
+misconfigured_monitoring(resource) if not resource.configuration.monitoring_role_arn
+
 evaluate_rds_2(plan) := {violation |
 	some resource in utils.resources(plan, "aws_db_instance")
 	standard_engine(resource.configuration.engine)
-
-	# The case of invalid monitoring intervals is handled by the Terraform provider,
-	# and the provider defaults the field to 0. We only have to check the = 0 case.
-	resource.configuration.monitoring_interval == 0
+	misconfigured_monitoring(resource)
 
 	violation := {
 		"id": {"opa": "aws.controls.rds.2", "control_tower": "CT.RDS.PR.2"},

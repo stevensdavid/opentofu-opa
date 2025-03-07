@@ -8751,6 +8751,67 @@
                 {
                   "resources": [
                     {
+                      "address": "module.pass.aws_db_instance.unsupported_engine",
+                      "mode": "managed",
+                      "type": "aws_db_instance",
+                      "name": "unsupported_engine",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 2,
+                      "values": {
+                        "allocated_storage": 5,
+                        "allow_major_version_upgrade": null,
+                        "apply_immediately": false,
+                        "auto_minor_version_upgrade": true,
+                        "blue_green_update": [],
+                        "copy_tags_to_snapshot": false,
+                        "custom_iam_instance_profile": null,
+                        "customer_owned_ip_enabled": null,
+                        "dedicated_log_volume": false,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_auth_secret_arn": null,
+                        "domain_dns_ips": null,
+                        "domain_iam_role_name": null,
+                        "domain_ou": null,
+                        "enabled_cloudwatch_logs_exports": null,
+                        "engine": "custom-oracle-ee",
+                        "final_snapshot_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "instance_class": "db.t2.micro",
+                        "manage_master_user_password": true,
+                        "max_allocated_storage": null,
+                        "monitoring_interval": 0,
+                        "multi_az": true,
+                        "password": null,
+                        "password_wo": null,
+                        "password_wo_version": null,
+                        "performance_insights_enabled": false,
+                        "publicly_accessible": false,
+                        "replicate_source_db": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "skip_final_snapshot": false,
+                        "storage_encrypted": null,
+                        "tags": null,
+                        "timeouts": null,
+                        "upgrade_storage_config": null,
+                        "username": "foo"
+                      },
+                      "sensitive_values": {
+                        "blue_green_update": [],
+                        "listener_endpoint": [],
+                        "master_user_secret": [],
+                        "password": true,
+                        "password_wo": true,
+                        "replicas": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    },
+                    {
                       "address": "module.pass.aws_db_instance.valid",
                       "mode": "managed",
                       "type": "aws_db_instance",
@@ -8818,6 +8879,124 @@
             }
           },
           "resource_changes": [
+            {
+              "address": "module.pass.aws_db_instance.unsupported_engine",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_db_instance",
+              "name": "unsupported_engine",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allocated_storage": 5,
+                  "allow_major_version_upgrade": null,
+                  "apply_immediately": false,
+                  "auto_minor_version_upgrade": true,
+                  "blue_green_update": [],
+                  "copy_tags_to_snapshot": false,
+                  "custom_iam_instance_profile": null,
+                  "customer_owned_ip_enabled": null,
+                  "dedicated_log_volume": false,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_auth_secret_arn": null,
+                  "domain_dns_ips": null,
+                  "domain_iam_role_name": null,
+                  "domain_ou": null,
+                  "enabled_cloudwatch_logs_exports": null,
+                  "engine": "custom-oracle-ee",
+                  "final_snapshot_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "instance_class": "db.t2.micro",
+                  "manage_master_user_password": true,
+                  "max_allocated_storage": null,
+                  "monitoring_interval": 0,
+                  "multi_az": true,
+                  "password": null,
+                  "password_wo": null,
+                  "password_wo_version": null,
+                  "performance_insights_enabled": false,
+                  "publicly_accessible": false,
+                  "replicate_source_db": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "skip_final_snapshot": false,
+                  "storage_encrypted": null,
+                  "tags": null,
+                  "timeouts": null,
+                  "upgrade_storage_config": null,
+                  "username": "foo"
+                },
+                "after_unknown": {
+                  "address": true,
+                  "arn": true,
+                  "availability_zone": true,
+                  "backup_retention_period": true,
+                  "backup_target": true,
+                  "backup_window": true,
+                  "blue_green_update": [],
+                  "ca_cert_identifier": true,
+                  "character_set_name": true,
+                  "db_name": true,
+                  "db_subnet_group_name": true,
+                  "domain_fqdn": true,
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "id": true,
+                  "identifier": true,
+                  "identifier_prefix": true,
+                  "iops": true,
+                  "kms_key_id": true,
+                  "latest_restorable_time": true,
+                  "license_model": true,
+                  "listener_endpoint": true,
+                  "maintenance_window": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "monitoring_role_arn": true,
+                  "nchar_character_set_name": true,
+                  "network_type": true,
+                  "option_group_name": true,
+                  "parameter_group_name": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "replica_mode": true,
+                  "replicas": true,
+                  "resource_id": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "snapshot_identifier": true,
+                  "status": true,
+                  "storage_throughput": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "timezone": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "blue_green_update": [],
+                  "listener_endpoint": [],
+                  "master_user_secret": [],
+                  "password": true,
+                  "password_wo": true,
+                  "replicas": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            },
             {
               "address": "module.pass.aws_db_instance.valid",
               "module_address": "module.pass",
@@ -8956,10 +9135,35 @@
                   "module": {
                     "resources": [
                       {
-                        "address": "aws_db_instance.invalid",
+                        "address": "aws_db_instance.missing_multi_az",
                         "mode": "managed",
                         "type": "aws_db_instance",
-                        "name": "invalid",
+                        "name": "missing_multi_az",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "allocated_storage": {
+                            "constant_value": 5
+                          },
+                          "engine": {
+                            "constant_value": "postgres"
+                          },
+                          "instance_class": {
+                            "constant_value": "db.t2.micro"
+                          },
+                          "manage_master_user_password": {
+                            "constant_value": true
+                          },
+                          "username": {
+                            "constant_value": "foo"
+                          }
+                        },
+                        "schema_version": 2
+                      },
+                      {
+                        "address": "aws_db_instance.multi_az_false",
+                        "mode": "managed",
+                        "type": "aws_db_instance",
+                        "name": "multi_az_false",
                         "provider_config_key": "aws",
                         "expressions": {
                           "allocated_storage": {
@@ -8990,6 +9194,34 @@
                   "source": "./pass",
                   "module": {
                     "resources": [
+                      {
+                        "address": "aws_db_instance.unsupported_engine",
+                        "mode": "managed",
+                        "type": "aws_db_instance",
+                        "name": "unsupported_engine",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "allocated_storage": {
+                            "constant_value": 5
+                          },
+                          "engine": {
+                            "constant_value": "custom-oracle-ee"
+                          },
+                          "instance_class": {
+                            "constant_value": "db.t2.micro"
+                          },
+                          "manage_master_user_password": {
+                            "constant_value": true
+                          },
+                          "multi_az": {
+                            "constant_value": true
+                          },
+                          "username": {
+                            "constant_value": "foo"
+                          }
+                        },
+                        "schema_version": 2
+                      },
                       {
                         "address": "aws_db_instance.valid",
                         "mode": "managed",
@@ -9024,7 +9256,7 @@
               }
             }
           },
-          "timestamp": "2025-03-03T12:42:33Z",
+          "timestamp": "2025-03-07T20:49:08Z",
           "errored": false
         },
         "fail": {
@@ -9036,10 +9268,70 @@
                 {
                   "resources": [
                     {
-                      "address": "module.fail.aws_db_instance.invalid",
+                      "address": "module.fail.aws_db_instance.missing_multi_az",
                       "mode": "managed",
                       "type": "aws_db_instance",
-                      "name": "invalid",
+                      "name": "missing_multi_az",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 2,
+                      "values": {
+                        "allocated_storage": 5,
+                        "allow_major_version_upgrade": null,
+                        "apply_immediately": false,
+                        "auto_minor_version_upgrade": true,
+                        "blue_green_update": [],
+                        "copy_tags_to_snapshot": false,
+                        "custom_iam_instance_profile": null,
+                        "customer_owned_ip_enabled": null,
+                        "dedicated_log_volume": false,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_auth_secret_arn": null,
+                        "domain_dns_ips": null,
+                        "domain_iam_role_name": null,
+                        "domain_ou": null,
+                        "enabled_cloudwatch_logs_exports": null,
+                        "engine": "postgres",
+                        "final_snapshot_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "instance_class": "db.t2.micro",
+                        "manage_master_user_password": true,
+                        "max_allocated_storage": null,
+                        "monitoring_interval": 0,
+                        "password": null,
+                        "password_wo": null,
+                        "password_wo_version": null,
+                        "performance_insights_enabled": false,
+                        "publicly_accessible": false,
+                        "replicate_source_db": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "skip_final_snapshot": false,
+                        "storage_encrypted": null,
+                        "tags": null,
+                        "timeouts": null,
+                        "upgrade_storage_config": null,
+                        "username": "foo"
+                      },
+                      "sensitive_values": {
+                        "blue_green_update": [],
+                        "listener_endpoint": [],
+                        "master_user_secret": [],
+                        "password": true,
+                        "password_wo": true,
+                        "replicas": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_db_instance.multi_az_false",
+                      "mode": "managed",
+                      "type": "aws_db_instance",
+                      "name": "multi_az_false",
                       "provider_name": "registry.opentofu.org/hashicorp/aws",
                       "schema_version": 2,
                       "values": {
@@ -9104,11 +9396,129 @@
           },
           "resource_changes": [
             {
-              "address": "module.fail.aws_db_instance.invalid",
+              "address": "module.fail.aws_db_instance.missing_multi_az",
               "module_address": "module.fail",
               "mode": "managed",
               "type": "aws_db_instance",
-              "name": "invalid",
+              "name": "missing_multi_az",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allocated_storage": 5,
+                  "allow_major_version_upgrade": null,
+                  "apply_immediately": false,
+                  "auto_minor_version_upgrade": true,
+                  "blue_green_update": [],
+                  "copy_tags_to_snapshot": false,
+                  "custom_iam_instance_profile": null,
+                  "customer_owned_ip_enabled": null,
+                  "dedicated_log_volume": false,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_auth_secret_arn": null,
+                  "domain_dns_ips": null,
+                  "domain_iam_role_name": null,
+                  "domain_ou": null,
+                  "enabled_cloudwatch_logs_exports": null,
+                  "engine": "postgres",
+                  "final_snapshot_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "instance_class": "db.t2.micro",
+                  "manage_master_user_password": true,
+                  "max_allocated_storage": null,
+                  "monitoring_interval": 0,
+                  "password": null,
+                  "password_wo": null,
+                  "password_wo_version": null,
+                  "performance_insights_enabled": false,
+                  "publicly_accessible": false,
+                  "replicate_source_db": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "skip_final_snapshot": false,
+                  "storage_encrypted": null,
+                  "tags": null,
+                  "timeouts": null,
+                  "upgrade_storage_config": null,
+                  "username": "foo"
+                },
+                "after_unknown": {
+                  "address": true,
+                  "arn": true,
+                  "availability_zone": true,
+                  "backup_retention_period": true,
+                  "backup_target": true,
+                  "backup_window": true,
+                  "blue_green_update": [],
+                  "ca_cert_identifier": true,
+                  "character_set_name": true,
+                  "db_name": true,
+                  "db_subnet_group_name": true,
+                  "domain_fqdn": true,
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "id": true,
+                  "identifier": true,
+                  "identifier_prefix": true,
+                  "iops": true,
+                  "kms_key_id": true,
+                  "latest_restorable_time": true,
+                  "license_model": true,
+                  "listener_endpoint": true,
+                  "maintenance_window": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "monitoring_role_arn": true,
+                  "multi_az": true,
+                  "nchar_character_set_name": true,
+                  "network_type": true,
+                  "option_group_name": true,
+                  "parameter_group_name": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "replica_mode": true,
+                  "replicas": true,
+                  "resource_id": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "snapshot_identifier": true,
+                  "status": true,
+                  "storage_throughput": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "timezone": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "blue_green_update": [],
+                  "listener_endpoint": [],
+                  "master_user_secret": [],
+                  "password": true,
+                  "password_wo": true,
+                  "replicas": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_db_instance.multi_az_false",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_instance",
+              "name": "multi_az_false",
               "provider_name": "registry.opentofu.org/hashicorp/aws",
               "change": {
                 "actions": [
@@ -9241,10 +9651,35 @@
                   "module": {
                     "resources": [
                       {
-                        "address": "aws_db_instance.invalid",
+                        "address": "aws_db_instance.missing_multi_az",
                         "mode": "managed",
                         "type": "aws_db_instance",
-                        "name": "invalid",
+                        "name": "missing_multi_az",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "allocated_storage": {
+                            "constant_value": 5
+                          },
+                          "engine": {
+                            "constant_value": "postgres"
+                          },
+                          "instance_class": {
+                            "constant_value": "db.t2.micro"
+                          },
+                          "manage_master_user_password": {
+                            "constant_value": true
+                          },
+                          "username": {
+                            "constant_value": "foo"
+                          }
+                        },
+                        "schema_version": 2
+                      },
+                      {
+                        "address": "aws_db_instance.multi_az_false",
+                        "mode": "managed",
+                        "type": "aws_db_instance",
+                        "name": "multi_az_false",
                         "provider_config_key": "aws",
                         "expressions": {
                           "allocated_storage": {
@@ -9275,6 +9710,34 @@
                   "source": "./pass",
                   "module": {
                     "resources": [
+                      {
+                        "address": "aws_db_instance.unsupported_engine",
+                        "mode": "managed",
+                        "type": "aws_db_instance",
+                        "name": "unsupported_engine",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "allocated_storage": {
+                            "constant_value": 5
+                          },
+                          "engine": {
+                            "constant_value": "custom-oracle-ee"
+                          },
+                          "instance_class": {
+                            "constant_value": "db.t2.micro"
+                          },
+                          "manage_master_user_password": {
+                            "constant_value": true
+                          },
+                          "multi_az": {
+                            "constant_value": true
+                          },
+                          "username": {
+                            "constant_value": "foo"
+                          }
+                        },
+                        "schema_version": 2
+                      },
                       {
                         "address": "aws_db_instance.valid",
                         "mode": "managed",
@@ -9309,7 +9772,7 @@
               }
             }
           },
-          "timestamp": "2025-03-03T12:42:36Z",
+          "timestamp": "2025-03-07T20:49:11Z",
           "errored": false
         }
       },
@@ -9734,6 +10197,37 @@
                         "schema_version": 2
                       },
                       {
+                        "address": "aws_db_instance.invalid_empty_monitoring_role",
+                        "mode": "managed",
+                        "type": "aws_db_instance",
+                        "name": "invalid_empty_monitoring_role",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "allocated_storage": {
+                            "constant_value": 5
+                          },
+                          "engine": {
+                            "constant_value": "postgres"
+                          },
+                          "instance_class": {
+                            "constant_value": "db.t2.micro"
+                          },
+                          "manage_master_user_password": {
+                            "constant_value": true
+                          },
+                          "monitoring_interval": {
+                            "constant_value": 15
+                          },
+                          "monitoring_role_arn": {
+                            "constant_value": ""
+                          },
+                          "username": {
+                            "constant_value": "foo"
+                          }
+                        },
+                        "schema_version": 2
+                      },
+                      {
                         "address": "aws_db_instance.invalid_missing_interval",
                         "mode": "managed",
                         "type": "aws_db_instance",
@@ -9751,6 +10245,34 @@
                           },
                           "manage_master_user_password": {
                             "constant_value": true
+                          },
+                          "username": {
+                            "constant_value": "foo"
+                          }
+                        },
+                        "schema_version": 2
+                      },
+                      {
+                        "address": "aws_db_instance.invalid_missing_monitoring_role",
+                        "mode": "managed",
+                        "type": "aws_db_instance",
+                        "name": "invalid_missing_monitoring_role",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "allocated_storage": {
+                            "constant_value": 5
+                          },
+                          "engine": {
+                            "constant_value": "postgres"
+                          },
+                          "instance_class": {
+                            "constant_value": "db.t2.micro"
+                          },
+                          "manage_master_user_password": {
+                            "constant_value": true
+                          },
+                          "monitoring_interval": {
+                            "constant_value": 15
                           },
                           "username": {
                             "constant_value": "foo"
@@ -9827,7 +10349,7 @@
               }
             }
           },
-          "timestamp": "2025-03-03T12:42:52Z",
+          "timestamp": "2025-03-07T20:51:56Z",
           "errored": false
         },
         "fail": {
@@ -9870,6 +10392,66 @@
                         "manage_master_user_password": true,
                         "max_allocated_storage": null,
                         "monitoring_interval": 0,
+                        "password": null,
+                        "password_wo": null,
+                        "password_wo_version": null,
+                        "performance_insights_enabled": false,
+                        "publicly_accessible": false,
+                        "replicate_source_db": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "skip_final_snapshot": false,
+                        "storage_encrypted": null,
+                        "tags": null,
+                        "timeouts": null,
+                        "upgrade_storage_config": null,
+                        "username": "foo"
+                      },
+                      "sensitive_values": {
+                        "blue_green_update": [],
+                        "listener_endpoint": [],
+                        "master_user_secret": [],
+                        "password": true,
+                        "password_wo": true,
+                        "replicas": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_db_instance.invalid_empty_monitoring_role",
+                      "mode": "managed",
+                      "type": "aws_db_instance",
+                      "name": "invalid_empty_monitoring_role",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 2,
+                      "values": {
+                        "allocated_storage": 5,
+                        "allow_major_version_upgrade": null,
+                        "apply_immediately": false,
+                        "auto_minor_version_upgrade": true,
+                        "blue_green_update": [],
+                        "copy_tags_to_snapshot": false,
+                        "custom_iam_instance_profile": null,
+                        "customer_owned_ip_enabled": null,
+                        "dedicated_log_volume": false,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_auth_secret_arn": null,
+                        "domain_dns_ips": null,
+                        "domain_iam_role_name": null,
+                        "domain_ou": null,
+                        "enabled_cloudwatch_logs_exports": null,
+                        "engine": "postgres",
+                        "final_snapshot_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "instance_class": "db.t2.micro",
+                        "manage_master_user_password": true,
+                        "max_allocated_storage": null,
+                        "monitoring_interval": 15,
                         "password": null,
                         "password_wo": null,
                         "password_wo_version": null,
@@ -9957,6 +10539,66 @@
                         "tags_all": {},
                         "vpc_security_group_ids": []
                       }
+                    },
+                    {
+                      "address": "module.fail.aws_db_instance.invalid_missing_monitoring_role",
+                      "mode": "managed",
+                      "type": "aws_db_instance",
+                      "name": "invalid_missing_monitoring_role",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 2,
+                      "values": {
+                        "allocated_storage": 5,
+                        "allow_major_version_upgrade": null,
+                        "apply_immediately": false,
+                        "auto_minor_version_upgrade": true,
+                        "blue_green_update": [],
+                        "copy_tags_to_snapshot": false,
+                        "custom_iam_instance_profile": null,
+                        "customer_owned_ip_enabled": null,
+                        "dedicated_log_volume": false,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_auth_secret_arn": null,
+                        "domain_dns_ips": null,
+                        "domain_iam_role_name": null,
+                        "domain_ou": null,
+                        "enabled_cloudwatch_logs_exports": null,
+                        "engine": "postgres",
+                        "final_snapshot_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "instance_class": "db.t2.micro",
+                        "manage_master_user_password": true,
+                        "max_allocated_storage": null,
+                        "monitoring_interval": 15,
+                        "password": null,
+                        "password_wo": null,
+                        "password_wo_version": null,
+                        "performance_insights_enabled": false,
+                        "publicly_accessible": false,
+                        "replicate_source_db": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "skip_final_snapshot": false,
+                        "storage_encrypted": null,
+                        "tags": null,
+                        "timeouts": null,
+                        "upgrade_storage_config": null,
+                        "username": "foo"
+                      },
+                      "sensitive_values": {
+                        "blue_green_update": [],
+                        "listener_endpoint": [],
+                        "master_user_secret": [],
+                        "password": true,
+                        "password_wo": true,
+                        "replicas": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
                     }
                   ],
                   "address": "module.fail"
@@ -10002,6 +10644,124 @@
                   "manage_master_user_password": true,
                   "max_allocated_storage": null,
                   "monitoring_interval": 0,
+                  "password": null,
+                  "password_wo": null,
+                  "password_wo_version": null,
+                  "performance_insights_enabled": false,
+                  "publicly_accessible": false,
+                  "replicate_source_db": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "skip_final_snapshot": false,
+                  "storage_encrypted": null,
+                  "tags": null,
+                  "timeouts": null,
+                  "upgrade_storage_config": null,
+                  "username": "foo"
+                },
+                "after_unknown": {
+                  "address": true,
+                  "arn": true,
+                  "availability_zone": true,
+                  "backup_retention_period": true,
+                  "backup_target": true,
+                  "backup_window": true,
+                  "blue_green_update": [],
+                  "ca_cert_identifier": true,
+                  "character_set_name": true,
+                  "db_name": true,
+                  "db_subnet_group_name": true,
+                  "domain_fqdn": true,
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "id": true,
+                  "identifier": true,
+                  "identifier_prefix": true,
+                  "iops": true,
+                  "kms_key_id": true,
+                  "latest_restorable_time": true,
+                  "license_model": true,
+                  "listener_endpoint": true,
+                  "maintenance_window": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "monitoring_role_arn": true,
+                  "multi_az": true,
+                  "nchar_character_set_name": true,
+                  "network_type": true,
+                  "option_group_name": true,
+                  "parameter_group_name": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "replica_mode": true,
+                  "replicas": true,
+                  "resource_id": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "snapshot_identifier": true,
+                  "status": true,
+                  "storage_throughput": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "timezone": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "blue_green_update": [],
+                  "listener_endpoint": [],
+                  "master_user_secret": [],
+                  "password": true,
+                  "password_wo": true,
+                  "replicas": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_db_instance.invalid_empty_monitoring_role",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_instance",
+              "name": "invalid_empty_monitoring_role",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allocated_storage": 5,
+                  "allow_major_version_upgrade": null,
+                  "apply_immediately": false,
+                  "auto_minor_version_upgrade": true,
+                  "blue_green_update": [],
+                  "copy_tags_to_snapshot": false,
+                  "custom_iam_instance_profile": null,
+                  "customer_owned_ip_enabled": null,
+                  "dedicated_log_volume": false,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_auth_secret_arn": null,
+                  "domain_dns_ips": null,
+                  "domain_iam_role_name": null,
+                  "domain_ou": null,
+                  "enabled_cloudwatch_logs_exports": null,
+                  "engine": "postgres",
+                  "final_snapshot_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "instance_class": "db.t2.micro",
+                  "manage_master_user_password": true,
+                  "max_allocated_storage": null,
+                  "monitoring_interval": 15,
                   "password": null,
                   "password_wo": null,
                   "password_wo_version": null,
@@ -10200,6 +10960,124 @@
                   "vpc_security_group_ids": []
                 }
               }
+            },
+            {
+              "address": "module.fail.aws_db_instance.invalid_missing_monitoring_role",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_instance",
+              "name": "invalid_missing_monitoring_role",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allocated_storage": 5,
+                  "allow_major_version_upgrade": null,
+                  "apply_immediately": false,
+                  "auto_minor_version_upgrade": true,
+                  "blue_green_update": [],
+                  "copy_tags_to_snapshot": false,
+                  "custom_iam_instance_profile": null,
+                  "customer_owned_ip_enabled": null,
+                  "dedicated_log_volume": false,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_auth_secret_arn": null,
+                  "domain_dns_ips": null,
+                  "domain_iam_role_name": null,
+                  "domain_ou": null,
+                  "enabled_cloudwatch_logs_exports": null,
+                  "engine": "postgres",
+                  "final_snapshot_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "instance_class": "db.t2.micro",
+                  "manage_master_user_password": true,
+                  "max_allocated_storage": null,
+                  "monitoring_interval": 15,
+                  "password": null,
+                  "password_wo": null,
+                  "password_wo_version": null,
+                  "performance_insights_enabled": false,
+                  "publicly_accessible": false,
+                  "replicate_source_db": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "skip_final_snapshot": false,
+                  "storage_encrypted": null,
+                  "tags": null,
+                  "timeouts": null,
+                  "upgrade_storage_config": null,
+                  "username": "foo"
+                },
+                "after_unknown": {
+                  "address": true,
+                  "arn": true,
+                  "availability_zone": true,
+                  "backup_retention_period": true,
+                  "backup_target": true,
+                  "backup_window": true,
+                  "blue_green_update": [],
+                  "ca_cert_identifier": true,
+                  "character_set_name": true,
+                  "db_name": true,
+                  "db_subnet_group_name": true,
+                  "domain_fqdn": true,
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "id": true,
+                  "identifier": true,
+                  "identifier_prefix": true,
+                  "iops": true,
+                  "kms_key_id": true,
+                  "latest_restorable_time": true,
+                  "license_model": true,
+                  "listener_endpoint": true,
+                  "maintenance_window": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "monitoring_role_arn": true,
+                  "multi_az": true,
+                  "nchar_character_set_name": true,
+                  "network_type": true,
+                  "option_group_name": true,
+                  "parameter_group_name": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "replica_mode": true,
+                  "replicas": true,
+                  "resource_id": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "snapshot_identifier": true,
+                  "status": true,
+                  "storage_throughput": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "timezone": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "blue_green_update": [],
+                  "listener_endpoint": [],
+                  "master_user_secret": [],
+                  "password": true,
+                  "password_wo": true,
+                  "replicas": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
             }
           ],
           "configuration": {
@@ -10249,6 +11127,37 @@
                         "schema_version": 2
                       },
                       {
+                        "address": "aws_db_instance.invalid_empty_monitoring_role",
+                        "mode": "managed",
+                        "type": "aws_db_instance",
+                        "name": "invalid_empty_monitoring_role",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "allocated_storage": {
+                            "constant_value": 5
+                          },
+                          "engine": {
+                            "constant_value": "postgres"
+                          },
+                          "instance_class": {
+                            "constant_value": "db.t2.micro"
+                          },
+                          "manage_master_user_password": {
+                            "constant_value": true
+                          },
+                          "monitoring_interval": {
+                            "constant_value": 15
+                          },
+                          "monitoring_role_arn": {
+                            "constant_value": ""
+                          },
+                          "username": {
+                            "constant_value": "foo"
+                          }
+                        },
+                        "schema_version": 2
+                      },
+                      {
                         "address": "aws_db_instance.invalid_missing_interval",
                         "mode": "managed",
                         "type": "aws_db_instance",
@@ -10266,6 +11175,34 @@
                           },
                           "manage_master_user_password": {
                             "constant_value": true
+                          },
+                          "username": {
+                            "constant_value": "foo"
+                          }
+                        },
+                        "schema_version": 2
+                      },
+                      {
+                        "address": "aws_db_instance.invalid_missing_monitoring_role",
+                        "mode": "managed",
+                        "type": "aws_db_instance",
+                        "name": "invalid_missing_monitoring_role",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "allocated_storage": {
+                            "constant_value": 5
+                          },
+                          "engine": {
+                            "constant_value": "postgres"
+                          },
+                          "instance_class": {
+                            "constant_value": "db.t2.micro"
+                          },
+                          "manage_master_user_password": {
+                            "constant_value": true
+                          },
+                          "monitoring_interval": {
+                            "constant_value": 15
                           },
                           "username": {
                             "constant_value": "foo"
@@ -10342,7 +11279,7 @@
               }
             }
           },
-          "timestamp": "2025-03-03T12:42:55Z",
+          "timestamp": "2025-03-07T20:51:59Z",
           "errored": false
         }
       },
