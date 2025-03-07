@@ -357,7 +357,6 @@
                 "after_unknown": {
                   "arn": true,
                   "arn_without_revision": true,
-                  "enable_fault_injection": true,
                   "ephemeral_storage": [],
                   "id": true,
                   "inference_accelerator": [],
@@ -1057,17 +1056,17 @@
             {
               "resource": "aws_vpc.vpc",
               "attribute": [
-                "cidr_block"
+                "id"
               ]
             },
             {
               "resource": "aws_vpc.vpc",
               "attribute": [
-                "id"
+                "cidr_block"
               ]
             }
           ],
-          "timestamp": "2025-02-27T14:58:59Z",
+          "timestamp": "2025-02-24T14:47:20Z",
           "errored": false
         },
         "fail": {
@@ -1362,7 +1361,6 @@
                 "after_unknown": {
                   "arn": true,
                   "arn_without_revision": true,
-                  "enable_fault_injection": true,
                   "ephemeral_storage": [],
                   "id": true,
                   "inference_accelerator": [],
@@ -1977,7 +1975,7 @@
               ]
             }
           ],
-          "timestamp": "2025-02-27T14:59:01Z",
+          "timestamp": "2025-02-24T14:47:22Z",
           "errored": false
         }
       },
@@ -2165,7 +2163,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T14:59:04Z",
+          "timestamp": "2025-02-25T12:27:54Z",
           "errored": false
         },
         "fail": {
@@ -2351,7 +2349,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T14:59:07Z",
+          "timestamp": "2025-02-25T12:27:56Z",
           "errored": false
         }
       },
@@ -2527,7 +2525,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T14:59:13Z",
+          "timestamp": "2025-02-25T12:46:07Z",
           "errored": false
         },
         "fail": {
@@ -2701,7 +2699,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T14:59:15Z",
+          "timestamp": "2025-02-25T12:46:10Z",
           "errored": false
         }
       },
@@ -2877,7 +2875,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T14:59:21Z",
+          "timestamp": "2025-02-25T12:55:36Z",
           "errored": false
         },
         "fail": {
@@ -3051,7 +3049,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T14:59:24Z",
+          "timestamp": "2025-02-25T12:55:39Z",
           "errored": false
         }
       },
@@ -4110,17 +4108,17 @@
             {
               "resource": "aws_vpc.vpc",
               "attribute": [
-                "cidr_block"
+                "id"
               ]
             },
             {
               "resource": "aws_vpc.vpc",
               "attribute": [
-                "id"
+                "cidr_block"
               ]
             }
           ],
-          "timestamp": "2025-02-27T14:59:30Z",
+          "timestamp": "2025-02-27T08:30:19Z",
           "errored": false
         },
         "fail": {
@@ -5109,7 +5107,7 @@
               ]
             }
           ],
-          "timestamp": "2025-02-27T14:59:33Z",
+          "timestamp": "2025-02-27T08:30:22Z",
           "errored": false
         }
       },
@@ -5270,7 +5268,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T14:59:39Z",
+          "timestamp": "2025-02-25T12:14:13Z",
           "errored": false
         },
         "fail": {
@@ -5411,7 +5409,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T14:59:41Z",
+          "timestamp": "2025-02-25T12:14:15Z",
           "errored": false
         }
       },
@@ -5593,7 +5591,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T14:59:48Z",
+          "timestamp": "2025-02-24T15:12:32Z",
           "errored": false
         },
         "fail": {
@@ -5773,7 +5771,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T14:59:50Z",
+          "timestamp": "2025-02-24T15:12:35Z",
           "errored": false
         }
       },
@@ -5782,115 +5780,8 @@
           "format_version": "1.2",
           "terraform_version": "1.9.0",
           "planned_values": {
-            "root_module": {
-              "child_modules": [
-                {
-                  "resources": [
-                    {
-                      "address": "module.pass.aws_ecs_task_definition.valid",
-                      "mode": "managed",
-                      "type": "aws_ecs_task_definition",
-                      "name": "valid",
-                      "provider_name": "registry.opentofu.org/hashicorp/aws",
-                      "schema_version": 1,
-                      "values": {
-                        "container_definitions": "[{\"essential\":true,\"image\":\"nginx:latest\",\"name\":\"ExampleContainerA\"}]",
-                        "cpu": null,
-                        "ephemeral_storage": [],
-                        "execution_role_arn": null,
-                        "family": "valid",
-                        "inference_accelerator": [],
-                        "ipc_mode": null,
-                        "memory": null,
-                        "network_mode": "awsvpc",
-                        "pid_mode": null,
-                        "placement_constraints": [],
-                        "proxy_configuration": [],
-                        "requires_compatibilities": null,
-                        "runtime_platform": [],
-                        "skip_destroy": false,
-                        "tags": null,
-                        "task_role_arn": null,
-                        "track_latest": false,
-                        "volume": []
-                      },
-                      "sensitive_values": {
-                        "ephemeral_storage": [],
-                        "inference_accelerator": [],
-                        "placement_constraints": [],
-                        "proxy_configuration": [],
-                        "runtime_platform": [],
-                        "tags_all": {},
-                        "volume": []
-                      }
-                    }
-                  ],
-                  "address": "module.pass"
-                }
-              ]
-            }
+            "root_module": {}
           },
-          "resource_changes": [
-            {
-              "address": "module.pass.aws_ecs_task_definition.valid",
-              "module_address": "module.pass",
-              "mode": "managed",
-              "type": "aws_ecs_task_definition",
-              "name": "valid",
-              "provider_name": "registry.opentofu.org/hashicorp/aws",
-              "change": {
-                "actions": [
-                  "create"
-                ],
-                "before": null,
-                "after": {
-                  "container_definitions": "[{\"essential\":true,\"image\":\"nginx:latest\",\"name\":\"ExampleContainerA\"}]",
-                  "cpu": null,
-                  "ephemeral_storage": [],
-                  "execution_role_arn": null,
-                  "family": "valid",
-                  "inference_accelerator": [],
-                  "ipc_mode": null,
-                  "memory": null,
-                  "network_mode": "awsvpc",
-                  "pid_mode": null,
-                  "placement_constraints": [],
-                  "proxy_configuration": [],
-                  "requires_compatibilities": null,
-                  "runtime_platform": [],
-                  "skip_destroy": false,
-                  "tags": null,
-                  "task_role_arn": null,
-                  "track_latest": false,
-                  "volume": []
-                },
-                "after_unknown": {
-                  "arn": true,
-                  "arn_without_revision": true,
-                  "enable_fault_injection": true,
-                  "ephemeral_storage": [],
-                  "id": true,
-                  "inference_accelerator": [],
-                  "placement_constraints": [],
-                  "proxy_configuration": [],
-                  "revision": true,
-                  "runtime_platform": [],
-                  "tags_all": true,
-                  "volume": []
-                },
-                "before_sensitive": false,
-                "after_sensitive": {
-                  "ephemeral_storage": [],
-                  "inference_accelerator": [],
-                  "placement_constraints": [],
-                  "proxy_configuration": [],
-                  "runtime_platform": [],
-                  "tags_all": {},
-                  "volume": []
-                }
-              }
-            }
-          ],
           "configuration": {
             "provider_config": {
               "aws": {
@@ -5953,8 +5844,8 @@
               }
             }
           },
-          "timestamp": "2025-02-27T14:59:56Z",
-          "errored": false
+          "timestamp": "2025-02-25T08:08:43Z",
+          "errored": true
         },
         "fail": {
           "format_version": "1.2",
@@ -6043,7 +5934,6 @@
                 "after_unknown": {
                   "arn": true,
                   "arn_without_revision": true,
-                  "enable_fault_injection": true,
                   "ephemeral_storage": [],
                   "id": true,
                   "inference_accelerator": [],
@@ -6130,7 +6020,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T14:59:59Z",
+          "timestamp": "2025-02-25T08:10:58Z",
           "errored": false
         }
       },
@@ -6306,7 +6196,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T15:00:05Z",
+          "timestamp": "2025-02-25T11:59:31Z",
           "errored": false
         },
         "fail": {
@@ -6480,7 +6370,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T15:00:08Z",
+          "timestamp": "2025-02-25T11:59:33Z",
           "errored": false
         }
       },
@@ -6656,7 +6546,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T15:00:15Z",
+          "timestamp": "2025-02-25T12:02:04Z",
           "errored": false
         },
         "fail": {
@@ -6830,7 +6720,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T15:00:18Z",
+          "timestamp": "2025-02-25T12:02:07Z",
           "errored": false
         }
       },
@@ -7006,7 +6896,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T15:00:24Z",
+          "timestamp": "2025-02-25T12:06:36Z",
           "errored": false
         },
         "fail": {
@@ -7180,7 +7070,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T15:00:27Z",
+          "timestamp": "2025-02-25T12:06:39Z",
           "errored": false
         }
       },
@@ -7274,7 +7164,6 @@
                 "after_unknown": {
                   "arn": true,
                   "arn_without_revision": true,
-                  "enable_fault_injection": true,
                   "ephemeral_storage": [],
                   "id": true,
                   "inference_accelerator": [],
@@ -7375,7 +7264,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T15:00:33Z",
+          "timestamp": "2025-02-24T10:45:47Z",
           "errored": false
         },
         "fail": {
@@ -7467,7 +7356,6 @@
                 "after_unknown": {
                   "arn": true,
                   "arn_without_revision": true,
-                  "enable_fault_injection": true,
                   "ephemeral_storage": [],
                   "id": true,
                   "inference_accelerator": [],
@@ -7568,7 +7456,7 @@
               }
             }
           },
-          "timestamp": "2025-02-27T15:00:35Z",
+          "timestamp": "2025-02-24T10:45:49Z",
           "errored": false
         }
       },
@@ -7577,844 +7465,8 @@
           "format_version": "1.2",
           "terraform_version": "1.9.0",
           "planned_values": {
-            "root_module": {
-              "resources": [
-                {
-                  "address": "aws_ecs_cluster.cluster",
-                  "mode": "managed",
-                  "type": "aws_ecs_cluster",
-                  "name": "cluster",
-                  "provider_name": "registry.opentofu.org/hashicorp/aws",
-                  "schema_version": 0,
-                  "values": {
-                    "configuration": [],
-                    "name": "test-cluster",
-                    "service_connect_defaults": [],
-                    "tags": null
-                  },
-                  "sensitive_values": {
-                    "configuration": [],
-                    "service_connect_defaults": [],
-                    "setting": [],
-                    "tags_all": {}
-                  }
-                },
-                {
-                  "address": "aws_ecs_task_definition.task",
-                  "mode": "managed",
-                  "type": "aws_ecs_task_definition",
-                  "name": "task",
-                  "provider_name": "registry.opentofu.org/hashicorp/aws",
-                  "schema_version": 1,
-                  "values": {
-                    "container_definitions": "[{\"essential\":true,\"image\":\"nginx:latest\",\"name\":\"test-container\"}]",
-                    "cpu": "256",
-                    "ephemeral_storage": [],
-                    "execution_role_arn": null,
-                    "family": "test-task",
-                    "inference_accelerator": [],
-                    "ipc_mode": null,
-                    "memory": "512",
-                    "network_mode": "awsvpc",
-                    "pid_mode": null,
-                    "placement_constraints": [],
-                    "proxy_configuration": [],
-                    "requires_compatibilities": [
-                      "FARGATE"
-                    ],
-                    "runtime_platform": [],
-                    "skip_destroy": false,
-                    "tags": null,
-                    "task_role_arn": null,
-                    "track_latest": false,
-                    "volume": []
-                  },
-                  "sensitive_values": {
-                    "ephemeral_storage": [],
-                    "inference_accelerator": [],
-                    "placement_constraints": [],
-                    "proxy_configuration": [],
-                    "requires_compatibilities": [
-                      false
-                    ],
-                    "runtime_platform": [],
-                    "tags_all": {},
-                    "volume": []
-                  }
-                },
-                {
-                  "address": "aws_subnet.subnet_one",
-                  "mode": "managed",
-                  "type": "aws_subnet",
-                  "name": "subnet_one",
-                  "provider_name": "registry.opentofu.org/hashicorp/aws",
-                  "schema_version": 1,
-                  "values": {
-                    "assign_ipv6_address_on_creation": false,
-                    "cidr_block": "10.0.0.0/24",
-                    "customer_owned_ipv4_pool": null,
-                    "enable_dns64": false,
-                    "enable_lni_at_device_index": null,
-                    "enable_resource_name_dns_a_record_on_launch": false,
-                    "enable_resource_name_dns_aaaa_record_on_launch": false,
-                    "ipv6_cidr_block": null,
-                    "ipv6_native": false,
-                    "map_customer_owned_ip_on_launch": null,
-                    "map_public_ip_on_launch": false,
-                    "outpost_arn": null,
-                    "tags": null,
-                    "timeouts": null
-                  },
-                  "sensitive_values": {
-                    "tags_all": {}
-                  }
-                },
-                {
-                  "address": "aws_subnet.subnet_two",
-                  "mode": "managed",
-                  "type": "aws_subnet",
-                  "name": "subnet_two",
-                  "provider_name": "registry.opentofu.org/hashicorp/aws",
-                  "schema_version": 1,
-                  "values": {
-                    "assign_ipv6_address_on_creation": false,
-                    "cidr_block": "10.0.1.0/24",
-                    "customer_owned_ipv4_pool": null,
-                    "enable_dns64": false,
-                    "enable_lni_at_device_index": null,
-                    "enable_resource_name_dns_a_record_on_launch": false,
-                    "enable_resource_name_dns_aaaa_record_on_launch": false,
-                    "ipv6_cidr_block": null,
-                    "ipv6_native": false,
-                    "map_customer_owned_ip_on_launch": null,
-                    "map_public_ip_on_launch": false,
-                    "outpost_arn": null,
-                    "tags": null,
-                    "timeouts": null
-                  },
-                  "sensitive_values": {
-                    "tags_all": {}
-                  }
-                },
-                {
-                  "address": "aws_vpc.vpc",
-                  "mode": "managed",
-                  "type": "aws_vpc",
-                  "name": "vpc",
-                  "provider_name": "registry.opentofu.org/hashicorp/aws",
-                  "schema_version": 1,
-                  "values": {
-                    "assign_generated_ipv6_cidr_block": null,
-                    "cidr_block": "10.0.0.0/16",
-                    "enable_dns_hostnames": true,
-                    "enable_dns_support": true,
-                    "instance_tenancy": "default",
-                    "ipv4_ipam_pool_id": null,
-                    "ipv4_netmask_length": null,
-                    "ipv6_ipam_pool_id": null,
-                    "ipv6_netmask_length": null,
-                    "tags": null
-                  },
-                  "sensitive_values": {
-                    "tags_all": {}
-                  }
-                }
-              ],
-              "child_modules": [
-                {
-                  "resources": [
-                    {
-                      "address": "module.pass.aws_ecs_service.valid",
-                      "mode": "managed",
-                      "type": "aws_ecs_service",
-                      "name": "valid",
-                      "provider_name": "registry.opentofu.org/hashicorp/aws",
-                      "schema_version": 1,
-                      "values": {
-                        "alarms": [],
-                        "availability_zone_rebalancing": "DISABLED",
-                        "capacity_provider_strategy": [],
-                        "deployment_circuit_breaker": [],
-                        "deployment_controller": [],
-                        "deployment_maximum_percent": 200,
-                        "deployment_minimum_healthy_percent": 100,
-                        "desired_count": 0,
-                        "enable_ecs_managed_tags": false,
-                        "enable_execute_command": false,
-                        "force_delete": null,
-                        "force_new_deployment": null,
-                        "health_check_grace_period_seconds": null,
-                        "launch_type": "FARGATE",
-                        "load_balancer": [],
-                        "name": "example-service",
-                        "network_configuration": [
-                          {
-                            "assign_public_ip": false,
-                            "security_groups": null
-                          }
-                        ],
-                        "ordered_placement_strategy": [],
-                        "placement_constraints": [],
-                        "propagate_tags": null,
-                        "scheduling_strategy": "REPLICA",
-                        "service_connect_configuration": [],
-                        "service_registries": [],
-                        "tags": null,
-                        "timeouts": null,
-                        "volume_configuration": [],
-                        "vpc_lattice_configurations": [],
-                        "wait_for_steady_state": false
-                      },
-                      "sensitive_values": {
-                        "alarms": [],
-                        "capacity_provider_strategy": [],
-                        "deployment_circuit_breaker": [],
-                        "deployment_controller": [],
-                        "load_balancer": [],
-                        "network_configuration": [
-                          {
-                            "subnets": []
-                          }
-                        ],
-                        "ordered_placement_strategy": [],
-                        "placement_constraints": [],
-                        "service_connect_configuration": [],
-                        "service_registries": [],
-                        "tags_all": {},
-                        "triggers": {},
-                        "volume_configuration": [],
-                        "vpc_lattice_configurations": []
-                      }
-                    },
-                    {
-                      "address": "module.pass.aws_ecs_service.valid_default",
-                      "mode": "managed",
-                      "type": "aws_ecs_service",
-                      "name": "valid_default",
-                      "provider_name": "registry.opentofu.org/hashicorp/aws",
-                      "schema_version": 1,
-                      "values": {
-                        "alarms": [],
-                        "availability_zone_rebalancing": "DISABLED",
-                        "capacity_provider_strategy": [],
-                        "deployment_circuit_breaker": [],
-                        "deployment_controller": [],
-                        "deployment_maximum_percent": 200,
-                        "deployment_minimum_healthy_percent": 100,
-                        "desired_count": 0,
-                        "enable_ecs_managed_tags": false,
-                        "enable_execute_command": false,
-                        "force_delete": null,
-                        "force_new_deployment": null,
-                        "health_check_grace_period_seconds": null,
-                        "launch_type": "FARGATE",
-                        "load_balancer": [],
-                        "name": "example-service",
-                        "network_configuration": [
-                          {
-                            "assign_public_ip": false,
-                            "security_groups": null
-                          }
-                        ],
-                        "ordered_placement_strategy": [],
-                        "placement_constraints": [],
-                        "propagate_tags": null,
-                        "scheduling_strategy": "REPLICA",
-                        "service_connect_configuration": [],
-                        "service_registries": [],
-                        "tags": null,
-                        "timeouts": null,
-                        "volume_configuration": [],
-                        "vpc_lattice_configurations": [],
-                        "wait_for_steady_state": false
-                      },
-                      "sensitive_values": {
-                        "alarms": [],
-                        "capacity_provider_strategy": [],
-                        "deployment_circuit_breaker": [],
-                        "deployment_controller": [],
-                        "load_balancer": [],
-                        "network_configuration": [
-                          {
-                            "subnets": []
-                          }
-                        ],
-                        "ordered_placement_strategy": [],
-                        "placement_constraints": [],
-                        "service_connect_configuration": [],
-                        "service_registries": [],
-                        "tags_all": {},
-                        "triggers": {},
-                        "volume_configuration": [],
-                        "vpc_lattice_configurations": []
-                      }
-                    },
-                    {
-                      "address": "module.pass.aws_ecs_service.valid_no_network",
-                      "mode": "managed",
-                      "type": "aws_ecs_service",
-                      "name": "valid_no_network",
-                      "provider_name": "registry.opentofu.org/hashicorp/aws",
-                      "schema_version": 1,
-                      "values": {
-                        "alarms": [],
-                        "availability_zone_rebalancing": "DISABLED",
-                        "capacity_provider_strategy": [],
-                        "deployment_circuit_breaker": [],
-                        "deployment_controller": [],
-                        "deployment_maximum_percent": 200,
-                        "deployment_minimum_healthy_percent": 100,
-                        "desired_count": 0,
-                        "enable_ecs_managed_tags": false,
-                        "enable_execute_command": false,
-                        "force_delete": null,
-                        "force_new_deployment": null,
-                        "health_check_grace_period_seconds": null,
-                        "launch_type": "FARGATE",
-                        "load_balancer": [],
-                        "name": "example-service",
-                        "network_configuration": [],
-                        "ordered_placement_strategy": [],
-                        "placement_constraints": [],
-                        "propagate_tags": null,
-                        "scheduling_strategy": "REPLICA",
-                        "service_connect_configuration": [],
-                        "service_registries": [],
-                        "tags": null,
-                        "timeouts": null,
-                        "volume_configuration": [],
-                        "vpc_lattice_configurations": [],
-                        "wait_for_steady_state": false
-                      },
-                      "sensitive_values": {
-                        "alarms": [],
-                        "capacity_provider_strategy": [],
-                        "deployment_circuit_breaker": [],
-                        "deployment_controller": [],
-                        "load_balancer": [],
-                        "network_configuration": [],
-                        "ordered_placement_strategy": [],
-                        "placement_constraints": [],
-                        "service_connect_configuration": [],
-                        "service_registries": [],
-                        "tags_all": {},
-                        "triggers": {},
-                        "volume_configuration": [],
-                        "vpc_lattice_configurations": []
-                      }
-                    }
-                  ],
-                  "address": "module.pass"
-                }
-              ]
-            }
+            "root_module": {}
           },
-          "resource_changes": [
-            {
-              "address": "aws_ecs_cluster.cluster",
-              "mode": "managed",
-              "type": "aws_ecs_cluster",
-              "name": "cluster",
-              "provider_name": "registry.opentofu.org/hashicorp/aws",
-              "change": {
-                "actions": [
-                  "create"
-                ],
-                "before": null,
-                "after": {
-                  "configuration": [],
-                  "name": "test-cluster",
-                  "service_connect_defaults": [],
-                  "tags": null
-                },
-                "after_unknown": {
-                  "arn": true,
-                  "configuration": [],
-                  "id": true,
-                  "service_connect_defaults": [],
-                  "setting": true,
-                  "tags_all": true
-                },
-                "before_sensitive": false,
-                "after_sensitive": {
-                  "configuration": [],
-                  "service_connect_defaults": [],
-                  "setting": [],
-                  "tags_all": {}
-                }
-              }
-            },
-            {
-              "address": "aws_ecs_task_definition.task",
-              "mode": "managed",
-              "type": "aws_ecs_task_definition",
-              "name": "task",
-              "provider_name": "registry.opentofu.org/hashicorp/aws",
-              "change": {
-                "actions": [
-                  "create"
-                ],
-                "before": null,
-                "after": {
-                  "container_definitions": "[{\"essential\":true,\"image\":\"nginx:latest\",\"name\":\"test-container\"}]",
-                  "cpu": "256",
-                  "ephemeral_storage": [],
-                  "execution_role_arn": null,
-                  "family": "test-task",
-                  "inference_accelerator": [],
-                  "ipc_mode": null,
-                  "memory": "512",
-                  "network_mode": "awsvpc",
-                  "pid_mode": null,
-                  "placement_constraints": [],
-                  "proxy_configuration": [],
-                  "requires_compatibilities": [
-                    "FARGATE"
-                  ],
-                  "runtime_platform": [],
-                  "skip_destroy": false,
-                  "tags": null,
-                  "task_role_arn": null,
-                  "track_latest": false,
-                  "volume": []
-                },
-                "after_unknown": {
-                  "arn": true,
-                  "arn_without_revision": true,
-                  "enable_fault_injection": true,
-                  "ephemeral_storage": [],
-                  "id": true,
-                  "inference_accelerator": [],
-                  "placement_constraints": [],
-                  "proxy_configuration": [],
-                  "requires_compatibilities": [
-                    false
-                  ],
-                  "revision": true,
-                  "runtime_platform": [],
-                  "tags_all": true,
-                  "volume": []
-                },
-                "before_sensitive": false,
-                "after_sensitive": {
-                  "ephemeral_storage": [],
-                  "inference_accelerator": [],
-                  "placement_constraints": [],
-                  "proxy_configuration": [],
-                  "requires_compatibilities": [
-                    false
-                  ],
-                  "runtime_platform": [],
-                  "tags_all": {},
-                  "volume": []
-                }
-              }
-            },
-            {
-              "address": "aws_subnet.subnet_one",
-              "mode": "managed",
-              "type": "aws_subnet",
-              "name": "subnet_one",
-              "provider_name": "registry.opentofu.org/hashicorp/aws",
-              "change": {
-                "actions": [
-                  "create"
-                ],
-                "before": null,
-                "after": {
-                  "assign_ipv6_address_on_creation": false,
-                  "cidr_block": "10.0.0.0/24",
-                  "customer_owned_ipv4_pool": null,
-                  "enable_dns64": false,
-                  "enable_lni_at_device_index": null,
-                  "enable_resource_name_dns_a_record_on_launch": false,
-                  "enable_resource_name_dns_aaaa_record_on_launch": false,
-                  "ipv6_cidr_block": null,
-                  "ipv6_native": false,
-                  "map_customer_owned_ip_on_launch": null,
-                  "map_public_ip_on_launch": false,
-                  "outpost_arn": null,
-                  "tags": null,
-                  "timeouts": null
-                },
-                "after_unknown": {
-                  "arn": true,
-                  "availability_zone": true,
-                  "availability_zone_id": true,
-                  "id": true,
-                  "ipv6_cidr_block_association_id": true,
-                  "owner_id": true,
-                  "private_dns_hostname_type_on_launch": true,
-                  "tags_all": true,
-                  "vpc_id": true
-                },
-                "before_sensitive": false,
-                "after_sensitive": {
-                  "tags_all": {}
-                }
-              }
-            },
-            {
-              "address": "aws_subnet.subnet_two",
-              "mode": "managed",
-              "type": "aws_subnet",
-              "name": "subnet_two",
-              "provider_name": "registry.opentofu.org/hashicorp/aws",
-              "change": {
-                "actions": [
-                  "create"
-                ],
-                "before": null,
-                "after": {
-                  "assign_ipv6_address_on_creation": false,
-                  "cidr_block": "10.0.1.0/24",
-                  "customer_owned_ipv4_pool": null,
-                  "enable_dns64": false,
-                  "enable_lni_at_device_index": null,
-                  "enable_resource_name_dns_a_record_on_launch": false,
-                  "enable_resource_name_dns_aaaa_record_on_launch": false,
-                  "ipv6_cidr_block": null,
-                  "ipv6_native": false,
-                  "map_customer_owned_ip_on_launch": null,
-                  "map_public_ip_on_launch": false,
-                  "outpost_arn": null,
-                  "tags": null,
-                  "timeouts": null
-                },
-                "after_unknown": {
-                  "arn": true,
-                  "availability_zone": true,
-                  "availability_zone_id": true,
-                  "id": true,
-                  "ipv6_cidr_block_association_id": true,
-                  "owner_id": true,
-                  "private_dns_hostname_type_on_launch": true,
-                  "tags_all": true,
-                  "vpc_id": true
-                },
-                "before_sensitive": false,
-                "after_sensitive": {
-                  "tags_all": {}
-                }
-              }
-            },
-            {
-              "address": "aws_vpc.vpc",
-              "mode": "managed",
-              "type": "aws_vpc",
-              "name": "vpc",
-              "provider_name": "registry.opentofu.org/hashicorp/aws",
-              "change": {
-                "actions": [
-                  "create"
-                ],
-                "before": null,
-                "after": {
-                  "assign_generated_ipv6_cidr_block": null,
-                  "cidr_block": "10.0.0.0/16",
-                  "enable_dns_hostnames": true,
-                  "enable_dns_support": true,
-                  "instance_tenancy": "default",
-                  "ipv4_ipam_pool_id": null,
-                  "ipv4_netmask_length": null,
-                  "ipv6_ipam_pool_id": null,
-                  "ipv6_netmask_length": null,
-                  "tags": null
-                },
-                "after_unknown": {
-                  "arn": true,
-                  "default_network_acl_id": true,
-                  "default_route_table_id": true,
-                  "default_security_group_id": true,
-                  "dhcp_options_id": true,
-                  "enable_network_address_usage_metrics": true,
-                  "id": true,
-                  "ipv6_association_id": true,
-                  "ipv6_cidr_block": true,
-                  "ipv6_cidr_block_network_border_group": true,
-                  "main_route_table_id": true,
-                  "owner_id": true,
-                  "tags_all": true
-                },
-                "before_sensitive": false,
-                "after_sensitive": {
-                  "tags_all": {}
-                }
-              }
-            },
-            {
-              "address": "module.pass.aws_ecs_service.valid",
-              "module_address": "module.pass",
-              "mode": "managed",
-              "type": "aws_ecs_service",
-              "name": "valid",
-              "provider_name": "registry.opentofu.org/hashicorp/aws",
-              "change": {
-                "actions": [
-                  "create"
-                ],
-                "before": null,
-                "after": {
-                  "alarms": [],
-                  "availability_zone_rebalancing": "DISABLED",
-                  "capacity_provider_strategy": [],
-                  "deployment_circuit_breaker": [],
-                  "deployment_controller": [],
-                  "deployment_maximum_percent": 200,
-                  "deployment_minimum_healthy_percent": 100,
-                  "desired_count": 0,
-                  "enable_ecs_managed_tags": false,
-                  "enable_execute_command": false,
-                  "force_delete": null,
-                  "force_new_deployment": null,
-                  "health_check_grace_period_seconds": null,
-                  "launch_type": "FARGATE",
-                  "load_balancer": [],
-                  "name": "example-service",
-                  "network_configuration": [
-                    {
-                      "assign_public_ip": false,
-                      "security_groups": null
-                    }
-                  ],
-                  "ordered_placement_strategy": [],
-                  "placement_constraints": [],
-                  "propagate_tags": null,
-                  "scheduling_strategy": "REPLICA",
-                  "service_connect_configuration": [],
-                  "service_registries": [],
-                  "tags": null,
-                  "timeouts": null,
-                  "volume_configuration": [],
-                  "vpc_lattice_configurations": [],
-                  "wait_for_steady_state": false
-                },
-                "after_unknown": {
-                  "alarms": [],
-                  "capacity_provider_strategy": [],
-                  "cluster": true,
-                  "deployment_circuit_breaker": [],
-                  "deployment_controller": [],
-                  "iam_role": true,
-                  "id": true,
-                  "load_balancer": [],
-                  "network_configuration": [
-                    {
-                      "subnets": true
-                    }
-                  ],
-                  "ordered_placement_strategy": [],
-                  "placement_constraints": [],
-                  "platform_version": true,
-                  "service_connect_configuration": [],
-                  "service_registries": [],
-                  "tags_all": true,
-                  "task_definition": true,
-                  "triggers": true,
-                  "volume_configuration": [],
-                  "vpc_lattice_configurations": []
-                },
-                "before_sensitive": false,
-                "after_sensitive": {
-                  "alarms": [],
-                  "capacity_provider_strategy": [],
-                  "deployment_circuit_breaker": [],
-                  "deployment_controller": [],
-                  "load_balancer": [],
-                  "network_configuration": [
-                    {
-                      "subnets": []
-                    }
-                  ],
-                  "ordered_placement_strategy": [],
-                  "placement_constraints": [],
-                  "service_connect_configuration": [],
-                  "service_registries": [],
-                  "tags_all": {},
-                  "triggers": {},
-                  "volume_configuration": [],
-                  "vpc_lattice_configurations": []
-                }
-              }
-            },
-            {
-              "address": "module.pass.aws_ecs_service.valid_default",
-              "module_address": "module.pass",
-              "mode": "managed",
-              "type": "aws_ecs_service",
-              "name": "valid_default",
-              "provider_name": "registry.opentofu.org/hashicorp/aws",
-              "change": {
-                "actions": [
-                  "create"
-                ],
-                "before": null,
-                "after": {
-                  "alarms": [],
-                  "availability_zone_rebalancing": "DISABLED",
-                  "capacity_provider_strategy": [],
-                  "deployment_circuit_breaker": [],
-                  "deployment_controller": [],
-                  "deployment_maximum_percent": 200,
-                  "deployment_minimum_healthy_percent": 100,
-                  "desired_count": 0,
-                  "enable_ecs_managed_tags": false,
-                  "enable_execute_command": false,
-                  "force_delete": null,
-                  "force_new_deployment": null,
-                  "health_check_grace_period_seconds": null,
-                  "launch_type": "FARGATE",
-                  "load_balancer": [],
-                  "name": "example-service",
-                  "network_configuration": [
-                    {
-                      "assign_public_ip": false,
-                      "security_groups": null
-                    }
-                  ],
-                  "ordered_placement_strategy": [],
-                  "placement_constraints": [],
-                  "propagate_tags": null,
-                  "scheduling_strategy": "REPLICA",
-                  "service_connect_configuration": [],
-                  "service_registries": [],
-                  "tags": null,
-                  "timeouts": null,
-                  "volume_configuration": [],
-                  "vpc_lattice_configurations": [],
-                  "wait_for_steady_state": false
-                },
-                "after_unknown": {
-                  "alarms": [],
-                  "capacity_provider_strategy": [],
-                  "cluster": true,
-                  "deployment_circuit_breaker": [],
-                  "deployment_controller": [],
-                  "iam_role": true,
-                  "id": true,
-                  "load_balancer": [],
-                  "network_configuration": [
-                    {
-                      "subnets": true
-                    }
-                  ],
-                  "ordered_placement_strategy": [],
-                  "placement_constraints": [],
-                  "platform_version": true,
-                  "service_connect_configuration": [],
-                  "service_registries": [],
-                  "tags_all": true,
-                  "task_definition": true,
-                  "triggers": true,
-                  "volume_configuration": [],
-                  "vpc_lattice_configurations": []
-                },
-                "before_sensitive": false,
-                "after_sensitive": {
-                  "alarms": [],
-                  "capacity_provider_strategy": [],
-                  "deployment_circuit_breaker": [],
-                  "deployment_controller": [],
-                  "load_balancer": [],
-                  "network_configuration": [
-                    {
-                      "subnets": []
-                    }
-                  ],
-                  "ordered_placement_strategy": [],
-                  "placement_constraints": [],
-                  "service_connect_configuration": [],
-                  "service_registries": [],
-                  "tags_all": {},
-                  "triggers": {},
-                  "volume_configuration": [],
-                  "vpc_lattice_configurations": []
-                }
-              }
-            },
-            {
-              "address": "module.pass.aws_ecs_service.valid_no_network",
-              "module_address": "module.pass",
-              "mode": "managed",
-              "type": "aws_ecs_service",
-              "name": "valid_no_network",
-              "provider_name": "registry.opentofu.org/hashicorp/aws",
-              "change": {
-                "actions": [
-                  "create"
-                ],
-                "before": null,
-                "after": {
-                  "alarms": [],
-                  "availability_zone_rebalancing": "DISABLED",
-                  "capacity_provider_strategy": [],
-                  "deployment_circuit_breaker": [],
-                  "deployment_controller": [],
-                  "deployment_maximum_percent": 200,
-                  "deployment_minimum_healthy_percent": 100,
-                  "desired_count": 0,
-                  "enable_ecs_managed_tags": false,
-                  "enable_execute_command": false,
-                  "force_delete": null,
-                  "force_new_deployment": null,
-                  "health_check_grace_period_seconds": null,
-                  "launch_type": "FARGATE",
-                  "load_balancer": [],
-                  "name": "example-service",
-                  "network_configuration": [],
-                  "ordered_placement_strategy": [],
-                  "placement_constraints": [],
-                  "propagate_tags": null,
-                  "scheduling_strategy": "REPLICA",
-                  "service_connect_configuration": [],
-                  "service_registries": [],
-                  "tags": null,
-                  "timeouts": null,
-                  "volume_configuration": [],
-                  "vpc_lattice_configurations": [],
-                  "wait_for_steady_state": false
-                },
-                "after_unknown": {
-                  "alarms": [],
-                  "capacity_provider_strategy": [],
-                  "cluster": true,
-                  "deployment_circuit_breaker": [],
-                  "deployment_controller": [],
-                  "iam_role": true,
-                  "id": true,
-                  "load_balancer": [],
-                  "network_configuration": [],
-                  "ordered_placement_strategy": [],
-                  "placement_constraints": [],
-                  "platform_version": true,
-                  "service_connect_configuration": [],
-                  "service_registries": [],
-                  "tags_all": true,
-                  "task_definition": true,
-                  "triggers": true,
-                  "volume_configuration": [],
-                  "vpc_lattice_configurations": []
-                },
-                "before_sensitive": false,
-                "after_sensitive": {
-                  "alarms": [],
-                  "capacity_provider_strategy": [],
-                  "deployment_circuit_breaker": [],
-                  "deployment_controller": [],
-                  "load_balancer": [],
-                  "network_configuration": [],
-                  "ordered_placement_strategy": [],
-                  "placement_constraints": [],
-                  "service_connect_configuration": [],
-                  "service_registries": [],
-                  "tags_all": {},
-                  "triggers": {},
-                  "volume_configuration": [],
-                  "vpc_lattice_configurations": []
-                }
-              }
-            }
-          ],
           "configuration": {
             "provider_config": {
               "aws": {
@@ -8755,46 +7807,8 @@
               }
             }
           },
-          "relevant_attributes": [
-            {
-              "resource": "aws_ecs_cluster.cluster",
-              "attribute": [
-                "id"
-              ]
-            },
-            {
-              "resource": "aws_ecs_task_definition.task",
-              "attribute": [
-                "arn"
-              ]
-            },
-            {
-              "resource": "aws_subnet.subnet_one",
-              "attribute": [
-                "id"
-              ]
-            },
-            {
-              "resource": "aws_subnet.subnet_two",
-              "attribute": [
-                "id"
-              ]
-            },
-            {
-              "resource": "aws_vpc.vpc",
-              "attribute": [
-                "cidr_block"
-              ]
-            },
-            {
-              "resource": "aws_vpc.vpc",
-              "attribute": [
-                "id"
-              ]
-            }
-          ],
-          "timestamp": "2025-02-27T15:00:42Z",
-          "errored": false
+          "timestamp": "2025-02-24T10:45:05Z",
+          "errored": true
         },
         "fail": {
           "format_version": "1.2",
@@ -9087,7 +8101,6 @@
                 "after_unknown": {
                   "arn": true,
                   "arn_without_revision": true,
-                  "enable_fault_injection": true,
                   "ephemeral_storage": [],
                   "id": true,
                   "inference_accelerator": [],
@@ -9712,17 +8725,17 @@
             {
               "resource": "aws_vpc.vpc",
               "attribute": [
-                "id"
+                "cidr_block"
               ]
             },
             {
               "resource": "aws_vpc.vpc",
               "attribute": [
-                "cidr_block"
+                "id"
               ]
             }
           ],
-          "timestamp": "2025-02-27T15:00:44Z",
+          "timestamp": "2025-02-24T10:45:16Z",
           "errored": false
         }
       }
@@ -10011,7 +9024,7 @@
               }
             }
           },
-          "timestamp": "2025-02-28T22:31:15Z",
+          "timestamp": "2025-03-03T12:42:33Z",
           "errored": false
         },
         "fail": {
@@ -10296,7 +9309,7 @@
               }
             }
           },
-          "timestamp": "2025-02-28T22:31:18Z",
+          "timestamp": "2025-03-03T12:42:36Z",
           "errored": false
         }
       },
@@ -10814,7 +9827,7 @@
               }
             }
           },
-          "timestamp": "2025-03-03T09:24:20Z",
+          "timestamp": "2025-03-03T12:42:52Z",
           "errored": false
         },
         "fail": {
@@ -11329,7 +10342,709 @@
               }
             }
           },
-          "timestamp": "2025-03-03T09:24:22Z",
+          "timestamp": "2025-03-03T12:42:55Z",
+          "errored": false
+        }
+      },
+      "3": {
+        "pass": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.pass.aws_rds_cluster.valid",
+                      "mode": "managed",
+                      "type": "aws_rds_cluster",
+                      "name": "valid",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 1,
+                      "values": {
+                        "allow_major_version_upgrade": null,
+                        "backtrack_window": null,
+                        "copy_tags_to_snapshot": false,
+                        "db_cluster_instance_class": null,
+                        "db_instance_parameter_group_name": null,
+                        "delete_automated_backups": true,
+                        "deletion_protection": true,
+                        "domain": null,
+                        "domain_iam_role_name": null,
+                        "enable_global_write_forwarding": false,
+                        "enable_http_endpoint": false,
+                        "enable_local_write_forwarding": false,
+                        "enabled_cloudwatch_logs_exports": null,
+                        "engine": "aurora-mysql",
+                        "engine_mode": "provisioned",
+                        "final_snapshot_identifier": null,
+                        "global_cluster_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "iops": null,
+                        "manage_master_user_password": null,
+                        "master_password": null,
+                        "master_password_wo": null,
+                        "master_password_wo_version": null,
+                        "performance_insights_enabled": null,
+                        "replication_source_identifier": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "skip_final_snapshot": false,
+                        "snapshot_identifier": null,
+                        "source_region": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "availability_zones": [],
+                        "cluster_members": [],
+                        "iam_roles": [],
+                        "master_password": true,
+                        "master_password_wo": true,
+                        "master_user_secret": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    }
+                  ],
+                  "address": "module.pass"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.pass.aws_rds_cluster.valid",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_rds_cluster",
+              "name": "valid",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allow_major_version_upgrade": null,
+                  "backtrack_window": null,
+                  "copy_tags_to_snapshot": false,
+                  "db_cluster_instance_class": null,
+                  "db_instance_parameter_group_name": null,
+                  "delete_automated_backups": true,
+                  "deletion_protection": true,
+                  "domain": null,
+                  "domain_iam_role_name": null,
+                  "enable_global_write_forwarding": false,
+                  "enable_http_endpoint": false,
+                  "enable_local_write_forwarding": false,
+                  "enabled_cloudwatch_logs_exports": null,
+                  "engine": "aurora-mysql",
+                  "engine_mode": "provisioned",
+                  "final_snapshot_identifier": null,
+                  "global_cluster_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "iops": null,
+                  "manage_master_user_password": null,
+                  "master_password": null,
+                  "master_password_wo": null,
+                  "master_password_wo_version": null,
+                  "performance_insights_enabled": null,
+                  "replication_source_identifier": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "skip_final_snapshot": false,
+                  "snapshot_identifier": null,
+                  "source_region": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "allocated_storage": true,
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zones": true,
+                  "backup_retention_period": true,
+                  "ca_certificate_identifier": true,
+                  "ca_certificate_valid_till": true,
+                  "cluster_identifier": true,
+                  "cluster_identifier_prefix": true,
+                  "cluster_members": true,
+                  "cluster_resource_id": true,
+                  "cluster_scalability_type": true,
+                  "database_insights_mode": true,
+                  "database_name": true,
+                  "db_cluster_parameter_group_name": true,
+                  "db_subnet_group_name": true,
+                  "db_system_id": true,
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "iam_roles": true,
+                  "id": true,
+                  "kms_key_id": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "master_username": true,
+                  "monitoring_interval": true,
+                  "monitoring_role_arn": true,
+                  "network_type": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "preferred_backup_window": true,
+                  "preferred_maintenance_window": true,
+                  "reader_endpoint": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "storage_encrypted": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "availability_zones": [],
+                  "cluster_members": [],
+                  "iam_roles": [],
+                  "master_password": true,
+                  "master_password_wo": true,
+                  "master_user_secret": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_rds_cluster.disabled_deletion_protection",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "disabled_deletion_protection",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "deletion_protection": {
+                            "constant_value": false
+                          },
+                          "engine": {
+                            "constant_value": "aurora-mysql"
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.missing_deletion_protection",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "missing_deletion_protection",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "engine": {
+                            "constant_value": "aurora-mysql"
+                          }
+                        },
+                        "schema_version": 1
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_rds_cluster.valid",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "valid",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "deletion_protection": {
+                            "constant_value": true
+                          },
+                          "engine": {
+                            "constant_value": "aurora-mysql"
+                          }
+                        },
+                        "schema_version": 1
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-07T20:25:33Z",
+          "errored": false
+        },
+        "fail": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.fail.aws_rds_cluster.disabled_deletion_protection",
+                      "mode": "managed",
+                      "type": "aws_rds_cluster",
+                      "name": "disabled_deletion_protection",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 1,
+                      "values": {
+                        "allow_major_version_upgrade": null,
+                        "backtrack_window": null,
+                        "copy_tags_to_snapshot": false,
+                        "db_cluster_instance_class": null,
+                        "db_instance_parameter_group_name": null,
+                        "delete_automated_backups": true,
+                        "deletion_protection": false,
+                        "domain": null,
+                        "domain_iam_role_name": null,
+                        "enable_global_write_forwarding": false,
+                        "enable_http_endpoint": false,
+                        "enable_local_write_forwarding": false,
+                        "enabled_cloudwatch_logs_exports": null,
+                        "engine": "aurora-mysql",
+                        "engine_mode": "provisioned",
+                        "final_snapshot_identifier": null,
+                        "global_cluster_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "iops": null,
+                        "manage_master_user_password": null,
+                        "master_password": null,
+                        "master_password_wo": null,
+                        "master_password_wo_version": null,
+                        "performance_insights_enabled": null,
+                        "replication_source_identifier": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "skip_final_snapshot": false,
+                        "snapshot_identifier": null,
+                        "source_region": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "availability_zones": [],
+                        "cluster_members": [],
+                        "iam_roles": [],
+                        "master_password": true,
+                        "master_password_wo": true,
+                        "master_user_secret": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_rds_cluster.missing_deletion_protection",
+                      "mode": "managed",
+                      "type": "aws_rds_cluster",
+                      "name": "missing_deletion_protection",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 1,
+                      "values": {
+                        "allow_major_version_upgrade": null,
+                        "backtrack_window": null,
+                        "copy_tags_to_snapshot": false,
+                        "db_cluster_instance_class": null,
+                        "db_instance_parameter_group_name": null,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_iam_role_name": null,
+                        "enable_global_write_forwarding": false,
+                        "enable_http_endpoint": false,
+                        "enable_local_write_forwarding": false,
+                        "enabled_cloudwatch_logs_exports": null,
+                        "engine": "aurora-mysql",
+                        "engine_mode": "provisioned",
+                        "final_snapshot_identifier": null,
+                        "global_cluster_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "iops": null,
+                        "manage_master_user_password": null,
+                        "master_password": null,
+                        "master_password_wo": null,
+                        "master_password_wo_version": null,
+                        "performance_insights_enabled": null,
+                        "replication_source_identifier": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "skip_final_snapshot": false,
+                        "snapshot_identifier": null,
+                        "source_region": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "availability_zones": [],
+                        "cluster_members": [],
+                        "iam_roles": [],
+                        "master_password": true,
+                        "master_password_wo": true,
+                        "master_user_secret": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    }
+                  ],
+                  "address": "module.fail"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.fail.aws_rds_cluster.disabled_deletion_protection",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_rds_cluster",
+              "name": "disabled_deletion_protection",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allow_major_version_upgrade": null,
+                  "backtrack_window": null,
+                  "copy_tags_to_snapshot": false,
+                  "db_cluster_instance_class": null,
+                  "db_instance_parameter_group_name": null,
+                  "delete_automated_backups": true,
+                  "deletion_protection": false,
+                  "domain": null,
+                  "domain_iam_role_name": null,
+                  "enable_global_write_forwarding": false,
+                  "enable_http_endpoint": false,
+                  "enable_local_write_forwarding": false,
+                  "enabled_cloudwatch_logs_exports": null,
+                  "engine": "aurora-mysql",
+                  "engine_mode": "provisioned",
+                  "final_snapshot_identifier": null,
+                  "global_cluster_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "iops": null,
+                  "manage_master_user_password": null,
+                  "master_password": null,
+                  "master_password_wo": null,
+                  "master_password_wo_version": null,
+                  "performance_insights_enabled": null,
+                  "replication_source_identifier": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "skip_final_snapshot": false,
+                  "snapshot_identifier": null,
+                  "source_region": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "allocated_storage": true,
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zones": true,
+                  "backup_retention_period": true,
+                  "ca_certificate_identifier": true,
+                  "ca_certificate_valid_till": true,
+                  "cluster_identifier": true,
+                  "cluster_identifier_prefix": true,
+                  "cluster_members": true,
+                  "cluster_resource_id": true,
+                  "cluster_scalability_type": true,
+                  "database_insights_mode": true,
+                  "database_name": true,
+                  "db_cluster_parameter_group_name": true,
+                  "db_subnet_group_name": true,
+                  "db_system_id": true,
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "iam_roles": true,
+                  "id": true,
+                  "kms_key_id": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "master_username": true,
+                  "monitoring_interval": true,
+                  "monitoring_role_arn": true,
+                  "network_type": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "preferred_backup_window": true,
+                  "preferred_maintenance_window": true,
+                  "reader_endpoint": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "storage_encrypted": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "availability_zones": [],
+                  "cluster_members": [],
+                  "iam_roles": [],
+                  "master_password": true,
+                  "master_password_wo": true,
+                  "master_user_secret": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_rds_cluster.missing_deletion_protection",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_rds_cluster",
+              "name": "missing_deletion_protection",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allow_major_version_upgrade": null,
+                  "backtrack_window": null,
+                  "copy_tags_to_snapshot": false,
+                  "db_cluster_instance_class": null,
+                  "db_instance_parameter_group_name": null,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_iam_role_name": null,
+                  "enable_global_write_forwarding": false,
+                  "enable_http_endpoint": false,
+                  "enable_local_write_forwarding": false,
+                  "enabled_cloudwatch_logs_exports": null,
+                  "engine": "aurora-mysql",
+                  "engine_mode": "provisioned",
+                  "final_snapshot_identifier": null,
+                  "global_cluster_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "iops": null,
+                  "manage_master_user_password": null,
+                  "master_password": null,
+                  "master_password_wo": null,
+                  "master_password_wo_version": null,
+                  "performance_insights_enabled": null,
+                  "replication_source_identifier": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "skip_final_snapshot": false,
+                  "snapshot_identifier": null,
+                  "source_region": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "allocated_storage": true,
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zones": true,
+                  "backup_retention_period": true,
+                  "ca_certificate_identifier": true,
+                  "ca_certificate_valid_till": true,
+                  "cluster_identifier": true,
+                  "cluster_identifier_prefix": true,
+                  "cluster_members": true,
+                  "cluster_resource_id": true,
+                  "cluster_scalability_type": true,
+                  "database_insights_mode": true,
+                  "database_name": true,
+                  "db_cluster_parameter_group_name": true,
+                  "db_subnet_group_name": true,
+                  "db_system_id": true,
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "iam_roles": true,
+                  "id": true,
+                  "kms_key_id": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "master_username": true,
+                  "monitoring_interval": true,
+                  "monitoring_role_arn": true,
+                  "network_type": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "preferred_backup_window": true,
+                  "preferred_maintenance_window": true,
+                  "reader_endpoint": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "storage_encrypted": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "availability_zones": [],
+                  "cluster_members": [],
+                  "iam_roles": [],
+                  "master_password": true,
+                  "master_password_wo": true,
+                  "master_user_secret": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_rds_cluster.disabled_deletion_protection",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "disabled_deletion_protection",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "deletion_protection": {
+                            "constant_value": false
+                          },
+                          "engine": {
+                            "constant_value": "aurora-mysql"
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.missing_deletion_protection",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "missing_deletion_protection",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "engine": {
+                            "constant_value": "aurora-mysql"
+                          }
+                        },
+                        "schema_version": 1
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_rds_cluster.valid",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "valid",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "deletion_protection": {
+                            "constant_value": true
+                          },
+                          "engine": {
+                            "constant_value": "aurora-mysql"
+                          }
+                        },
+                        "schema_version": 1
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-07T20:25:35Z",
           "errored": false
         }
       }

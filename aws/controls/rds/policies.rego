@@ -28,3 +28,23 @@ evaluate_rds_2(plan) := {violation |
 		"resource": resource.address,
 	}
 }
+
+evaluate_rds_3(plan) := {violation |
+	some resource in utils.resources(plan, "aws_rds_cluster")
+	not resource.configuration.deletion_protection
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.3", "control_tower": "CT.RDS.PR.3"},
+		"reason": "Require an Amazon RDS cluster to have deletion protection configured",
+		"resource": resource.address,
+	}
+} | {violation |
+	some resource in utils.resources(plan, "aws_rds_cluster")
+	is_null(resource.configuration.deletion_protection)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.3", "control_tower": "CT.RDS.PR.3"},
+		"reason": "Require an Amazon RDS database instance to have deletion protection configured",
+		"resource": resource.address,
+	}
+}
