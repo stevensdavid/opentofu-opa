@@ -65,3 +65,15 @@ evaluate_rds_4(plan) := {violation |
 		"resource": resource.address,
 	}
 }
+
+evaluate_rds_5(plan) := {violation |
+	some resource in utils.resources(plan, "aws_db_instance")
+	standard_engine(resource.configuration.engine)
+	not resource.configuration.auto_minor_version_upgrade
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.5", "control_tower": "CT.RDS.PR.5"},
+		"reason": "Require an Amazon RDS database instance to have minor version upgrades configured",
+		"resource": resource.address,
+	}
+}
