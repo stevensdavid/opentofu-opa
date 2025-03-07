@@ -26,3 +26,18 @@ test_evaluate_rds_4_invalid_input if count(rds.evaluate_rds_4(controls.mocks.rds
 test_evaluate_rds_5_valid_input if count(rds.evaluate_rds_5(controls.mocks.rds["5"].pass)) == 0
 
 test_evaluate_rds_5_invalid_input if count(rds.evaluate_rds_5(controls.mocks.rds["5"].fail)) == 1
+
+test_evaluate_rds_6_valid_input if count(rds.evaluate_rds_6(controls.mocks.rds["6"].pass)) == 0
+
+# test_evaluate_rds_6_valid_input if {
+# 	result := rds.evaluate_rds_6(controls.mocks.rds["6"].pass)
+# 	print(result)
+# 	count(result) == 0
+# }
+
+# test_evaluate_rds_6_invalid_input if count(rds.evaluate_rds_6(controls.mocks.rds["6"].fail)) == 8
+test_evaluate_rds_6_invalid_input if {
+	result := rds.evaluate_rds_6(controls.mocks.rds["6"].fail)
+	print(result)
+	count(result) == 8
+}

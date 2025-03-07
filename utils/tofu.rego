@@ -13,3 +13,17 @@ resources(plan, type) := [
 null_or_false(null)
 
 null_or_false(false)
+
+falsy(null)
+
+falsy(false)
+
+falsy(0)
+
+falsy("")
+
+falsy([])
+
+falsy({})
+
+falsy(set())

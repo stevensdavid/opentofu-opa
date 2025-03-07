@@ -77,3 +77,15 @@ evaluate_rds_5(plan) := {violation |
 		"resource": resource.address,
 	}
 }
+
+evaluate_rds_6(plan) := {violation |
+	some resource in utils.resources(plan, "aws_rds_cluster")
+	backtrackable(resource.configuration)
+	utils.falsy(resource.configuration.backtrack_window)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.6", "control_tower": "CT.RDS.PR.6"},
+		"reason": "Require an Amazon RDS database cluster to have backtracking configured",
+		"resource": resource.address,
+	}
+}
