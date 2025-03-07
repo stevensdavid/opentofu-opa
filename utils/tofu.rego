@@ -9,3 +9,7 @@ resources(plan, type) := [
 	some action in result.change.actions
 	action in {"create", "update"}
 ]
+
+null_or_false(null)
+
+null_or_false(false)
