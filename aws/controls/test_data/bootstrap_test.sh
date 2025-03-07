@@ -32,7 +32,7 @@ cat <<EOF >>"../${service}/policies_test.rego"
 
 test_${function_name}_valid_input if count(${service}.$function_name(controls.mocks.${service}["$control_number"].pass)) == 0
 
-test_${function_name}_invalid_input if ${service}.$function_name(controls.mocks.${service}["$control_number"].fail)
+test_${function_name}_invalid_input if count(${service}.$function_name(controls.mocks.${service}["$control_number"].fail)) == 1
 EOF
 
 cat <<EOF >>"../${service}/policies.rego"
