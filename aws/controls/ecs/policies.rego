@@ -16,39 +16,13 @@ fargate_uses_latest_version(plan) := {rule |
 	}
 }
 
-# This rule has three cases that lead to failure:
-# 1. The setting is present and not enabled
-clusters_enable_container_insights(plan) := ({rule |
+clusters_enable_container_insights(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_cluster")
-	some setting in resource.configuration.setting
-	setting.name == "containerInsights"
-	setting.value != "enabled"
+	cluster_insights_is_disabled(resource.configuration)
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.2", "fsbp": "ECS.12", "opa": "aws.controls.ecs.2"},
 		"severity": "medium",
 		"reason": "ECS clusters should enable container insights",
-		"resource": resource.address,
-	}
-} | {rule |
-	# 2. The setting is not present
-	some resource in utils.resources(plan, "aws_ecs_cluster")
-	every setting in resource.configuration.setting {
-		setting.name != "containerInsights"
-	}
-	rule := {
-		"id": {"control_tower": "CT.ECS.PR.2", "fsbp": "ECS.12", "opa": "aws.controls.ecs.2"},
-		"reason": "ECS clusters should enable container insights",
-		"severity": "medium",
-		"resource": resource.address,
-	}
-}) | {rule |
-	# 3. No settings are set
-	some resource in utils.resources(plan, "aws_ecs_cluster")
-	not resource.configuration.setting
-	rule := {
-		"id": {"control_tower": "CT.ECS.PR.2", "fsbp": "ECS.12", "opa": "aws.controls.ecs.2"},
-		"reason": "ECS clusters should enable container insights",
-		"severity": "medium",
 		"resource": resource.address,
 	}
 }
@@ -65,15 +39,7 @@ task_definitions_should_not_run_as_root(plan) := {rule |
 
 tasks_use_awsvpc_network_mode(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_task_definition")
-	resource.configuration.network_mode != "awsvpc"
-	rule := {
-		"id": {"control_tower": "CT.ECS.PR.4", "opa": "aws.controls.ecs.4"},
-		"reason": "Tasks should use 'awsvpc' networking mode",
-		"resource": resource.address,
-	}
-} | {rule |
-	some resource in utils.resources(plan, "aws_ecs_task_definition")
-	not resource.configuration.network_mode
+	task_doesnt_use_awsvpc(resource)
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.4", "opa": "aws.controls.ecs.4"},
 		"reason": "Tasks should use 'awsvpc' networking mode",
