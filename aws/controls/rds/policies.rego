@@ -48,3 +48,15 @@ evaluate_rds_3(plan) := {violation |
 		"resource": resource.address,
 	}
 }
+
+evaluate_rds_4(plan) := {violation |
+	some resource in utils.resources(plan, "aws_rds_cluster")
+	resource.configuration.engine in {"aurora-mysql", "aurora-postgresql"}
+	disabled_iam_database_authentication(resource)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.4", "control_tower": "CT.RDS.PR.4"},
+		"reason": "Require an Amazon RDS database cluster to have AWS IAM database authentication configured",
+		"resource": resource.address,
+	}
+}
