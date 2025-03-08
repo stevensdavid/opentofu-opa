@@ -101,3 +101,14 @@ evaluate_rds_7(plan) := {violation |
 		"resource": resource.address,
 	}
 }
+
+evaluate_rds_8(plan) := {violation |
+	some resource in utils.resources(plan, "aws_db_instance")
+	standard_engine(resource.configuration.engine)
+	invalid_backup_retention_period(resource.configuration)
+	violation := {
+		"id": {"opa": "aws.controls.rds.8", "control_tower": "CT.RDS.PR.8"},
+		"reason": "Require an Amazon RDS database instance to have automatic backups configured",
+		"resource": resource.address,
+	}
+}

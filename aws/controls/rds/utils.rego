@@ -45,3 +45,15 @@ backtrackable(cluster) if {
 	utils.falsy(cluster.serverlessv2_scaling_configuration)
 	backtrackable_engine_mode(cluster.engine_mode)
 }
+
+invalid_backup_retention_period(instance) if {
+	instance.backup_retention_period < 7
+}
+
+invalid_backup_retention_period(instance) if {
+	utils.falsy(instance.backup_retention_period)
+}
+
+invalid_backup_retention_period(instance) if {
+	not instance.backup_retention_period
+}
