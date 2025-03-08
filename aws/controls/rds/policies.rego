@@ -112,3 +112,15 @@ evaluate_rds_8(plan) := {violation |
 		"resource": resource.address,
 	}
 }
+
+evaluate_rds_9(plan) := {violation |
+	some resource in utils.resources(plan, "aws_rds_cluster")
+	resource.configuration.engine in {"aurora-mysql", "aurora-postgresql"}
+	utils.null_or_false(resource.configuration.copy_tags_to_snapshot)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.9", "control_tower": "CT.RDS.PR.9"},
+		"reason": "Require an Amazon RDS database cluster to copy tags to snapshots",
+		"resource": resource.address,
+	}
+}
