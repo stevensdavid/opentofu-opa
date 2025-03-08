@@ -89,3 +89,15 @@ evaluate_rds_6(plan) := {violation |
 		"resource": resource.address,
 	}
 }
+
+evaluate_rds_7(plan) := {violation |
+	some resource in utils.resources(plan, "aws_db_instance")
+	resource.configuration.engine in {"mysql", "mariadb", "postgres"}
+	utils.null_or_false(resource.configuration.iam_database_authentication_enabled)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.7", "control_tower": "CT.RDS.PR.7"},
+		"reason": "Require Amazon RDS database instances to have IAM authentication configured",
+		"resource": resource.address,
+	}
+}
