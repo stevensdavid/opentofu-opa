@@ -146,3 +146,16 @@ evaluate_rds_10(plan) := {violation |
 		"resource": resource.address,
 	}
 }
+
+evaluate_rds_11(plan) := {violation |
+	some resource in utils.resources(plan, "aws_db_instance")
+
+	standard_engine(resource.configuration.engine)
+	not resource.configuration.db_subnet_group_name
+	violation := {
+		"id": {"opa": "aws.controls.rds.11", "control_tower": "CT.RDS.PR.11"},
+		"severity": "high",
+		"reason": "Require an Amazon RDS database instance to have a VPC configuration",
+		"resource": resource.address,
+	}
+}

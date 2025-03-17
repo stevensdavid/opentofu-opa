@@ -46,3 +46,7 @@ test_evaluate_rds_9_invalid_input if count(rds.evaluate_rds_9(controls.mocks.rds
 test_evaluate_rds_10_valid_input if count(rds.evaluate_rds_10(controls.mocks.rds["10"].pass)) == 0
 
 test_evaluate_rds_10_invalid_input if count(rds.evaluate_rds_10(controls.mocks.rds["10"].fail)) == 2
+
+test_evaluate_rds_11_valid_input if count(rds.evaluate_rds_11(controls.mocks.rds["11"].pass)) == 0
+
+test_evaluate_rds_11_invalid_input if count(rds.evaluate_rds_11(controls.mocks.rds["11"].fail)) == 2
