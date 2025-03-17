@@ -33,6 +33,7 @@ task_definitions_should_not_run_as_root(plan) := {rule |
 	is_root_user(container)
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.3", "opa": "aws.controls.ecs.3"},
+		"severity": "high",
 		"reason": "Task definitions should not run as root",
 	}
 }
@@ -42,6 +43,7 @@ tasks_use_awsvpc_network_mode(plan) := {rule |
 	task_doesnt_use_awsvpc(resource)
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.4", "opa": "aws.controls.ecs.4"},
+		"severity": "high",
 		"reason": "Tasks should use 'awsvpc' networking mode",
 		"resource": resource.address,
 	}
@@ -77,6 +79,7 @@ task_containers_specify_memory_usage_limits(plan) := {rule |
 	not container.memory
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.7", "opa": "aws.controls.ecs.7"},
+		"severity": "high",
 		"reason": "Task containers should specify memory usage limits",
 		"resource": resource.address,
 	}

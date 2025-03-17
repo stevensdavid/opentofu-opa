@@ -9,6 +9,7 @@ evaluate_rds_1(plan) := {violation |
 
 	violation := {
 		"id": {"opa": "aws.controls.rds.1", "control_tower": "CT.RDS.PR.1"},
+		"severity": "medium",
 		"reason": "Require that an Amazon RDS database instance is configured with multiple Availability Zones",
 		"resource": resource.address,
 	}
@@ -38,6 +39,7 @@ evaluate_rds_2(plan) := {violation |
 
 	violation := {
 		"id": {"opa": "aws.controls.rds.2", "control_tower": "CT.RDS.PR.2"},
+		"severity": "low",
 		"reason": "Require an Amazon RDS database instance or cluster to have enhanced monitoring configured",
 		"resource": resource.address,
 	}
@@ -49,6 +51,7 @@ evaluate_rds_3(plan) := {violation |
 
 	violation := {
 		"id": {"opa": "aws.controls.rds.3", "control_tower": "CT.RDS.PR.3"},
+		"severity": "low",
 		"reason": "Require an Amazon RDS cluster to have deletion protection configured",
 		"resource": resource.address,
 	}
@@ -61,6 +64,7 @@ evaluate_rds_4(plan) := {violation |
 
 	violation := {
 		"id": {"opa": "aws.controls.rds.4", "control_tower": "CT.RDS.PR.4"},
+		"severity": "medium",
 		"reason": "Require an Amazon RDS database cluster to have AWS IAM database authentication configured",
 		"resource": resource.address,
 	}
@@ -73,6 +77,7 @@ evaluate_rds_5(plan) := {violation |
 
 	violation := {
 		"id": {"opa": "aws.controls.rds.5", "control_tower": "CT.RDS.PR.5"},
+		"severity": "high",
 		"reason": "Require an Amazon RDS database instance to have minor version upgrades configured",
 		"resource": resource.address,
 	}
@@ -85,6 +90,7 @@ evaluate_rds_6(plan) := {violation |
 
 	violation := {
 		"id": {"opa": "aws.controls.rds.6", "control_tower": "CT.RDS.PR.6"},
+		"severity": "medium",
 		"reason": "Require an Amazon RDS database cluster to have backtracking configured",
 		"resource": resource.address,
 	}
@@ -97,6 +103,7 @@ evaluate_rds_7(plan) := {violation |
 
 	violation := {
 		"id": {"opa": "aws.controls.rds.7", "control_tower": "CT.RDS.PR.7"},
+		"severity": "medium",
 		"reason": "Require Amazon RDS database instances to have IAM authentication configured",
 		"resource": resource.address,
 	}
@@ -108,6 +115,7 @@ evaluate_rds_8(plan) := {violation |
 	invalid_backup_retention_period(resource.configuration)
 	violation := {
 		"id": {"opa": "aws.controls.rds.8", "control_tower": "CT.RDS.PR.8"},
+		"severity": "medium",
 		"reason": "Require an Amazon RDS database instance to have automatic backups configured",
 		"resource": resource.address,
 	}
@@ -120,6 +128,7 @@ evaluate_rds_9(plan) := {violation |
 
 	violation := {
 		"id": {"opa": "aws.controls.rds.9", "control_tower": "CT.RDS.PR.9"},
+		"severity": "low",
 		"reason": "Require an Amazon RDS database cluster to copy tags to snapshots",
 		"resource": resource.address,
 	}
