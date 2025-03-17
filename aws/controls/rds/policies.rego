@@ -159,3 +159,15 @@ evaluate_rds_11(plan) := {violation |
 		"resource": resource.address,
 	}
 }
+
+evaluate_rds_12(plan) := {violation |
+	some resource in utils.resources(plan, "aws_db_event_subscription")
+	resource.configuration.source_type == "db-cluster"
+	not valid_event_subscription(resource)
+	violation := {
+		"id": {"opa": "aws.controls.rds.12", "control_tower": "CT.RDS.PR.12"},
+		"reason": "Require an Amazon RDS event subscription to have critical cluster events configured",
+		"severity": "low",
+		"resource": resource.address,
+	}
+}

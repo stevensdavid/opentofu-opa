@@ -57,3 +57,18 @@ invalid_backup_retention_period(instance) if {
 invalid_backup_retention_period(instance) if {
 	not instance.backup_retention_period
 }
+
+# Used in aws.controls.rds.12
+valid_event_categories([])
+
+valid_event_categories(null)
+
+valid_event_categories(categories) if {
+	"maintenance" in categories
+	"failure" in categories
+}
+
+valid_event_subscription(resource) if {
+	resource.configuration.enabled != false
+	valid_event_categories(resource.configuration.event_categories)
+}
