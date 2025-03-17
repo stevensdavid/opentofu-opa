@@ -124,3 +124,16 @@ evaluate_rds_9(plan) := {violation |
 		"resource": resource.address,
 	}
 }
+
+evaluate_rds_10(plan) := {violation |
+	some resource in utils.resources(plan, "aws_db_instance")
+	standard_engine(resource.configuration.engine)
+	utils.null_or_false(resource.configuration.copy_tags_to_snapshot)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.10", "control_tower": "CT.RDS.PR.10"},
+		"reason": "Require an Amazon RDS database instance to copy tags to snapshots",
+		"severity": "low",
+		"resource": resource.address,
+	}
+}
