@@ -30,3 +30,25 @@ test_all_rules_have_severity if {
 		}
 	}
 }
+
+test_all_rules_have_reason if {
+	every service in object.keys(controls.mocks) {
+		every rule_id in object.keys(controls.mocks[service]) {
+			denies := controls.evaluate_all(controls.mocks[service][rule_id].fail)
+			every deny in denies {
+				deny.reason
+			}
+		}
+	}
+}
+
+test_all_rules_have_id if {
+	every service in object.keys(controls.mocks) {
+		every rule_id in object.keys(controls.mocks[service]) {
+			denies := controls.evaluate_all(controls.mocks[service][rule_id].fail)
+			every deny in denies {
+				deny.id.opa
+			}
+		}
+	}
+}
