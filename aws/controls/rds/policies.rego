@@ -330,3 +330,16 @@ evaluate_rds_24(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds24",
 	}
 }
+
+evaluate_rds_25(plan) := {violation |
+	some proxy in utils.resources(plan, "aws_db_proxy")
+	utils.falsy(proxy.configuration.require_tls)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.25", "control_tower": "CT.RDS.PR.26"},
+		"reason": "Require an Amazon Relational Database Service DB Proxy to require Transport Layer Security (TLS) connections",
+		"resource": proxy.address,
+		"severity": "medium",
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds25",
+	}
+}

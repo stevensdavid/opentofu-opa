@@ -33670,6 +33670,534 @@
           "errored": false
         }
       },
+      "25": {
+        "pass": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.pass.aws_db_proxy.valid",
+                      "mode": "managed",
+                      "type": "aws_db_proxy",
+                      "name": "valid",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "auth": [
+                          {
+                            "auth_scheme": "",
+                            "description": "",
+                            "iam_auth": "",
+                            "secret_arn": "",
+                            "username": ""
+                          }
+                        ],
+                        "debug_logging": null,
+                        "engine_family": "MYSQL",
+                        "name": "valid",
+                        "require_tls": true,
+                        "role_arn": "",
+                        "tags": null,
+                        "timeouts": null,
+                        "vpc_subnet_ids": null
+                      },
+                      "sensitive_values": {
+                        "auth": [
+                          {}
+                        ],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    }
+                  ],
+                  "address": "module.pass"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.pass.aws_db_proxy.valid",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_db_proxy",
+              "name": "valid",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "auth": [
+                    {
+                      "auth_scheme": "",
+                      "description": "",
+                      "iam_auth": "",
+                      "secret_arn": "",
+                      "username": ""
+                    }
+                  ],
+                  "debug_logging": null,
+                  "engine_family": "MYSQL",
+                  "name": "valid",
+                  "require_tls": true,
+                  "role_arn": "",
+                  "tags": null,
+                  "timeouts": null,
+                  "vpc_subnet_ids": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "auth": [
+                    {
+                      "client_password_auth_type": true
+                    }
+                  ],
+                  "endpoint": true,
+                  "id": true,
+                  "idle_client_timeout": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "auth": [
+                    {}
+                  ],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_db_proxy.default",
+                        "mode": "managed",
+                        "type": "aws_db_proxy",
+                        "name": "default",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "auth": [
+                            {}
+                          ],
+                          "engine_family": {
+                            "constant_value": "MYSQL"
+                          },
+                          "name": {
+                            "constant_value": "valid"
+                          },
+                          "role_arn": {
+                            "constant_value": ""
+                          },
+                          "vpc_subnet_ids": {
+                            "constant_value": []
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_proxy.explicit_disable",
+                        "mode": "managed",
+                        "type": "aws_db_proxy",
+                        "name": "explicit_disable",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "auth": [
+                            {}
+                          ],
+                          "engine_family": {
+                            "constant_value": "MYSQL"
+                          },
+                          "name": {
+                            "constant_value": "valid"
+                          },
+                          "require_tls": {
+                            "constant_value": false
+                          },
+                          "role_arn": {
+                            "constant_value": ""
+                          },
+                          "vpc_subnet_ids": {
+                            "constant_value": []
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_db_proxy.valid",
+                        "mode": "managed",
+                        "type": "aws_db_proxy",
+                        "name": "valid",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "auth": [
+                            {}
+                          ],
+                          "engine_family": {
+                            "constant_value": "MYSQL"
+                          },
+                          "name": {
+                            "constant_value": "valid"
+                          },
+                          "require_tls": {
+                            "constant_value": true
+                          },
+                          "role_arn": {
+                            "constant_value": ""
+                          },
+                          "vpc_subnet_ids": {
+                            "constant_value": []
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-21T21:19:07Z",
+          "errored": false
+        },
+        "fail": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.fail.aws_db_proxy.default",
+                      "mode": "managed",
+                      "type": "aws_db_proxy",
+                      "name": "default",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "auth": [
+                          {
+                            "auth_scheme": "",
+                            "description": "",
+                            "iam_auth": "",
+                            "secret_arn": "",
+                            "username": ""
+                          }
+                        ],
+                        "debug_logging": null,
+                        "engine_family": "MYSQL",
+                        "name": "valid",
+                        "require_tls": null,
+                        "role_arn": "",
+                        "tags": null,
+                        "timeouts": null,
+                        "vpc_subnet_ids": null
+                      },
+                      "sensitive_values": {
+                        "auth": [
+                          {}
+                        ],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_db_proxy.explicit_disable",
+                      "mode": "managed",
+                      "type": "aws_db_proxy",
+                      "name": "explicit_disable",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "auth": [
+                          {
+                            "auth_scheme": "",
+                            "description": "",
+                            "iam_auth": "",
+                            "secret_arn": "",
+                            "username": ""
+                          }
+                        ],
+                        "debug_logging": null,
+                        "engine_family": "MYSQL",
+                        "name": "valid",
+                        "require_tls": false,
+                        "role_arn": "",
+                        "tags": null,
+                        "timeouts": null,
+                        "vpc_subnet_ids": null
+                      },
+                      "sensitive_values": {
+                        "auth": [
+                          {}
+                        ],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    }
+                  ],
+                  "address": "module.fail"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.fail.aws_db_proxy.default",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_proxy",
+              "name": "default",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "auth": [
+                    {
+                      "auth_scheme": "",
+                      "description": "",
+                      "iam_auth": "",
+                      "secret_arn": "",
+                      "username": ""
+                    }
+                  ],
+                  "debug_logging": null,
+                  "engine_family": "MYSQL",
+                  "name": "valid",
+                  "require_tls": null,
+                  "role_arn": "",
+                  "tags": null,
+                  "timeouts": null,
+                  "vpc_subnet_ids": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "auth": [
+                    {
+                      "client_password_auth_type": true
+                    }
+                  ],
+                  "endpoint": true,
+                  "id": true,
+                  "idle_client_timeout": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "auth": [
+                    {}
+                  ],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_db_proxy.explicit_disable",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_proxy",
+              "name": "explicit_disable",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "auth": [
+                    {
+                      "auth_scheme": "",
+                      "description": "",
+                      "iam_auth": "",
+                      "secret_arn": "",
+                      "username": ""
+                    }
+                  ],
+                  "debug_logging": null,
+                  "engine_family": "MYSQL",
+                  "name": "valid",
+                  "require_tls": false,
+                  "role_arn": "",
+                  "tags": null,
+                  "timeouts": null,
+                  "vpc_subnet_ids": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "auth": [
+                    {
+                      "client_password_auth_type": true
+                    }
+                  ],
+                  "endpoint": true,
+                  "id": true,
+                  "idle_client_timeout": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "auth": [
+                    {}
+                  ],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_db_proxy.default",
+                        "mode": "managed",
+                        "type": "aws_db_proxy",
+                        "name": "default",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "auth": [
+                            {}
+                          ],
+                          "engine_family": {
+                            "constant_value": "MYSQL"
+                          },
+                          "name": {
+                            "constant_value": "valid"
+                          },
+                          "role_arn": {
+                            "constant_value": ""
+                          },
+                          "vpc_subnet_ids": {
+                            "constant_value": []
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_proxy.explicit_disable",
+                        "mode": "managed",
+                        "type": "aws_db_proxy",
+                        "name": "explicit_disable",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "auth": [
+                            {}
+                          ],
+                          "engine_family": {
+                            "constant_value": "MYSQL"
+                          },
+                          "name": {
+                            "constant_value": "valid"
+                          },
+                          "require_tls": {
+                            "constant_value": false
+                          },
+                          "role_arn": {
+                            "constant_value": ""
+                          },
+                          "vpc_subnet_ids": {
+                            "constant_value": []
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_db_proxy.valid",
+                        "mode": "managed",
+                        "type": "aws_db_proxy",
+                        "name": "valid",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "auth": [
+                            {}
+                          ],
+                          "engine_family": {
+                            "constant_value": "MYSQL"
+                          },
+                          "name": {
+                            "constant_value": "valid"
+                          },
+                          "require_tls": {
+                            "constant_value": true
+                          },
+                          "role_arn": {
+                            "constant_value": ""
+                          },
+                          "vpc_subnet_ids": {
+                            "constant_value": []
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-21T21:19:10Z",
+          "errored": false
+        }
+      },
       "3": {
         "pass": {
           "format_version": "1.2",
