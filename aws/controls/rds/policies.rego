@@ -278,3 +278,16 @@ evaluate_rds_20(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds20",
 	}
 }
+
+evaluate_rds_21(plan) := {violation |
+	some instance in utils.resources(plan, "aws_db_instance")
+	instance.configuration.username in {"admin", "postgres"}
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.21"},
+		"reason": "Require an Amazon RDS database instance to have a unique administrator username",
+		"resource": instance.address,
+		"severity": "medium",
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds21",
+	}
+}
