@@ -4,6 +4,23 @@ import data.utils
 
 standard_engine(engine) := engine in {"mariadb", "mysql", "oracle-ee", "oracle-ee-cdb", "oracle-se2", "oracle-se2-cdb", "postgres", "sqlserver-ee", "sqlserver-se", "sqlserver-ex", "sqlserver-web"}
 
+misconfigured_monitoring(resource) if {
+	# The case of invalid monitoring intervals is handled by the Terraform provider,
+	# and the provider defaults the field to 0. We only have to check the = 0 case
+	# and missing roles.
+	resource.configuration.monitoring_interval == 0
+}
+
+misconfigured_monitoring(resource) if {
+	resource.configuration.monitoring_role_arn == ""
+}
+
+misconfigured_monitoring(resource) if {
+	is_null(resource.configuration.monitoring_role_arn)
+}
+
+misconfigured_monitoring(resource) if not resource.configuration.monitoring_role_arn
+
 backtrackable_engine_mode(null)
 
 backtrackable_engine_mode("provisioned")
