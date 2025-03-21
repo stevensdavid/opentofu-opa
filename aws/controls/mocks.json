@@ -35529,6 +35529,1267 @@
           "errored": false
         }
       },
+      "27": {
+        "pass": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.pass.aws_db_parameter_group.unsupported_family[\"mariadb10.4\"]",
+                      "mode": "managed",
+                      "type": "aws_db_parameter_group",
+                      "name": "unsupported_family",
+                      "index": "mariadb10.4",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": "Managed by Terraform",
+                        "family": "mariadb10.4",
+                        "parameter": [],
+                        "skip_destroy": false,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "parameter": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_db_parameter_group.valid_mysql[\"mariadb10.5\"]",
+                      "mode": "managed",
+                      "type": "aws_db_parameter_group",
+                      "name": "valid_mysql",
+                      "index": "mariadb10.5",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": "Managed by Terraform",
+                        "family": "mariadb10.5",
+                        "parameter": [
+                          {
+                            "apply_method": "immediate",
+                            "name": "require_secure_transport",
+                            "value": "true"
+                          }
+                        ],
+                        "skip_destroy": false,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "parameter": [
+                          {}
+                        ],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_db_parameter_group.valid_mysql[\"mysql5.7\"]",
+                      "mode": "managed",
+                      "type": "aws_db_parameter_group",
+                      "name": "valid_mysql",
+                      "index": "mysql5.7",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": "Managed by Terraform",
+                        "family": "mysql5.7",
+                        "parameter": [
+                          {
+                            "apply_method": "immediate",
+                            "name": "require_secure_transport",
+                            "value": "true"
+                          }
+                        ],
+                        "skip_destroy": false,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "parameter": [
+                          {}
+                        ],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_db_parameter_group.valid_postgres[\"postgres\"]",
+                      "mode": "managed",
+                      "type": "aws_db_parameter_group",
+                      "name": "valid_postgres",
+                      "index": "postgres",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": "Managed by Terraform",
+                        "family": "postgres",
+                        "parameter": [
+                          {
+                            "apply_method": "immediate",
+                            "name": "rds.force_ssl",
+                            "value": "true"
+                          }
+                        ],
+                        "skip_destroy": false,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "parameter": [
+                          {}
+                        ],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_db_parameter_group.valid_postgres[\"sqlserver\"]",
+                      "mode": "managed",
+                      "type": "aws_db_parameter_group",
+                      "name": "valid_postgres",
+                      "index": "sqlserver",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": "Managed by Terraform",
+                        "family": "sqlserver",
+                        "parameter": [
+                          {
+                            "apply_method": "immediate",
+                            "name": "rds.force_ssl",
+                            "value": "true"
+                          }
+                        ],
+                        "skip_destroy": false,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "parameter": [
+                          {}
+                        ],
+                        "tags_all": {}
+                      }
+                    }
+                  ],
+                  "address": "module.pass"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.pass.aws_db_parameter_group.unsupported_family[\"mariadb10.4\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_db_parameter_group",
+              "name": "unsupported_family",
+              "index": "mariadb10.4",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": "Managed by Terraform",
+                  "family": "mariadb10.4",
+                  "parameter": [],
+                  "skip_destroy": false,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "parameter": [],
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "parameter": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_db_parameter_group.valid_mysql[\"mariadb10.5\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_db_parameter_group",
+              "name": "valid_mysql",
+              "index": "mariadb10.5",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": "Managed by Terraform",
+                  "family": "mariadb10.5",
+                  "parameter": [
+                    {
+                      "apply_method": "immediate",
+                      "name": "require_secure_transport",
+                      "value": "true"
+                    }
+                  ],
+                  "skip_destroy": false,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_db_parameter_group.valid_mysql[\"mysql5.7\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_db_parameter_group",
+              "name": "valid_mysql",
+              "index": "mysql5.7",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": "Managed by Terraform",
+                  "family": "mysql5.7",
+                  "parameter": [
+                    {
+                      "apply_method": "immediate",
+                      "name": "require_secure_transport",
+                      "value": "true"
+                    }
+                  ],
+                  "skip_destroy": false,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_db_parameter_group.valid_postgres[\"postgres\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_db_parameter_group",
+              "name": "valid_postgres",
+              "index": "postgres",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": "Managed by Terraform",
+                  "family": "postgres",
+                  "parameter": [
+                    {
+                      "apply_method": "immediate",
+                      "name": "rds.force_ssl",
+                      "value": "true"
+                    }
+                  ],
+                  "skip_destroy": false,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_db_parameter_group.valid_postgres[\"sqlserver\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_db_parameter_group",
+              "name": "valid_postgres",
+              "index": "sqlserver",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": "Managed by Terraform",
+                  "family": "sqlserver",
+                  "parameter": [
+                    {
+                      "apply_method": "immediate",
+                      "name": "rds.force_ssl",
+                      "value": "true"
+                    }
+                  ],
+                  "skip_destroy": false,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": {}
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_db_parameter_group.invalid_mysql",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "invalid_mysql",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "parameter": [
+                            {
+                              "name": {
+                                "constant_value": "require_secure_transport"
+                              },
+                              "value": {
+                                "constant_value": "no"
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_parameter_group.invalid_mysql_missing",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "invalid_mysql_missing",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_parameter_group.invalid_postgres",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "invalid_postgres",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "parameter": [
+                            {
+                              "name": {
+                                "constant_value": "rds.force_ssl"
+                              },
+                              "value": {
+                                "constant_value": "false"
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_parameter_group.invalid_postgres_missing",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "invalid_postgres_missing",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_db_parameter_group.unsupported_family",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "unsupported_family",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          }
+                        },
+                        "schema_version": 0,
+                        "for_each_expression": {
+                          "references": [
+                            "local.unsupported_families"
+                          ]
+                        }
+                      },
+                      {
+                        "address": "aws_db_parameter_group.valid_mysql",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "valid_mysql",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "parameter": [
+                            {
+                              "name": {
+                                "constant_value": "require_secure_transport"
+                              },
+                              "value": {
+                                "constant_value": "true"
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_parameter_group.valid_postgres",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "valid_postgres",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "parameter": [
+                            {
+                              "name": {
+                                "constant_value": "rds.force_ssl"
+                              },
+                              "value": {
+                                "constant_value": "true"
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-21T22:02:44Z",
+          "errored": false
+        },
+        "fail": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.fail.aws_db_parameter_group.invalid_mysql[\"mariadb10.5\"]",
+                      "mode": "managed",
+                      "type": "aws_db_parameter_group",
+                      "name": "invalid_mysql",
+                      "index": "mariadb10.5",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": "Managed by Terraform",
+                        "family": "mariadb10.5",
+                        "parameter": [
+                          {
+                            "apply_method": "immediate",
+                            "name": "require_secure_transport",
+                            "value": "no"
+                          }
+                        ],
+                        "skip_destroy": false,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "parameter": [
+                          {}
+                        ],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_db_parameter_group.invalid_mysql[\"mysql5.7\"]",
+                      "mode": "managed",
+                      "type": "aws_db_parameter_group",
+                      "name": "invalid_mysql",
+                      "index": "mysql5.7",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": "Managed by Terraform",
+                        "family": "mysql5.7",
+                        "parameter": [
+                          {
+                            "apply_method": "immediate",
+                            "name": "require_secure_transport",
+                            "value": "no"
+                          }
+                        ],
+                        "skip_destroy": false,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "parameter": [
+                          {}
+                        ],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_db_parameter_group.invalid_mysql_missing[\"mariadb10.5\"]",
+                      "mode": "managed",
+                      "type": "aws_db_parameter_group",
+                      "name": "invalid_mysql_missing",
+                      "index": "mariadb10.5",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": "Managed by Terraform",
+                        "family": "mariadb10.5",
+                        "parameter": [],
+                        "skip_destroy": false,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "parameter": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_db_parameter_group.invalid_mysql_missing[\"mysql5.7\"]",
+                      "mode": "managed",
+                      "type": "aws_db_parameter_group",
+                      "name": "invalid_mysql_missing",
+                      "index": "mysql5.7",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": "Managed by Terraform",
+                        "family": "mysql5.7",
+                        "parameter": [],
+                        "skip_destroy": false,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "parameter": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_db_parameter_group.invalid_postgres[\"postgres\"]",
+                      "mode": "managed",
+                      "type": "aws_db_parameter_group",
+                      "name": "invalid_postgres",
+                      "index": "postgres",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": "Managed by Terraform",
+                        "family": "postgres",
+                        "parameter": [
+                          {
+                            "apply_method": "immediate",
+                            "name": "rds.force_ssl",
+                            "value": "false"
+                          }
+                        ],
+                        "skip_destroy": false,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "parameter": [
+                          {}
+                        ],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_db_parameter_group.invalid_postgres[\"sqlserver\"]",
+                      "mode": "managed",
+                      "type": "aws_db_parameter_group",
+                      "name": "invalid_postgres",
+                      "index": "sqlserver",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": "Managed by Terraform",
+                        "family": "sqlserver",
+                        "parameter": [
+                          {
+                            "apply_method": "immediate",
+                            "name": "rds.force_ssl",
+                            "value": "false"
+                          }
+                        ],
+                        "skip_destroy": false,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "parameter": [
+                          {}
+                        ],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_db_parameter_group.invalid_postgres_missing[\"postgres\"]",
+                      "mode": "managed",
+                      "type": "aws_db_parameter_group",
+                      "name": "invalid_postgres_missing",
+                      "index": "postgres",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": "Managed by Terraform",
+                        "family": "postgres",
+                        "parameter": [],
+                        "skip_destroy": false,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "parameter": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_db_parameter_group.invalid_postgres_missing[\"sqlserver\"]",
+                      "mode": "managed",
+                      "type": "aws_db_parameter_group",
+                      "name": "invalid_postgres_missing",
+                      "index": "sqlserver",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": "Managed by Terraform",
+                        "family": "sqlserver",
+                        "parameter": [],
+                        "skip_destroy": false,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "parameter": [],
+                        "tags_all": {}
+                      }
+                    }
+                  ],
+                  "address": "module.fail"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.fail.aws_db_parameter_group.invalid_mysql[\"mariadb10.5\"]",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_parameter_group",
+              "name": "invalid_mysql",
+              "index": "mariadb10.5",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": "Managed by Terraform",
+                  "family": "mariadb10.5",
+                  "parameter": [
+                    {
+                      "apply_method": "immediate",
+                      "name": "require_secure_transport",
+                      "value": "no"
+                    }
+                  ],
+                  "skip_destroy": false,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_db_parameter_group.invalid_mysql[\"mysql5.7\"]",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_parameter_group",
+              "name": "invalid_mysql",
+              "index": "mysql5.7",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": "Managed by Terraform",
+                  "family": "mysql5.7",
+                  "parameter": [
+                    {
+                      "apply_method": "immediate",
+                      "name": "require_secure_transport",
+                      "value": "no"
+                    }
+                  ],
+                  "skip_destroy": false,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_db_parameter_group.invalid_mysql_missing[\"mariadb10.5\"]",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_parameter_group",
+              "name": "invalid_mysql_missing",
+              "index": "mariadb10.5",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": "Managed by Terraform",
+                  "family": "mariadb10.5",
+                  "parameter": [],
+                  "skip_destroy": false,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "parameter": [],
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "parameter": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_db_parameter_group.invalid_mysql_missing[\"mysql5.7\"]",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_parameter_group",
+              "name": "invalid_mysql_missing",
+              "index": "mysql5.7",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": "Managed by Terraform",
+                  "family": "mysql5.7",
+                  "parameter": [],
+                  "skip_destroy": false,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "parameter": [],
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "parameter": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_db_parameter_group.invalid_postgres[\"postgres\"]",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_parameter_group",
+              "name": "invalid_postgres",
+              "index": "postgres",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": "Managed by Terraform",
+                  "family": "postgres",
+                  "parameter": [
+                    {
+                      "apply_method": "immediate",
+                      "name": "rds.force_ssl",
+                      "value": "false"
+                    }
+                  ],
+                  "skip_destroy": false,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_db_parameter_group.invalid_postgres[\"sqlserver\"]",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_parameter_group",
+              "name": "invalid_postgres",
+              "index": "sqlserver",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": "Managed by Terraform",
+                  "family": "sqlserver",
+                  "parameter": [
+                    {
+                      "apply_method": "immediate",
+                      "name": "rds.force_ssl",
+                      "value": "false"
+                    }
+                  ],
+                  "skip_destroy": false,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "parameter": [
+                    {}
+                  ],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_db_parameter_group.invalid_postgres_missing[\"postgres\"]",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_parameter_group",
+              "name": "invalid_postgres_missing",
+              "index": "postgres",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": "Managed by Terraform",
+                  "family": "postgres",
+                  "parameter": [],
+                  "skip_destroy": false,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "parameter": [],
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "parameter": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_db_parameter_group.invalid_postgres_missing[\"sqlserver\"]",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_parameter_group",
+              "name": "invalid_postgres_missing",
+              "index": "sqlserver",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": "Managed by Terraform",
+                  "family": "sqlserver",
+                  "parameter": [],
+                  "skip_destroy": false,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "parameter": [],
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "parameter": [],
+                  "tags_all": {}
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_db_parameter_group.invalid_mysql",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "invalid_mysql",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "parameter": [
+                            {
+                              "name": {
+                                "constant_value": "require_secure_transport"
+                              },
+                              "value": {
+                                "constant_value": "no"
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_parameter_group.invalid_mysql_missing",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "invalid_mysql_missing",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_parameter_group.invalid_postgres",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "invalid_postgres",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "parameter": [
+                            {
+                              "name": {
+                                "constant_value": "rds.force_ssl"
+                              },
+                              "value": {
+                                "constant_value": "false"
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_parameter_group.invalid_postgres_missing",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "invalid_postgres_missing",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_db_parameter_group.unsupported_family",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "unsupported_family",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          }
+                        },
+                        "schema_version": 0,
+                        "for_each_expression": {
+                          "references": [
+                            "local.unsupported_families"
+                          ]
+                        }
+                      },
+                      {
+                        "address": "aws_db_parameter_group.valid_mysql",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "valid_mysql",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "parameter": [
+                            {
+                              "name": {
+                                "constant_value": "require_secure_transport"
+                              },
+                              "value": {
+                                "constant_value": "true"
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_parameter_group.valid_postgres",
+                        "mode": "managed",
+                        "type": "aws_db_parameter_group",
+                        "name": "valid_postgres",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "family": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "parameter": [
+                            {
+                              "name": {
+                                "constant_value": "rds.force_ssl"
+                              },
+                              "value": {
+                                "constant_value": "true"
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-21T22:02:47Z",
+          "errored": false
+        }
+      },
       "3": {
         "pass": {
           "format_version": "1.2",
