@@ -303,3 +303,16 @@ evaluate_rds_22(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds22",
 	}
 }
+
+evaluate_rds_23(plan) := {violation |
+	some instance in utils.resources(plan, "aws_db_instance")
+
+	not instance.configuration.storage_encrypted
+	violation := {
+		"id": {"opa": "aws.controls.rds.23", "control_tower": "CT.RDS.PR.24"},
+		"reason": "Require an Amazon RDS database instance to have encryption at rest configured",
+		"severity": "medium",
+		"resource": instance.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds23",
+	}
+}
