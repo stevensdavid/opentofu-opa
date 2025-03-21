@@ -90,3 +90,7 @@ test_evaluate_rds_20_invalid_input if count(rds.evaluate_rds_20(controls.mocks.r
 test_evaluate_rds_21_valid_input if count(rds.evaluate_rds_21(controls.mocks.rds["21"].pass)) == 0
 
 test_evaluate_rds_21_invalid_input if count(rds.evaluate_rds_21(controls.mocks.rds["21"].fail)) == 2
+
+test_evaluate_rds_22_valid_input if count(rds.evaluate_rds_22(controls.mocks.rds["22"].pass)) == 0
+
+test_evaluate_rds_22_invalid_input if count(rds.evaluate_rds_22(controls.mocks.rds["22"].fail)) == 1

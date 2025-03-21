@@ -291,3 +291,15 @@ evaluate_rds_21(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds21",
 	}
 }
+
+evaluate_rds_22(plan) := {violation |
+	some instance in utils.resources(plan, "aws_db_instance")
+	instance.configuration.publicly_accessible
+	violation := {
+		"id": {"opa": "aws.controls.rds.22"},
+		"reason": "Require an Amazon RDS database instance to not be publicly accessible",
+		"severity": "critical",
+		"resource": instance.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds22",
+	}
+}
