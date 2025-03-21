@@ -22,7 +22,7 @@ evaluate_ecs_2(plan) := {rule |
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.2", "fsbp": "ECS.12", "opa": "aws.controls.ecs.2"},
 		"severity": "medium",
-		"reason": "ECS clusters should enable container insights",
+		"reason": "Require any Amazon ECS cluster to have container insights activated",
 		"resource": resource.address,
 	}
 }
@@ -34,7 +34,7 @@ evaluate_ecs_3(plan) := {rule |
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.3", "opa": "aws.controls.ecs.3"},
 		"severity": "high",
-		"reason": "Task definitions should not run as root",
+		"reason": "Require any Amazon ECS task definition to specify a user that is not the root",
 	}
 }
 
@@ -44,7 +44,7 @@ evaluate_ecs_4(plan) := {rule |
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.4", "opa": "aws.controls.ecs.4"},
 		"severity": "high",
-		"reason": "Tasks should use 'awsvpc' networking mode",
+		"reason": "Require Amazon ECS tasks to use 'awsvpc' networking mode",
 		"resource": resource.address,
 	}
 }
@@ -56,7 +56,7 @@ evaluate_ecs_5(plan) := {rule |
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.5", "fsbp": "ECS.9", "opa": "aws.controls.ecs.5"},
 		"severity": "high",
-		"reason": "Task containers must have a logging configuration",
+		"reason": "Require an active Amazon ECS task definition to have a logging configuration",
 		"resource": resource.address,
 	}
 }
@@ -68,7 +68,7 @@ evaluate_ecs_6(plan) := {rule |
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.6", "fsbp": "ECS.5", "opa": "aws.controls.ecs.6"},
 		"severity": "high",
-		"reason": "Task containers should have read-only root filesystems",
+		"reason": "Require Amazon ECS containers to allow read-only access to the root filesystem",
 		"resource": resource.address,
 	}
 }
@@ -80,7 +80,7 @@ evaluate_ecs_7(plan) := {rule |
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.7", "opa": "aws.controls.ecs.7"},
 		"severity": "high",
-		"reason": "Task containers should specify memory usage limits",
+		"reason": "Require an Amazon ECS task definition to have a specific memory usage limit",
 		"resource": resource.address,
 	}
 }
@@ -94,7 +94,7 @@ evaluate_ecs_8(plan) := {rule |
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.8", "fsbp": "ECS.1", "opa": "aws.controls.ecs.8"},
 		"severity": "high",
-		"reason": "Task definitions should have secure networking modes and user definitions",
+		"reason": "Require Amazon ECS task definitions to have secure networking modes and user definitions",
 		"resource": resource.address,
 	}
 }
@@ -106,7 +106,7 @@ evaluate_ecs_9(plan) := {rule |
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.9", "fsbp": "ECS.2", "opa": "aws.controls.ecs.9"},
 		"severity": "high",
-		"reason": "Public IP should not be assigned to ECS service",
+		"reason": "Require Amazon ECS services not to assign public IP addresses automatically",
 		"resource": resource.address,
 	}
 }
@@ -117,7 +117,7 @@ evaluate_ecs_10(plan) := {rule |
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.10", "fsbp": "ECS.3", "opa": "aws.controls.ecs.10"},
 		"severity": "high",
-		"reason": "ECS tasks should not use the host's process namespace",
+		"reason": "Require that Amazon ECS task definitions do not share the host's process namespace",
 		"resource": resource.address,
 	}
 }
@@ -129,7 +129,7 @@ evaluate_ecs_11(plan) := {rule |
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.11", "fsbp": "ECS.4", "opa": "aws.controls.ecs.11"},
 		"severity": "high",
-		"reason": "ECS tasks should run as non-privileged",
+		"reason": "Require an Amazon ECS container to run as non-privileged",
 		"resource": resource.address,
 	}
 }
@@ -142,7 +142,7 @@ evaluate_ecs_12(plan) := {rule |
 	rule := {
 		"id": {"control_tower": "CT.ECS.PR.12", "fsbp": "ECS.8", "opa": "aws.controls.ecs.12"},
 		"severity": "high",
-		"reason": "ECS tasks do not pass secrets as container environment variables",
+		"reason": "Require that Amazon ECS task definitions do not pass secrets as container environment variables",
 		"resource": resource.address,
 	}
 }
@@ -153,7 +153,7 @@ evaluate_ecs_13(plan) := {rule |
 	network.assign_public_ip == true
 	rule := {
 		"id": {"opa": "aws.controls.ecs.13", "fsbp": "ECS.16"},
-		"reason": "ECS task sets should not automatically assign public IP addresses",
+		"reason": "Require that ECS task sets do not automatically assign public IP addresses",
 		"severity": "high",
 		"resource": resource.address,
 	}
