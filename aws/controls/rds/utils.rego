@@ -132,3 +132,17 @@ valid_log_configuration(resource) if {
 	resource.configuration.enabled_cloudwatch_logs_exports
 	includes_all_log_types(resource)
 }
+
+default_port(engine) := 3306 if engine in {"mysql", "mariadb"}
+
+default_port("postgres") := 5432
+
+default_port(engine) := 1433 if engine in {"sqlserver-ee", "sqlserver-se", "sqlserver-ex", "sqlserver-web"}
+
+default_port(engine) := 1521 if engine in {"oracle-ee", "oracle-se2", "oracle-ee-cdb", "oracle-se2-cdb"}
+
+uses_default_port(instance) if {
+	instance.port == default_port(instance.engine)
+}
+
+uses_default_port(instance) if not instance.port

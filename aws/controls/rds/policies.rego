@@ -250,3 +250,18 @@ evaluate_rds_18(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds18",
 	}
 }
+
+evaluate_rds_19(plan) := {violation |
+	some instance in utils.resources(plan, "aws_db_instance")
+
+	standard_engine(instance.configuration.engine)
+	uses_default_port(instance.configuration)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.19", "control_tower": "CT.RDS.PR.20"},
+		"reason": "Require an Amazon RDS database instance not to use a database engine default port",
+		"resource": instance.address,
+		"severity": "low",
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds19",
+	}
+}
