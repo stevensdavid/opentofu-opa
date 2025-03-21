@@ -211,3 +211,17 @@ evaluate_rds_14(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds14",
 	}
 }
+
+evaluate_rds_15(plan) := {violation |
+	some cluster in utils.resources(plan, "aws_rds_cluster")
+	utils.falsy(cluster.configuration.replication_source_identifier)
+	not cluster.configuration.storage_encrypted
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.15", "control_tower": "CT.RDS.PR.16"},
+		"reason": "Require an Amazon RDS database cluster to have encryption at rest configured",
+		"resource": cluster.address,
+		"severity": "high",
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds15",
+	}
+}
