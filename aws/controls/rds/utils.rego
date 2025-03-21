@@ -63,6 +63,8 @@ event_categories("db-cluster") := ["maintenance", "failure"]
 
 event_categories("db-instance") := ["maintenance", "failure", "configuration change"]
 
+event_categories("db-parameter-group") := ["configuration change"]
+
 valid_event_categories(_, [])
 
 valid_event_categories(_, null)

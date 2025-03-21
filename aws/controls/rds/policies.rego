@@ -239,3 +239,17 @@ evaluate_rds_16(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds16",
 	}
 }
+
+evaluate_rds_17(plan) := {violation |
+	some subscription in utils.resources(plan, "aws_db_event_subscription")
+	subscription.configuration.source_type == "db-parameter-group"
+	not valid_event_subscription(subscription)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.17", "control_tower": "CT.RDS.PR.18"},
+		"reason": "Require an Amazon RDS event notification subscription to have critical database parameter group events configured",
+		"severity": "low",
+		"resource": subscription.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds16",
+	}
+}

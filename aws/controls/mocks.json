@@ -20001,6 +20001,1004 @@
           "errored": false
         }
       },
+      "17": {
+        "pass": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.pass.aws_db_event_subscription.default",
+                      "mode": "managed",
+                      "type": "aws_db_event_subscription",
+                      "name": "default",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "enabled": true,
+                        "event_categories": null,
+                        "source_ids": null,
+                        "source_type": "db-parameter-group",
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_db_event_subscription.empty_list",
+                      "mode": "managed",
+                      "type": "aws_db_event_subscription",
+                      "name": "empty_list",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "enabled": true,
+                        "event_categories": null,
+                        "source_ids": null,
+                        "source_type": "db-parameter-group",
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_db_event_subscription.explicit",
+                      "mode": "managed",
+                      "type": "aws_db_event_subscription",
+                      "name": "explicit",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "enabled": true,
+                        "event_categories": [
+                          "configuration change"
+                        ],
+                        "source_ids": null,
+                        "source_type": "db-parameter-group",
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "event_categories": [
+                          false
+                        ],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_db_event_subscription.other_source",
+                      "mode": "managed",
+                      "type": "aws_db_event_subscription",
+                      "name": "other_source",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "enabled": false,
+                        "event_categories": null,
+                        "source_ids": null,
+                        "source_type": "db-cluster",
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_sns_topic.topic",
+                      "mode": "managed",
+                      "type": "aws_sns_topic",
+                      "name": "topic",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "application_failure_feedback_role_arn": null,
+                        "application_success_feedback_role_arn": null,
+                        "application_success_feedback_sample_rate": null,
+                        "archive_policy": null,
+                        "content_based_deduplication": false,
+                        "delivery_policy": null,
+                        "display_name": null,
+                        "fifo_topic": false,
+                        "firehose_failure_feedback_role_arn": null,
+                        "firehose_success_feedback_role_arn": null,
+                        "firehose_success_feedback_sample_rate": null,
+                        "http_failure_feedback_role_arn": null,
+                        "http_success_feedback_role_arn": null,
+                        "http_success_feedback_sample_rate": null,
+                        "kms_master_key_id": null,
+                        "lambda_failure_feedback_role_arn": null,
+                        "lambda_success_feedback_role_arn": null,
+                        "lambda_success_feedback_sample_rate": null,
+                        "sqs_failure_feedback_role_arn": null,
+                        "sqs_success_feedback_role_arn": null,
+                        "sqs_success_feedback_sample_rate": null,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "tags_all": {}
+                      }
+                    }
+                  ],
+                  "address": "module.pass"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.pass.aws_db_event_subscription.default",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_db_event_subscription",
+              "name": "default",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "enabled": true,
+                  "event_categories": null,
+                  "source_ids": null,
+                  "source_type": "db-parameter-group",
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "customer_aws_id": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "sns_topic": true,
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_db_event_subscription.empty_list",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_db_event_subscription",
+              "name": "empty_list",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "enabled": true,
+                  "event_categories": null,
+                  "source_ids": null,
+                  "source_type": "db-parameter-group",
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "customer_aws_id": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "sns_topic": true,
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_db_event_subscription.explicit",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_db_event_subscription",
+              "name": "explicit",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "enabled": true,
+                  "event_categories": [
+                    "configuration change"
+                  ],
+                  "source_ids": null,
+                  "source_type": "db-parameter-group",
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "customer_aws_id": true,
+                  "event_categories": [
+                    false
+                  ],
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "sns_topic": true,
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "event_categories": [
+                    false
+                  ],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_db_event_subscription.other_source",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_db_event_subscription",
+              "name": "other_source",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "enabled": false,
+                  "event_categories": null,
+                  "source_ids": null,
+                  "source_type": "db-cluster",
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "customer_aws_id": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "sns_topic": true,
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_sns_topic.topic",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_sns_topic",
+              "name": "topic",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "application_failure_feedback_role_arn": null,
+                  "application_success_feedback_role_arn": null,
+                  "application_success_feedback_sample_rate": null,
+                  "archive_policy": null,
+                  "content_based_deduplication": false,
+                  "delivery_policy": null,
+                  "display_name": null,
+                  "fifo_topic": false,
+                  "firehose_failure_feedback_role_arn": null,
+                  "firehose_success_feedback_role_arn": null,
+                  "firehose_success_feedback_sample_rate": null,
+                  "http_failure_feedback_role_arn": null,
+                  "http_success_feedback_role_arn": null,
+                  "http_success_feedback_sample_rate": null,
+                  "kms_master_key_id": null,
+                  "lambda_failure_feedback_role_arn": null,
+                  "lambda_success_feedback_role_arn": null,
+                  "lambda_success_feedback_sample_rate": null,
+                  "sqs_failure_feedback_role_arn": null,
+                  "sqs_success_feedback_role_arn": null,
+                  "sqs_success_feedback_sample_rate": null,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "beginning_archive_time": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "owner": true,
+                  "policy": true,
+                  "signature_version": true,
+                  "tags_all": true,
+                  "tracing_config": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "tags_all": {}
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_db_event_subscription.disabled",
+                        "mode": "managed",
+                        "type": "aws_db_event_subscription",
+                        "name": "disabled",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled": {
+                            "constant_value": false
+                          },
+                          "event_categories": {
+                            "constant_value": [
+                              "configuration change"
+                            ]
+                          },
+                          "sns_topic": {
+                            "references": [
+                              "aws_sns_topic.topic.arn",
+                              "aws_sns_topic.topic"
+                            ]
+                          },
+                          "source_type": {
+                            "constant_value": "db-parameter-group"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_event_subscription.missing_configuration_change",
+                        "mode": "managed",
+                        "type": "aws_db_event_subscription",
+                        "name": "missing_configuration_change",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled": {
+                            "constant_value": true
+                          },
+                          "event_categories": {
+                            "constant_value": [
+                              "maintenance",
+                              "failure"
+                            ]
+                          },
+                          "sns_topic": {
+                            "references": [
+                              "aws_sns_topic.topic.arn",
+                              "aws_sns_topic.topic"
+                            ]
+                          },
+                          "source_type": {
+                            "constant_value": "db-parameter-group"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_sns_topic.topic",
+                        "mode": "managed",
+                        "type": "aws_sns_topic",
+                        "name": "topic",
+                        "provider_config_key": "aws",
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_db_event_subscription.default",
+                        "mode": "managed",
+                        "type": "aws_db_event_subscription",
+                        "name": "default",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled": {
+                            "constant_value": true
+                          },
+                          "sns_topic": {
+                            "references": [
+                              "aws_sns_topic.topic.arn",
+                              "aws_sns_topic.topic"
+                            ]
+                          },
+                          "source_type": {
+                            "constant_value": "db-parameter-group"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_event_subscription.empty_list",
+                        "mode": "managed",
+                        "type": "aws_db_event_subscription",
+                        "name": "empty_list",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled": {
+                            "constant_value": true
+                          },
+                          "event_categories": {
+                            "constant_value": []
+                          },
+                          "sns_topic": {
+                            "references": [
+                              "aws_sns_topic.topic.arn",
+                              "aws_sns_topic.topic"
+                            ]
+                          },
+                          "source_type": {
+                            "constant_value": "db-parameter-group"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_event_subscription.explicit",
+                        "mode": "managed",
+                        "type": "aws_db_event_subscription",
+                        "name": "explicit",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled": {
+                            "constant_value": true
+                          },
+                          "event_categories": {
+                            "constant_value": [
+                              "configuration change"
+                            ]
+                          },
+                          "sns_topic": {
+                            "references": [
+                              "aws_sns_topic.topic.arn",
+                              "aws_sns_topic.topic"
+                            ]
+                          },
+                          "source_type": {
+                            "constant_value": "db-parameter-group"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_event_subscription.other_source",
+                        "mode": "managed",
+                        "type": "aws_db_event_subscription",
+                        "name": "other_source",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled": {
+                            "constant_value": false
+                          },
+                          "sns_topic": {
+                            "references": [
+                              "aws_sns_topic.topic.arn",
+                              "aws_sns_topic.topic"
+                            ]
+                          },
+                          "source_type": {
+                            "constant_value": "db-cluster"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_sns_topic.topic",
+                        "mode": "managed",
+                        "type": "aws_sns_topic",
+                        "name": "topic",
+                        "provider_config_key": "aws",
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "relevant_attributes": [
+            {
+              "resource": "module.pass.aws_sns_topic.topic",
+              "attribute": [
+                "arn"
+              ]
+            }
+          ],
+          "timestamp": "2025-03-21T14:12:30Z",
+          "errored": false
+        },
+        "fail": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.fail.aws_db_event_subscription.disabled",
+                      "mode": "managed",
+                      "type": "aws_db_event_subscription",
+                      "name": "disabled",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "enabled": false,
+                        "event_categories": [
+                          "configuration change"
+                        ],
+                        "source_ids": null,
+                        "source_type": "db-parameter-group",
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "event_categories": [
+                          false
+                        ],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_db_event_subscription.missing_configuration_change",
+                      "mode": "managed",
+                      "type": "aws_db_event_subscription",
+                      "name": "missing_configuration_change",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "enabled": true,
+                        "event_categories": [
+                          "failure",
+                          "maintenance"
+                        ],
+                        "source_ids": null,
+                        "source_type": "db-parameter-group",
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "event_categories": [
+                          false,
+                          false
+                        ],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_sns_topic.topic",
+                      "mode": "managed",
+                      "type": "aws_sns_topic",
+                      "name": "topic",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "application_failure_feedback_role_arn": null,
+                        "application_success_feedback_role_arn": null,
+                        "application_success_feedback_sample_rate": null,
+                        "archive_policy": null,
+                        "content_based_deduplication": false,
+                        "delivery_policy": null,
+                        "display_name": null,
+                        "fifo_topic": false,
+                        "firehose_failure_feedback_role_arn": null,
+                        "firehose_success_feedback_role_arn": null,
+                        "firehose_success_feedback_sample_rate": null,
+                        "http_failure_feedback_role_arn": null,
+                        "http_success_feedback_role_arn": null,
+                        "http_success_feedback_sample_rate": null,
+                        "kms_master_key_id": null,
+                        "lambda_failure_feedback_role_arn": null,
+                        "lambda_success_feedback_role_arn": null,
+                        "lambda_success_feedback_sample_rate": null,
+                        "sqs_failure_feedback_role_arn": null,
+                        "sqs_success_feedback_role_arn": null,
+                        "sqs_success_feedback_sample_rate": null,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "tags_all": {}
+                      }
+                    }
+                  ],
+                  "address": "module.fail"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.fail.aws_db_event_subscription.disabled",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_event_subscription",
+              "name": "disabled",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "enabled": false,
+                  "event_categories": [
+                    "configuration change"
+                  ],
+                  "source_ids": null,
+                  "source_type": "db-parameter-group",
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "customer_aws_id": true,
+                  "event_categories": [
+                    false
+                  ],
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "sns_topic": true,
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "event_categories": [
+                    false
+                  ],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_db_event_subscription.missing_configuration_change",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_db_event_subscription",
+              "name": "missing_configuration_change",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "enabled": true,
+                  "event_categories": [
+                    "failure",
+                    "maintenance"
+                  ],
+                  "source_ids": null,
+                  "source_type": "db-parameter-group",
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "customer_aws_id": true,
+                  "event_categories": [
+                    false,
+                    false
+                  ],
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "sns_topic": true,
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "event_categories": [
+                    false,
+                    false
+                  ],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_sns_topic.topic",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_sns_topic",
+              "name": "topic",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "application_failure_feedback_role_arn": null,
+                  "application_success_feedback_role_arn": null,
+                  "application_success_feedback_sample_rate": null,
+                  "archive_policy": null,
+                  "content_based_deduplication": false,
+                  "delivery_policy": null,
+                  "display_name": null,
+                  "fifo_topic": false,
+                  "firehose_failure_feedback_role_arn": null,
+                  "firehose_success_feedback_role_arn": null,
+                  "firehose_success_feedback_sample_rate": null,
+                  "http_failure_feedback_role_arn": null,
+                  "http_success_feedback_role_arn": null,
+                  "http_success_feedback_sample_rate": null,
+                  "kms_master_key_id": null,
+                  "lambda_failure_feedback_role_arn": null,
+                  "lambda_success_feedback_role_arn": null,
+                  "lambda_success_feedback_sample_rate": null,
+                  "sqs_failure_feedback_role_arn": null,
+                  "sqs_success_feedback_role_arn": null,
+                  "sqs_success_feedback_sample_rate": null,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "beginning_archive_time": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "owner": true,
+                  "policy": true,
+                  "signature_version": true,
+                  "tags_all": true,
+                  "tracing_config": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "tags_all": {}
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_db_event_subscription.disabled",
+                        "mode": "managed",
+                        "type": "aws_db_event_subscription",
+                        "name": "disabled",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled": {
+                            "constant_value": false
+                          },
+                          "event_categories": {
+                            "constant_value": [
+                              "configuration change"
+                            ]
+                          },
+                          "sns_topic": {
+                            "references": [
+                              "aws_sns_topic.topic.arn",
+                              "aws_sns_topic.topic"
+                            ]
+                          },
+                          "source_type": {
+                            "constant_value": "db-parameter-group"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_event_subscription.missing_configuration_change",
+                        "mode": "managed",
+                        "type": "aws_db_event_subscription",
+                        "name": "missing_configuration_change",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled": {
+                            "constant_value": true
+                          },
+                          "event_categories": {
+                            "constant_value": [
+                              "maintenance",
+                              "failure"
+                            ]
+                          },
+                          "sns_topic": {
+                            "references": [
+                              "aws_sns_topic.topic.arn",
+                              "aws_sns_topic.topic"
+                            ]
+                          },
+                          "source_type": {
+                            "constant_value": "db-parameter-group"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_sns_topic.topic",
+                        "mode": "managed",
+                        "type": "aws_sns_topic",
+                        "name": "topic",
+                        "provider_config_key": "aws",
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_db_event_subscription.default",
+                        "mode": "managed",
+                        "type": "aws_db_event_subscription",
+                        "name": "default",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled": {
+                            "constant_value": true
+                          },
+                          "sns_topic": {
+                            "references": [
+                              "aws_sns_topic.topic.arn",
+                              "aws_sns_topic.topic"
+                            ]
+                          },
+                          "source_type": {
+                            "constant_value": "db-parameter-group"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_event_subscription.empty_list",
+                        "mode": "managed",
+                        "type": "aws_db_event_subscription",
+                        "name": "empty_list",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled": {
+                            "constant_value": true
+                          },
+                          "event_categories": {
+                            "constant_value": []
+                          },
+                          "sns_topic": {
+                            "references": [
+                              "aws_sns_topic.topic.arn",
+                              "aws_sns_topic.topic"
+                            ]
+                          },
+                          "source_type": {
+                            "constant_value": "db-parameter-group"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_event_subscription.explicit",
+                        "mode": "managed",
+                        "type": "aws_db_event_subscription",
+                        "name": "explicit",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled": {
+                            "constant_value": true
+                          },
+                          "event_categories": {
+                            "constant_value": [
+                              "configuration change"
+                            ]
+                          },
+                          "sns_topic": {
+                            "references": [
+                              "aws_sns_topic.topic.arn",
+                              "aws_sns_topic.topic"
+                            ]
+                          },
+                          "source_type": {
+                            "constant_value": "db-parameter-group"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_db_event_subscription.other_source",
+                        "mode": "managed",
+                        "type": "aws_db_event_subscription",
+                        "name": "other_source",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled": {
+                            "constant_value": false
+                          },
+                          "sns_topic": {
+                            "references": [
+                              "aws_sns_topic.topic.arn",
+                              "aws_sns_topic.topic"
+                            ]
+                          },
+                          "source_type": {
+                            "constant_value": "db-cluster"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_sns_topic.topic",
+                        "mode": "managed",
+                        "type": "aws_sns_topic",
+                        "name": "topic",
+                        "provider_config_key": "aws",
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "relevant_attributes": [
+            {
+              "resource": "module.fail.aws_sns_topic.topic",
+              "attribute": [
+                "arn"
+              ]
+            }
+          ],
+          "timestamp": "2025-03-21T14:12:33Z",
+          "errored": false
+        }
+      },
       "2": {
         "pass": {
           "format_version": "1.2",
