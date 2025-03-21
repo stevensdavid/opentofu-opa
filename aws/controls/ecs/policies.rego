@@ -4,7 +4,7 @@ import data.utils
 
 import rego.v1
 
-fargate_uses_latest_version(plan) := {rule |
+evaluate_ecs_1(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_service")
 	resource.configuration.launch_type == "FARGATE"
 	resource.configuration.platform_version != "LATEST"
@@ -16,7 +16,7 @@ fargate_uses_latest_version(plan) := {rule |
 	}
 }
 
-clusters_enable_container_insights(plan) := {rule |
+evaluate_ecs_2(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_cluster")
 	cluster_insights_is_disabled(resource.configuration)
 	rule := {
@@ -27,7 +27,7 @@ clusters_enable_container_insights(plan) := {rule |
 	}
 }
 
-task_definitions_should_not_run_as_root(plan) := {rule |
+evaluate_ecs_3(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_task_definition")
 	some container in json.unmarshal(resource.configuration.container_definitions)
 	is_root_user(container)
@@ -38,7 +38,7 @@ task_definitions_should_not_run_as_root(plan) := {rule |
 	}
 }
 
-tasks_use_awsvpc_network_mode(plan) := {rule |
+evaluate_ecs_4(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_task_definition")
 	task_doesnt_use_awsvpc(resource)
 	rule := {
@@ -49,7 +49,7 @@ tasks_use_awsvpc_network_mode(plan) := {rule |
 	}
 }
 
-task_containers_have_logging_configurations(plan) := {rule |
+evaluate_ecs_5(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_task_definition")
 	some container in json.unmarshal(resource.configuration.container_definitions)
 	not container.logConfiguration
@@ -61,7 +61,7 @@ task_containers_have_logging_configurations(plan) := {rule |
 	}
 }
 
-task_containers_have_read_only_root_filesystems(plan) := {rule |
+evaluate_ecs_6(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_task_definition")
 	some container in json.unmarshal(resource.configuration.container_definitions)
 	not container.readonlyRootFilesystem
@@ -73,7 +73,7 @@ task_containers_have_read_only_root_filesystems(plan) := {rule |
 	}
 }
 
-task_containers_specify_memory_usage_limits(plan) := {rule |
+evaluate_ecs_7(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_task_definition")
 	some container in json.unmarshal(resource.configuration.container_definitions)
 	not container.memory
@@ -85,7 +85,7 @@ task_containers_specify_memory_usage_limits(plan) := {rule |
 	}
 }
 
-task_definitions_have_secure_networking_modes_and_user_definitions(plan) := {rule |
+evaluate_ecs_8(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_task_definition")
 	resource.configuration.network_mode == "host"
 	some container in json.unmarshal(resource.configuration.container_definitions)
@@ -99,7 +99,7 @@ task_definitions_have_secure_networking_modes_and_user_definitions(plan) := {rul
 	}
 }
 
-services_should_not_have_public_ips(plan) := {rule |
+evaluate_ecs_9(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_service")
 	some network in resource.configuration.network_configuration
 	network.assign_public_ip == true
@@ -111,7 +111,7 @@ services_should_not_have_public_ips(plan) := {rule |
 	}
 }
 
-tasks_should_not_use_hosts_process_namespace(plan) := {rule |
+evaluate_ecs_10(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_task_definition")
 	resource.configuration.pid_mode == "host"
 	rule := {
@@ -122,7 +122,7 @@ tasks_should_not_use_hosts_process_namespace(plan) := {rule |
 	}
 }
 
-tasks_should_run_as_non_privileged(plan) := {rule |
+evaluate_ecs_11(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_task_definition")
 	some container in json.unmarshal(resource.configuration.container_definitions)
 	container.privileged
@@ -134,7 +134,7 @@ tasks_should_run_as_non_privileged(plan) := {rule |
 	}
 }
 
-tasks_do_not_pass_secrets_in_environment_variables(plan) := {rule |
+evaluate_ecs_12(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_task_definition")
 	some container in json.unmarshal(resource.configuration.container_definitions)
 	some variable in container.environment
@@ -147,7 +147,7 @@ tasks_do_not_pass_secrets_in_environment_variables(plan) := {rule |
 	}
 }
 
-task_sets_should_not_have_public_ips(plan) := {rule |
+evaluate_ecs_13(plan) := {rule |
 	some resource in utils.resources(plan, "aws_ecs_task_set")
 	some network in resource.configuration.network_configuration
 	network.assign_public_ip == true
