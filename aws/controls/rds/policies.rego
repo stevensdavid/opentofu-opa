@@ -271,7 +271,7 @@ evaluate_rds_20(plan) := {violation |
 	cluster.configuration.master_username in {"admin", "postgres"}
 
 	violation := {
-		"id": {"opa": "aws.controls.rds.20"},
+		"id": {"opa": "aws.controls.rds.20", "control_tower": "CT.RDS.PR.21"},
 		"reason": "Require an Amazon RDS DB cluster to have a unique administrator username",
 		"severity": "medium",
 		"resource": cluster.address,
@@ -284,7 +284,7 @@ evaluate_rds_21(plan) := {violation |
 	instance.configuration.username in {"admin", "postgres"}
 
 	violation := {
-		"id": {"opa": "aws.controls.rds.21"},
+		"id": {"opa": "aws.controls.rds.21", "control_tower": "CT.RDS.PR.22"},
 		"reason": "Require an Amazon RDS database instance to have a unique administrator username",
 		"resource": instance.address,
 		"severity": "medium",
@@ -296,7 +296,7 @@ evaluate_rds_22(plan) := {violation |
 	some instance in utils.resources(plan, "aws_db_instance")
 	instance.configuration.publicly_accessible
 	violation := {
-		"id": {"opa": "aws.controls.rds.22"},
+		"id": {"opa": "aws.controls.rds.22", "control_tower": "CT.RDS.PR.23"},
 		"reason": "Require an Amazon RDS database instance to not be publicly accessible",
 		"severity": "critical",
 		"resource": instance.address,
