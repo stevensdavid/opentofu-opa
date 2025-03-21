@@ -35,6 +35,8 @@ test_${function_name}_valid_input if count(${service}.$function_name(controls.mo
 test_${function_name}_invalid_input if count(${service}.$function_name(controls.mocks.${service}["$control_number"].fail)) == 1
 EOF
 
+docs_link="https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrols${service}${control_number}"
+
 cat <<EOF >>"../${service}/policies.rego"
 
 $function_name(plan) := {violation |
@@ -44,6 +46,7 @@ $function_name(plan) := {violation |
 		"id": {"opa": "$control_id"},
 		"reason": "",
 		"resource": resource.address,
+		"docs": "$docs_link",
 	}
 }
 EOF
