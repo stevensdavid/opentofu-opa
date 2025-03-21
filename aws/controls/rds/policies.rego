@@ -343,3 +343,18 @@ evaluate_rds_25(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds25",
 	}
 }
+
+evaluate_rds_26(plan) := {violation |
+	some group in utils.resources(plan, "aws_rds_cluster_parameter_group")
+	group.configuration.family in {"aurora-mysql", "aurora-postgresql", "mysql", "postgres"}
+
+	not parameter_group_requires_tls(group.configuration)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.26"},
+		"reason": "Require an Amazon Relational Database Service DB cluster parameter group to require Transport Layer Security (TLS) connections for supported engine types",
+		"resource": group.address,
+		"severity": "medium",
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds26",
+	}
+}

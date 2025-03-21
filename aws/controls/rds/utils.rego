@@ -151,3 +151,17 @@ uses_default_port(instance) if {
 }
 
 uses_default_port(instance) if not instance.port
+
+parameter_group_requires_tls(group) if {
+	group.family in {"mysql", "aurora-mysql"}
+	some parameter in group.parameter
+	parameter.name == "require_secure_transport"
+	parameter.value == "ON"
+}
+
+parameter_group_requires_tls(group) if {
+	group.family in {"postgres", "aurora-postgresql"}
+	some parameter in group.parameter
+	parameter.name == "rds.force_ssl"
+	parameter.value == "true"
+}
