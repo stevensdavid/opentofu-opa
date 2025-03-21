@@ -52,3 +52,14 @@ test_all_rules_have_id if {
 		}
 	}
 }
+
+test_all_rules_have_docs_link if {
+	every service in object.keys(controls.mocks) {
+		every rule_id in object.keys(controls.mocks[service]) {
+			denies := controls.evaluate_all(controls.mocks[service][rule_id].fail)
+			every deny in denies {
+				deny.docs
+			}
+		}
+	}
+}

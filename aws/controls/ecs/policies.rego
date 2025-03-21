@@ -13,6 +13,7 @@ evaluate_ecs_1(plan) := {rule |
 		"severity": "medium",
 		"reason": "Require Amazon ECS Fargate Services to run on the latest Fargate platform version",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsecs1",
 	}
 }
 
@@ -24,6 +25,7 @@ evaluate_ecs_2(plan) := {rule |
 		"severity": "medium",
 		"reason": "Require any Amazon ECS cluster to have container insights activated",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsecs2",
 	}
 }
 
@@ -35,6 +37,7 @@ evaluate_ecs_3(plan) := {rule |
 		"id": {"control_tower": "CT.ECS.PR.3", "opa": "aws.controls.ecs.3"},
 		"severity": "high",
 		"reason": "Require any Amazon ECS task definition to specify a user that is not the root",
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsecs3",
 	}
 }
 
@@ -46,6 +49,7 @@ evaluate_ecs_4(plan) := {rule |
 		"severity": "high",
 		"reason": "Require Amazon ECS tasks to use 'awsvpc' networking mode",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsecs4",
 	}
 }
 
@@ -58,6 +62,7 @@ evaluate_ecs_5(plan) := {rule |
 		"severity": "high",
 		"reason": "Require an active Amazon ECS task definition to have a logging configuration",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsecs5",
 	}
 }
 
@@ -70,6 +75,7 @@ evaluate_ecs_6(plan) := {rule |
 		"severity": "high",
 		"reason": "Require Amazon ECS containers to allow read-only access to the root filesystem",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsecs6",
 	}
 }
 
@@ -82,6 +88,7 @@ evaluate_ecs_7(plan) := {rule |
 		"severity": "high",
 		"reason": "Require an Amazon ECS task definition to have a specific memory usage limit",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsecs7",
 	}
 }
 
@@ -96,6 +103,7 @@ evaluate_ecs_8(plan) := {rule |
 		"severity": "high",
 		"reason": "Require Amazon ECS task definitions to have secure networking modes and user definitions",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsecs8",
 	}
 }
 
@@ -108,6 +116,7 @@ evaluate_ecs_9(plan) := {rule |
 		"severity": "high",
 		"reason": "Require Amazon ECS services not to assign public IP addresses automatically",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsecs9",
 	}
 }
 
@@ -119,6 +128,7 @@ evaluate_ecs_10(plan) := {rule |
 		"severity": "high",
 		"reason": "Require that Amazon ECS task definitions do not share the host's process namespace",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsecs10",
 	}
 }
 
@@ -131,6 +141,7 @@ evaluate_ecs_11(plan) := {rule |
 		"severity": "high",
 		"reason": "Require an Amazon ECS container to run as non-privileged",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsecs11",
 	}
 }
 
@@ -144,6 +155,7 @@ evaluate_ecs_12(plan) := {rule |
 		"severity": "high",
 		"reason": "Require that Amazon ECS task definitions do not pass secrets as container environment variables",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsecs12",
 	}
 }
 
@@ -156,5 +168,6 @@ evaluate_ecs_13(plan) := {rule |
 		"reason": "Require that ECS task sets do not automatically assign public IP addresses",
 		"severity": "high",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsecs13",
 	}
 }

@@ -12,6 +12,7 @@ evaluate_rds_1(plan) := {violation |
 		"severity": "medium",
 		"reason": "Require that an Amazon RDS database instance is configured with multiple Availability Zones",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds1",
 	}
 }
 
@@ -42,6 +43,7 @@ evaluate_rds_2(plan) := {violation |
 		"severity": "low",
 		"reason": "Require an Amazon RDS database instance or cluster to have enhanced monitoring configured",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds2",
 	}
 }
 
@@ -54,6 +56,7 @@ evaluate_rds_3(plan) := {violation |
 		"severity": "low",
 		"reason": "Require an Amazon RDS cluster to have deletion protection configured",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds3",
 	}
 }
 
@@ -67,6 +70,7 @@ evaluate_rds_4(plan) := {violation |
 		"severity": "medium",
 		"reason": "Require an Amazon RDS database cluster to have AWS IAM database authentication configured",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds4",
 	}
 }
 
@@ -80,6 +84,7 @@ evaluate_rds_5(plan) := {violation |
 		"severity": "high",
 		"reason": "Require an Amazon RDS database instance to have minor version upgrades configured",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds5",
 	}
 }
 
@@ -93,6 +98,7 @@ evaluate_rds_6(plan) := {violation |
 		"severity": "medium",
 		"reason": "Require an Amazon RDS database cluster to have backtracking configured",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds6",
 	}
 }
 
@@ -106,6 +112,7 @@ evaluate_rds_7(plan) := {violation |
 		"severity": "medium",
 		"reason": "Require Amazon RDS database instances to have IAM authentication configured",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds7",
 	}
 }
 
@@ -118,6 +125,7 @@ evaluate_rds_8(plan) := {violation |
 		"severity": "medium",
 		"reason": "Require an Amazon RDS database instance to have automatic backups configured",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds8",
 	}
 }
 
@@ -131,6 +139,7 @@ evaluate_rds_9(plan) := {violation |
 		"severity": "low",
 		"reason": "Require an Amazon RDS database cluster to copy tags to snapshots",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds9",
 	}
 }
 
@@ -144,6 +153,7 @@ evaluate_rds_10(plan) := {violation |
 		"reason": "Require an Amazon RDS database instance to copy tags to snapshots",
 		"severity": "low",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds10",
 	}
 }
 
@@ -157,6 +167,7 @@ evaluate_rds_11(plan) := {violation |
 		"severity": "high",
 		"reason": "Require an Amazon RDS database instance to have a VPC configuration",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds11",
 	}
 }
 
@@ -169,6 +180,7 @@ evaluate_rds_12(plan) := {violation |
 		"reason": "Require an Amazon RDS event subscription to have critical cluster events configured",
 		"severity": "low",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds12",
 	}
 }
 
@@ -182,5 +194,6 @@ evaluate_rds_13(plan) := {violation |
 		"severity": "low",
 		"reason": "Require any Amazon RDS instance to have deletion protection configured",
 		"resource": resource.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds13",
 	}
 }
