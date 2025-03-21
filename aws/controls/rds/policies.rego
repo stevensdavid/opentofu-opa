@@ -171,3 +171,16 @@ evaluate_rds_12(plan) := {violation |
 		"resource": resource.address,
 	}
 }
+
+evaluate_rds_13(plan) := {violation |
+	some resource in utils.resources(plan, "aws_db_instance")
+	standard_engine(resource.configuration.engine)
+	utils.null_or_false(resource.configuration.deletion_protection)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.13", "control_tower": "CT.RDS.PR.13"},
+		"severity": "low",
+		"reason": "Require any Amazon RDS instance to have deletion protection configured",
+		"resource": resource.address,
+	}
+}
