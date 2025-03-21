@@ -197,3 +197,17 @@ evaluate_rds_13(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds13",
 	}
 }
+
+evaluate_rds_14(plan) := {violation |
+	some instance in utils.resources(plan, "aws_db_instance")
+	standard_engine(instance.configuration.engine)
+	not valid_log_configuration(instance)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.14", "control_tower": "CT.RDS.PR.14"},
+		"reason": "Require an Amazon RDS database instance to export logs to Amazon CloudWatch Logs by means of the EnableCloudwatchLogsExports property",
+		"resource": instance.address,
+		"severity": "medium",
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds14",
+	}
+}

@@ -72,3 +72,37 @@ valid_event_subscription(resource) if {
 	resource.configuration.enabled != false
 	valid_event_categories(resource.configuration.event_categories)
 }
+
+supported_log_types(engine) := log_types if {
+	engine in {"mysql", "mariadb"}
+	log_types := ["audit", "error", "general", "slowquery"]
+}
+
+supported_log_types(engine) := log_types if {
+	engine == "postgres"
+	log_types := ["postgresql", "upgrade"]
+}
+
+supported_log_types(engine) := log_types if {
+	engine in {"sqlserver-ee", "sqlserver-se", "sqlserver-ex", "sqlserver-web"}
+	log_types := ["agent", "error"]
+}
+
+supported_log_types(engine) := log_types if {
+	engine in {"oracle-ee", "oracle-se2", "oracle-ee-cdb", "oracle-se2-cdb"}
+	log_types := ["alert", "audit", "listener", "oemagent", "trace"]
+}
+
+includes_all_log_types(resource) if {
+	every log_type in supported_log_types(resource.configuration.engine) {
+		log_type in resource.configuration.enabled_cloudwatch_logs_exports
+	}
+	every log_type in resource.configuration.enabled_cloudwatch_logs_exports {
+		log_type in supported_log_types(resource.configuration.engine)
+	}
+}
+
+valid_log_configuration(resource) if {
+	resource.configuration.enabled_cloudwatch_logs_exports
+	includes_all_log_types(resource)
+}
