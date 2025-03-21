@@ -265,3 +265,16 @@ evaluate_rds_19(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds19",
 	}
 }
+
+evaluate_rds_20(plan) := {violation |
+	some cluster in utils.resources(plan, "aws_rds_cluster")
+	cluster.configuration.master_username in {"admin", "postgres"}
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.20"},
+		"reason": "Require an Amazon RDS DB cluster to have a unique administrator username",
+		"severity": "medium",
+		"resource": cluster.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds20",
+	}
+}
