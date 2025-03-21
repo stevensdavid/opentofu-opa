@@ -58,19 +58,24 @@ invalid_backup_retention_period(instance) if {
 	not instance.backup_retention_period
 }
 
-# Used in aws.controls.rds.12
-valid_event_categories([])
+# Used in aws.controls.rds.12 and aws.controls.rds.16
+event_categories("db-cluster") := ["maintenance", "failure"]
 
-valid_event_categories(null)
+event_categories("db-instance") := ["maintenance", "failure", "configuration change"]
 
-valid_event_categories(categories) if {
-	"maintenance" in categories
-	"failure" in categories
+valid_event_categories(_, [])
+
+valid_event_categories(_, null)
+
+valid_event_categories(source_type, categories) if {
+	every category in event_categories(source_type) {
+		category in categories
+	}
 }
 
 valid_event_subscription(resource) if {
 	resource.configuration.enabled != false
-	valid_event_categories(resource.configuration.event_categories)
+	valid_event_categories(resource.configuration.source_type, resource.configuration.event_categories)
 }
 
 supported_log_types(engine) := log_types if {
