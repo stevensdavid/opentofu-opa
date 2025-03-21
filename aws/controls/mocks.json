@@ -31633,6 +31633,2043 @@
           "errored": false
         }
       },
+      "24": {
+        "pass": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.pass.aws_rds_cluster.all_aurora_postgres_log_types[\"aurora-postgresql\"]",
+                      "mode": "managed",
+                      "type": "aws_rds_cluster",
+                      "name": "all_aurora_postgres_log_types",
+                      "index": "aurora-postgresql",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 1,
+                      "values": {
+                        "allow_major_version_upgrade": null,
+                        "backtrack_window": null,
+                        "copy_tags_to_snapshot": false,
+                        "db_cluster_instance_class": null,
+                        "db_instance_parameter_group_name": null,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_iam_role_name": null,
+                        "enable_global_write_forwarding": false,
+                        "enable_http_endpoint": false,
+                        "enable_local_write_forwarding": false,
+                        "enabled_cloudwatch_logs_exports": [
+                          "postgresql"
+                        ],
+                        "engine": "aurora-postgresql",
+                        "engine_mode": "provisioned",
+                        "final_snapshot_identifier": null,
+                        "global_cluster_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "iops": null,
+                        "manage_master_user_password": null,
+                        "master_password": null,
+                        "master_password_wo": null,
+                        "master_password_wo_version": null,
+                        "performance_insights_enabled": null,
+                        "replication_source_identifier": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "skip_final_snapshot": false,
+                        "snapshot_identifier": null,
+                        "source_region": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "availability_zones": [],
+                        "cluster_members": [],
+                        "enabled_cloudwatch_logs_exports": [
+                          false
+                        ],
+                        "iam_roles": [],
+                        "master_password": true,
+                        "master_password_wo": true,
+                        "master_user_secret": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_rds_cluster.all_mysql_log_types[\"aurora-mysql\"]",
+                      "mode": "managed",
+                      "type": "aws_rds_cluster",
+                      "name": "all_mysql_log_types",
+                      "index": "aurora-mysql",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 1,
+                      "values": {
+                        "allow_major_version_upgrade": null,
+                        "backtrack_window": null,
+                        "copy_tags_to_snapshot": false,
+                        "db_cluster_instance_class": null,
+                        "db_instance_parameter_group_name": null,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_iam_role_name": null,
+                        "enable_global_write_forwarding": false,
+                        "enable_http_endpoint": false,
+                        "enable_local_write_forwarding": false,
+                        "enabled_cloudwatch_logs_exports": [
+                          "audit",
+                          "error",
+                          "general",
+                          "slowquery"
+                        ],
+                        "engine": "aurora-mysql",
+                        "engine_mode": "provisioned",
+                        "final_snapshot_identifier": null,
+                        "global_cluster_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "iops": null,
+                        "manage_master_user_password": null,
+                        "master_password": null,
+                        "master_password_wo": null,
+                        "master_password_wo_version": null,
+                        "performance_insights_enabled": null,
+                        "replication_source_identifier": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "skip_final_snapshot": false,
+                        "snapshot_identifier": null,
+                        "source_region": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "availability_zones": [],
+                        "cluster_members": [],
+                        "enabled_cloudwatch_logs_exports": [
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "iam_roles": [],
+                        "master_password": true,
+                        "master_password_wo": true,
+                        "master_user_secret": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_rds_cluster.all_mysql_log_types[\"mysql\"]",
+                      "mode": "managed",
+                      "type": "aws_rds_cluster",
+                      "name": "all_mysql_log_types",
+                      "index": "mysql",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 1,
+                      "values": {
+                        "allow_major_version_upgrade": null,
+                        "backtrack_window": null,
+                        "copy_tags_to_snapshot": false,
+                        "db_cluster_instance_class": null,
+                        "db_instance_parameter_group_name": null,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_iam_role_name": null,
+                        "enable_global_write_forwarding": false,
+                        "enable_http_endpoint": false,
+                        "enable_local_write_forwarding": false,
+                        "enabled_cloudwatch_logs_exports": [
+                          "audit",
+                          "error",
+                          "general",
+                          "slowquery"
+                        ],
+                        "engine": "mysql",
+                        "engine_mode": "provisioned",
+                        "final_snapshot_identifier": null,
+                        "global_cluster_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "iops": null,
+                        "manage_master_user_password": null,
+                        "master_password": null,
+                        "master_password_wo": null,
+                        "master_password_wo_version": null,
+                        "performance_insights_enabled": null,
+                        "replication_source_identifier": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "skip_final_snapshot": false,
+                        "snapshot_identifier": null,
+                        "source_region": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "availability_zones": [],
+                        "cluster_members": [],
+                        "enabled_cloudwatch_logs_exports": [
+                          false,
+                          false,
+                          false,
+                          false
+                        ],
+                        "iam_roles": [],
+                        "master_password": true,
+                        "master_password_wo": true,
+                        "master_user_secret": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_rds_cluster.all_postgres_log_types[\"postgres\"]",
+                      "mode": "managed",
+                      "type": "aws_rds_cluster",
+                      "name": "all_postgres_log_types",
+                      "index": "postgres",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 1,
+                      "values": {
+                        "allow_major_version_upgrade": null,
+                        "backtrack_window": null,
+                        "copy_tags_to_snapshot": false,
+                        "db_cluster_instance_class": null,
+                        "db_instance_parameter_group_name": null,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_iam_role_name": null,
+                        "enable_global_write_forwarding": false,
+                        "enable_http_endpoint": false,
+                        "enable_local_write_forwarding": false,
+                        "enabled_cloudwatch_logs_exports": [
+                          "postgresql",
+                          "upgrade"
+                        ],
+                        "engine": "postgres",
+                        "engine_mode": "provisioned",
+                        "final_snapshot_identifier": null,
+                        "global_cluster_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "iops": null,
+                        "manage_master_user_password": null,
+                        "master_password": null,
+                        "master_password_wo": null,
+                        "master_password_wo_version": null,
+                        "performance_insights_enabled": null,
+                        "replication_source_identifier": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "skip_final_snapshot": false,
+                        "snapshot_identifier": null,
+                        "source_region": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "availability_zones": [],
+                        "cluster_members": [],
+                        "enabled_cloudwatch_logs_exports": [
+                          false,
+                          false
+                        ],
+                        "iam_roles": [],
+                        "master_password": true,
+                        "master_password_wo": true,
+                        "master_user_secret": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_rds_cluster.unsupported_engine",
+                      "mode": "managed",
+                      "type": "aws_rds_cluster",
+                      "name": "unsupported_engine",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 1,
+                      "values": {
+                        "allow_major_version_upgrade": null,
+                        "backtrack_window": null,
+                        "copy_tags_to_snapshot": false,
+                        "db_cluster_instance_class": null,
+                        "db_instance_parameter_group_name": null,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_iam_role_name": null,
+                        "enable_global_write_forwarding": false,
+                        "enable_http_endpoint": false,
+                        "enable_local_write_forwarding": false,
+                        "enabled_cloudwatch_logs_exports": null,
+                        "engine": "custom-sqlserver-ee",
+                        "engine_mode": "provisioned",
+                        "final_snapshot_identifier": null,
+                        "global_cluster_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "iops": null,
+                        "manage_master_user_password": null,
+                        "master_password": null,
+                        "master_password_wo": null,
+                        "master_password_wo_version": null,
+                        "performance_insights_enabled": null,
+                        "replication_source_identifier": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "skip_final_snapshot": false,
+                        "snapshot_identifier": null,
+                        "source_region": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "availability_zones": [],
+                        "cluster_members": [],
+                        "iam_roles": [],
+                        "master_password": true,
+                        "master_password_wo": true,
+                        "master_user_secret": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    }
+                  ],
+                  "address": "module.pass"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.pass.aws_rds_cluster.all_aurora_postgres_log_types[\"aurora-postgresql\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_rds_cluster",
+              "name": "all_aurora_postgres_log_types",
+              "index": "aurora-postgresql",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allow_major_version_upgrade": null,
+                  "backtrack_window": null,
+                  "copy_tags_to_snapshot": false,
+                  "db_cluster_instance_class": null,
+                  "db_instance_parameter_group_name": null,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_iam_role_name": null,
+                  "enable_global_write_forwarding": false,
+                  "enable_http_endpoint": false,
+                  "enable_local_write_forwarding": false,
+                  "enabled_cloudwatch_logs_exports": [
+                    "postgresql"
+                  ],
+                  "engine": "aurora-postgresql",
+                  "engine_mode": "provisioned",
+                  "final_snapshot_identifier": null,
+                  "global_cluster_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "iops": null,
+                  "manage_master_user_password": null,
+                  "master_password": null,
+                  "master_password_wo": null,
+                  "master_password_wo_version": null,
+                  "performance_insights_enabled": null,
+                  "replication_source_identifier": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "skip_final_snapshot": false,
+                  "snapshot_identifier": null,
+                  "source_region": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "allocated_storage": true,
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zones": true,
+                  "backup_retention_period": true,
+                  "ca_certificate_identifier": true,
+                  "ca_certificate_valid_till": true,
+                  "cluster_identifier": true,
+                  "cluster_identifier_prefix": true,
+                  "cluster_members": true,
+                  "cluster_resource_id": true,
+                  "cluster_scalability_type": true,
+                  "database_insights_mode": true,
+                  "database_name": true,
+                  "db_cluster_parameter_group_name": true,
+                  "db_subnet_group_name": true,
+                  "db_system_id": true,
+                  "enabled_cloudwatch_logs_exports": [
+                    false
+                  ],
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "iam_roles": true,
+                  "id": true,
+                  "kms_key_id": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "master_username": true,
+                  "monitoring_interval": true,
+                  "monitoring_role_arn": true,
+                  "network_type": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "preferred_backup_window": true,
+                  "preferred_maintenance_window": true,
+                  "reader_endpoint": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "storage_encrypted": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "availability_zones": [],
+                  "cluster_members": [],
+                  "enabled_cloudwatch_logs_exports": [
+                    false
+                  ],
+                  "iam_roles": [],
+                  "master_password": true,
+                  "master_password_wo": true,
+                  "master_user_secret": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_rds_cluster.all_mysql_log_types[\"aurora-mysql\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_rds_cluster",
+              "name": "all_mysql_log_types",
+              "index": "aurora-mysql",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allow_major_version_upgrade": null,
+                  "backtrack_window": null,
+                  "copy_tags_to_snapshot": false,
+                  "db_cluster_instance_class": null,
+                  "db_instance_parameter_group_name": null,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_iam_role_name": null,
+                  "enable_global_write_forwarding": false,
+                  "enable_http_endpoint": false,
+                  "enable_local_write_forwarding": false,
+                  "enabled_cloudwatch_logs_exports": [
+                    "audit",
+                    "error",
+                    "general",
+                    "slowquery"
+                  ],
+                  "engine": "aurora-mysql",
+                  "engine_mode": "provisioned",
+                  "final_snapshot_identifier": null,
+                  "global_cluster_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "iops": null,
+                  "manage_master_user_password": null,
+                  "master_password": null,
+                  "master_password_wo": null,
+                  "master_password_wo_version": null,
+                  "performance_insights_enabled": null,
+                  "replication_source_identifier": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "skip_final_snapshot": false,
+                  "snapshot_identifier": null,
+                  "source_region": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "allocated_storage": true,
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zones": true,
+                  "backup_retention_period": true,
+                  "ca_certificate_identifier": true,
+                  "ca_certificate_valid_till": true,
+                  "cluster_identifier": true,
+                  "cluster_identifier_prefix": true,
+                  "cluster_members": true,
+                  "cluster_resource_id": true,
+                  "cluster_scalability_type": true,
+                  "database_insights_mode": true,
+                  "database_name": true,
+                  "db_cluster_parameter_group_name": true,
+                  "db_subnet_group_name": true,
+                  "db_system_id": true,
+                  "enabled_cloudwatch_logs_exports": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ],
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "iam_roles": true,
+                  "id": true,
+                  "kms_key_id": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "master_username": true,
+                  "monitoring_interval": true,
+                  "monitoring_role_arn": true,
+                  "network_type": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "preferred_backup_window": true,
+                  "preferred_maintenance_window": true,
+                  "reader_endpoint": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "storage_encrypted": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "availability_zones": [],
+                  "cluster_members": [],
+                  "enabled_cloudwatch_logs_exports": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ],
+                  "iam_roles": [],
+                  "master_password": true,
+                  "master_password_wo": true,
+                  "master_user_secret": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_rds_cluster.all_mysql_log_types[\"mysql\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_rds_cluster",
+              "name": "all_mysql_log_types",
+              "index": "mysql",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allow_major_version_upgrade": null,
+                  "backtrack_window": null,
+                  "copy_tags_to_snapshot": false,
+                  "db_cluster_instance_class": null,
+                  "db_instance_parameter_group_name": null,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_iam_role_name": null,
+                  "enable_global_write_forwarding": false,
+                  "enable_http_endpoint": false,
+                  "enable_local_write_forwarding": false,
+                  "enabled_cloudwatch_logs_exports": [
+                    "audit",
+                    "error",
+                    "general",
+                    "slowquery"
+                  ],
+                  "engine": "mysql",
+                  "engine_mode": "provisioned",
+                  "final_snapshot_identifier": null,
+                  "global_cluster_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "iops": null,
+                  "manage_master_user_password": null,
+                  "master_password": null,
+                  "master_password_wo": null,
+                  "master_password_wo_version": null,
+                  "performance_insights_enabled": null,
+                  "replication_source_identifier": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "skip_final_snapshot": false,
+                  "snapshot_identifier": null,
+                  "source_region": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "allocated_storage": true,
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zones": true,
+                  "backup_retention_period": true,
+                  "ca_certificate_identifier": true,
+                  "ca_certificate_valid_till": true,
+                  "cluster_identifier": true,
+                  "cluster_identifier_prefix": true,
+                  "cluster_members": true,
+                  "cluster_resource_id": true,
+                  "cluster_scalability_type": true,
+                  "database_insights_mode": true,
+                  "database_name": true,
+                  "db_cluster_parameter_group_name": true,
+                  "db_subnet_group_name": true,
+                  "db_system_id": true,
+                  "enabled_cloudwatch_logs_exports": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ],
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "iam_roles": true,
+                  "id": true,
+                  "kms_key_id": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "master_username": true,
+                  "monitoring_interval": true,
+                  "monitoring_role_arn": true,
+                  "network_type": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "preferred_backup_window": true,
+                  "preferred_maintenance_window": true,
+                  "reader_endpoint": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "storage_encrypted": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "availability_zones": [],
+                  "cluster_members": [],
+                  "enabled_cloudwatch_logs_exports": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ],
+                  "iam_roles": [],
+                  "master_password": true,
+                  "master_password_wo": true,
+                  "master_user_secret": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_rds_cluster.all_postgres_log_types[\"postgres\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_rds_cluster",
+              "name": "all_postgres_log_types",
+              "index": "postgres",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allow_major_version_upgrade": null,
+                  "backtrack_window": null,
+                  "copy_tags_to_snapshot": false,
+                  "db_cluster_instance_class": null,
+                  "db_instance_parameter_group_name": null,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_iam_role_name": null,
+                  "enable_global_write_forwarding": false,
+                  "enable_http_endpoint": false,
+                  "enable_local_write_forwarding": false,
+                  "enabled_cloudwatch_logs_exports": [
+                    "postgresql",
+                    "upgrade"
+                  ],
+                  "engine": "postgres",
+                  "engine_mode": "provisioned",
+                  "final_snapshot_identifier": null,
+                  "global_cluster_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "iops": null,
+                  "manage_master_user_password": null,
+                  "master_password": null,
+                  "master_password_wo": null,
+                  "master_password_wo_version": null,
+                  "performance_insights_enabled": null,
+                  "replication_source_identifier": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "skip_final_snapshot": false,
+                  "snapshot_identifier": null,
+                  "source_region": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "allocated_storage": true,
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zones": true,
+                  "backup_retention_period": true,
+                  "ca_certificate_identifier": true,
+                  "ca_certificate_valid_till": true,
+                  "cluster_identifier": true,
+                  "cluster_identifier_prefix": true,
+                  "cluster_members": true,
+                  "cluster_resource_id": true,
+                  "cluster_scalability_type": true,
+                  "database_insights_mode": true,
+                  "database_name": true,
+                  "db_cluster_parameter_group_name": true,
+                  "db_subnet_group_name": true,
+                  "db_system_id": true,
+                  "enabled_cloudwatch_logs_exports": [
+                    false,
+                    false
+                  ],
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "iam_roles": true,
+                  "id": true,
+                  "kms_key_id": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "master_username": true,
+                  "monitoring_interval": true,
+                  "monitoring_role_arn": true,
+                  "network_type": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "preferred_backup_window": true,
+                  "preferred_maintenance_window": true,
+                  "reader_endpoint": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "storage_encrypted": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "availability_zones": [],
+                  "cluster_members": [],
+                  "enabled_cloudwatch_logs_exports": [
+                    false,
+                    false
+                  ],
+                  "iam_roles": [],
+                  "master_password": true,
+                  "master_password_wo": true,
+                  "master_user_secret": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_rds_cluster.unsupported_engine",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_rds_cluster",
+              "name": "unsupported_engine",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allow_major_version_upgrade": null,
+                  "backtrack_window": null,
+                  "copy_tags_to_snapshot": false,
+                  "db_cluster_instance_class": null,
+                  "db_instance_parameter_group_name": null,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_iam_role_name": null,
+                  "enable_global_write_forwarding": false,
+                  "enable_http_endpoint": false,
+                  "enable_local_write_forwarding": false,
+                  "enabled_cloudwatch_logs_exports": null,
+                  "engine": "custom-sqlserver-ee",
+                  "engine_mode": "provisioned",
+                  "final_snapshot_identifier": null,
+                  "global_cluster_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "iops": null,
+                  "manage_master_user_password": null,
+                  "master_password": null,
+                  "master_password_wo": null,
+                  "master_password_wo_version": null,
+                  "performance_insights_enabled": null,
+                  "replication_source_identifier": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "skip_final_snapshot": false,
+                  "snapshot_identifier": null,
+                  "source_region": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "allocated_storage": true,
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zones": true,
+                  "backup_retention_period": true,
+                  "ca_certificate_identifier": true,
+                  "ca_certificate_valid_till": true,
+                  "cluster_identifier": true,
+                  "cluster_identifier_prefix": true,
+                  "cluster_members": true,
+                  "cluster_resource_id": true,
+                  "cluster_scalability_type": true,
+                  "database_insights_mode": true,
+                  "database_name": true,
+                  "db_cluster_parameter_group_name": true,
+                  "db_subnet_group_name": true,
+                  "db_system_id": true,
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "iam_roles": true,
+                  "id": true,
+                  "kms_key_id": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "master_username": true,
+                  "monitoring_interval": true,
+                  "monitoring_role_arn": true,
+                  "network_type": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "preferred_backup_window": true,
+                  "preferred_maintenance_window": true,
+                  "reader_endpoint": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "storage_encrypted": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "availability_zones": [],
+                  "cluster_members": [],
+                  "iam_roles": [],
+                  "master_password": true,
+                  "master_password_wo": true,
+                  "master_user_secret": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_rds_cluster.empty_list",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "empty_list",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled_cloudwatch_logs_exports": {
+                            "constant_value": []
+                          },
+                          "engine": {
+                            "constant_value": "postgres"
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.missing_log_types",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "missing_log_types",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled_cloudwatch_logs_exports": {
+                            "constant_value": [
+                              "upgrade"
+                            ]
+                          },
+                          "engine": {
+                            "constant_value": "postgres"
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.unspecified",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "unspecified",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "engine": {
+                            "constant_value": "postgres"
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.unsupported_log_type",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "unsupported_log_type",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled_cloudwatch_logs_exports": {
+                            "constant_value": [
+                              "audit"
+                            ]
+                          },
+                          "engine": {
+                            "constant_value": "postgres"
+                          }
+                        },
+                        "schema_version": 1
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_rds_cluster.all_aurora_postgres_log_types",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "all_aurora_postgres_log_types",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled_cloudwatch_logs_exports": {
+                            "constant_value": [
+                              "postgresql"
+                            ]
+                          },
+                          "engine": {
+                            "references": [
+                              "each.value"
+                            ]
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.all_mysql_log_types",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "all_mysql_log_types",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled_cloudwatch_logs_exports": {
+                            "constant_value": [
+                              "audit",
+                              "error",
+                              "general",
+                              "slowquery"
+                            ]
+                          },
+                          "engine": {
+                            "references": [
+                              "each.value"
+                            ]
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.all_postgres_log_types",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "all_postgres_log_types",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled_cloudwatch_logs_exports": {
+                            "constant_value": [
+                              "postgresql",
+                              "upgrade"
+                            ]
+                          },
+                          "engine": {
+                            "references": [
+                              "each.value"
+                            ]
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.unsupported_engine",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "unsupported_engine",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "engine": {
+                            "constant_value": "custom-sqlserver-ee"
+                          }
+                        },
+                        "schema_version": 1
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-21T21:12:11Z",
+          "errored": false
+        },
+        "fail": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.fail.aws_rds_cluster.empty_list",
+                      "mode": "managed",
+                      "type": "aws_rds_cluster",
+                      "name": "empty_list",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 1,
+                      "values": {
+                        "allow_major_version_upgrade": null,
+                        "backtrack_window": null,
+                        "copy_tags_to_snapshot": false,
+                        "db_cluster_instance_class": null,
+                        "db_instance_parameter_group_name": null,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_iam_role_name": null,
+                        "enable_global_write_forwarding": false,
+                        "enable_http_endpoint": false,
+                        "enable_local_write_forwarding": false,
+                        "enabled_cloudwatch_logs_exports": null,
+                        "engine": "postgres",
+                        "engine_mode": "provisioned",
+                        "final_snapshot_identifier": null,
+                        "global_cluster_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "iops": null,
+                        "manage_master_user_password": null,
+                        "master_password": null,
+                        "master_password_wo": null,
+                        "master_password_wo_version": null,
+                        "performance_insights_enabled": null,
+                        "replication_source_identifier": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "skip_final_snapshot": false,
+                        "snapshot_identifier": null,
+                        "source_region": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "availability_zones": [],
+                        "cluster_members": [],
+                        "iam_roles": [],
+                        "master_password": true,
+                        "master_password_wo": true,
+                        "master_user_secret": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_rds_cluster.missing_log_types",
+                      "mode": "managed",
+                      "type": "aws_rds_cluster",
+                      "name": "missing_log_types",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 1,
+                      "values": {
+                        "allow_major_version_upgrade": null,
+                        "backtrack_window": null,
+                        "copy_tags_to_snapshot": false,
+                        "db_cluster_instance_class": null,
+                        "db_instance_parameter_group_name": null,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_iam_role_name": null,
+                        "enable_global_write_forwarding": false,
+                        "enable_http_endpoint": false,
+                        "enable_local_write_forwarding": false,
+                        "enabled_cloudwatch_logs_exports": [
+                          "upgrade"
+                        ],
+                        "engine": "postgres",
+                        "engine_mode": "provisioned",
+                        "final_snapshot_identifier": null,
+                        "global_cluster_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "iops": null,
+                        "manage_master_user_password": null,
+                        "master_password": null,
+                        "master_password_wo": null,
+                        "master_password_wo_version": null,
+                        "performance_insights_enabled": null,
+                        "replication_source_identifier": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "skip_final_snapshot": false,
+                        "snapshot_identifier": null,
+                        "source_region": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "availability_zones": [],
+                        "cluster_members": [],
+                        "enabled_cloudwatch_logs_exports": [
+                          false
+                        ],
+                        "iam_roles": [],
+                        "master_password": true,
+                        "master_password_wo": true,
+                        "master_user_secret": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_rds_cluster.unspecified",
+                      "mode": "managed",
+                      "type": "aws_rds_cluster",
+                      "name": "unspecified",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 1,
+                      "values": {
+                        "allow_major_version_upgrade": null,
+                        "backtrack_window": null,
+                        "copy_tags_to_snapshot": false,
+                        "db_cluster_instance_class": null,
+                        "db_instance_parameter_group_name": null,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_iam_role_name": null,
+                        "enable_global_write_forwarding": false,
+                        "enable_http_endpoint": false,
+                        "enable_local_write_forwarding": false,
+                        "enabled_cloudwatch_logs_exports": null,
+                        "engine": "postgres",
+                        "engine_mode": "provisioned",
+                        "final_snapshot_identifier": null,
+                        "global_cluster_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "iops": null,
+                        "manage_master_user_password": null,
+                        "master_password": null,
+                        "master_password_wo": null,
+                        "master_password_wo_version": null,
+                        "performance_insights_enabled": null,
+                        "replication_source_identifier": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "skip_final_snapshot": false,
+                        "snapshot_identifier": null,
+                        "source_region": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "availability_zones": [],
+                        "cluster_members": [],
+                        "iam_roles": [],
+                        "master_password": true,
+                        "master_password_wo": true,
+                        "master_user_secret": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_rds_cluster.unsupported_log_type",
+                      "mode": "managed",
+                      "type": "aws_rds_cluster",
+                      "name": "unsupported_log_type",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 1,
+                      "values": {
+                        "allow_major_version_upgrade": null,
+                        "backtrack_window": null,
+                        "copy_tags_to_snapshot": false,
+                        "db_cluster_instance_class": null,
+                        "db_instance_parameter_group_name": null,
+                        "delete_automated_backups": true,
+                        "deletion_protection": null,
+                        "domain": null,
+                        "domain_iam_role_name": null,
+                        "enable_global_write_forwarding": false,
+                        "enable_http_endpoint": false,
+                        "enable_local_write_forwarding": false,
+                        "enabled_cloudwatch_logs_exports": [
+                          "audit"
+                        ],
+                        "engine": "postgres",
+                        "engine_mode": "provisioned",
+                        "final_snapshot_identifier": null,
+                        "global_cluster_identifier": null,
+                        "iam_database_authentication_enabled": null,
+                        "iops": null,
+                        "manage_master_user_password": null,
+                        "master_password": null,
+                        "master_password_wo": null,
+                        "master_password_wo_version": null,
+                        "performance_insights_enabled": null,
+                        "replication_source_identifier": null,
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "skip_final_snapshot": false,
+                        "snapshot_identifier": null,
+                        "source_region": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "availability_zones": [],
+                        "cluster_members": [],
+                        "enabled_cloudwatch_logs_exports": [
+                          false
+                        ],
+                        "iam_roles": [],
+                        "master_password": true,
+                        "master_password_wo": true,
+                        "master_user_secret": [],
+                        "restore_to_point_in_time": [],
+                        "s3_import": [],
+                        "scaling_configuration": [],
+                        "serverlessv2_scaling_configuration": [],
+                        "tags_all": {},
+                        "vpc_security_group_ids": []
+                      }
+                    }
+                  ],
+                  "address": "module.fail"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.fail.aws_rds_cluster.empty_list",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_rds_cluster",
+              "name": "empty_list",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allow_major_version_upgrade": null,
+                  "backtrack_window": null,
+                  "copy_tags_to_snapshot": false,
+                  "db_cluster_instance_class": null,
+                  "db_instance_parameter_group_name": null,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_iam_role_name": null,
+                  "enable_global_write_forwarding": false,
+                  "enable_http_endpoint": false,
+                  "enable_local_write_forwarding": false,
+                  "enabled_cloudwatch_logs_exports": null,
+                  "engine": "postgres",
+                  "engine_mode": "provisioned",
+                  "final_snapshot_identifier": null,
+                  "global_cluster_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "iops": null,
+                  "manage_master_user_password": null,
+                  "master_password": null,
+                  "master_password_wo": null,
+                  "master_password_wo_version": null,
+                  "performance_insights_enabled": null,
+                  "replication_source_identifier": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "skip_final_snapshot": false,
+                  "snapshot_identifier": null,
+                  "source_region": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "allocated_storage": true,
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zones": true,
+                  "backup_retention_period": true,
+                  "ca_certificate_identifier": true,
+                  "ca_certificate_valid_till": true,
+                  "cluster_identifier": true,
+                  "cluster_identifier_prefix": true,
+                  "cluster_members": true,
+                  "cluster_resource_id": true,
+                  "cluster_scalability_type": true,
+                  "database_insights_mode": true,
+                  "database_name": true,
+                  "db_cluster_parameter_group_name": true,
+                  "db_subnet_group_name": true,
+                  "db_system_id": true,
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "iam_roles": true,
+                  "id": true,
+                  "kms_key_id": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "master_username": true,
+                  "monitoring_interval": true,
+                  "monitoring_role_arn": true,
+                  "network_type": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "preferred_backup_window": true,
+                  "preferred_maintenance_window": true,
+                  "reader_endpoint": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "storage_encrypted": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "availability_zones": [],
+                  "cluster_members": [],
+                  "iam_roles": [],
+                  "master_password": true,
+                  "master_password_wo": true,
+                  "master_user_secret": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_rds_cluster.missing_log_types",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_rds_cluster",
+              "name": "missing_log_types",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allow_major_version_upgrade": null,
+                  "backtrack_window": null,
+                  "copy_tags_to_snapshot": false,
+                  "db_cluster_instance_class": null,
+                  "db_instance_parameter_group_name": null,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_iam_role_name": null,
+                  "enable_global_write_forwarding": false,
+                  "enable_http_endpoint": false,
+                  "enable_local_write_forwarding": false,
+                  "enabled_cloudwatch_logs_exports": [
+                    "upgrade"
+                  ],
+                  "engine": "postgres",
+                  "engine_mode": "provisioned",
+                  "final_snapshot_identifier": null,
+                  "global_cluster_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "iops": null,
+                  "manage_master_user_password": null,
+                  "master_password": null,
+                  "master_password_wo": null,
+                  "master_password_wo_version": null,
+                  "performance_insights_enabled": null,
+                  "replication_source_identifier": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "skip_final_snapshot": false,
+                  "snapshot_identifier": null,
+                  "source_region": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "allocated_storage": true,
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zones": true,
+                  "backup_retention_period": true,
+                  "ca_certificate_identifier": true,
+                  "ca_certificate_valid_till": true,
+                  "cluster_identifier": true,
+                  "cluster_identifier_prefix": true,
+                  "cluster_members": true,
+                  "cluster_resource_id": true,
+                  "cluster_scalability_type": true,
+                  "database_insights_mode": true,
+                  "database_name": true,
+                  "db_cluster_parameter_group_name": true,
+                  "db_subnet_group_name": true,
+                  "db_system_id": true,
+                  "enabled_cloudwatch_logs_exports": [
+                    false
+                  ],
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "iam_roles": true,
+                  "id": true,
+                  "kms_key_id": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "master_username": true,
+                  "monitoring_interval": true,
+                  "monitoring_role_arn": true,
+                  "network_type": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "preferred_backup_window": true,
+                  "preferred_maintenance_window": true,
+                  "reader_endpoint": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "storage_encrypted": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "availability_zones": [],
+                  "cluster_members": [],
+                  "enabled_cloudwatch_logs_exports": [
+                    false
+                  ],
+                  "iam_roles": [],
+                  "master_password": true,
+                  "master_password_wo": true,
+                  "master_user_secret": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_rds_cluster.unspecified",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_rds_cluster",
+              "name": "unspecified",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allow_major_version_upgrade": null,
+                  "backtrack_window": null,
+                  "copy_tags_to_snapshot": false,
+                  "db_cluster_instance_class": null,
+                  "db_instance_parameter_group_name": null,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_iam_role_name": null,
+                  "enable_global_write_forwarding": false,
+                  "enable_http_endpoint": false,
+                  "enable_local_write_forwarding": false,
+                  "enabled_cloudwatch_logs_exports": null,
+                  "engine": "postgres",
+                  "engine_mode": "provisioned",
+                  "final_snapshot_identifier": null,
+                  "global_cluster_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "iops": null,
+                  "manage_master_user_password": null,
+                  "master_password": null,
+                  "master_password_wo": null,
+                  "master_password_wo_version": null,
+                  "performance_insights_enabled": null,
+                  "replication_source_identifier": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "skip_final_snapshot": false,
+                  "snapshot_identifier": null,
+                  "source_region": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "allocated_storage": true,
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zones": true,
+                  "backup_retention_period": true,
+                  "ca_certificate_identifier": true,
+                  "ca_certificate_valid_till": true,
+                  "cluster_identifier": true,
+                  "cluster_identifier_prefix": true,
+                  "cluster_members": true,
+                  "cluster_resource_id": true,
+                  "cluster_scalability_type": true,
+                  "database_insights_mode": true,
+                  "database_name": true,
+                  "db_cluster_parameter_group_name": true,
+                  "db_subnet_group_name": true,
+                  "db_system_id": true,
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "iam_roles": true,
+                  "id": true,
+                  "kms_key_id": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "master_username": true,
+                  "monitoring_interval": true,
+                  "monitoring_role_arn": true,
+                  "network_type": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "preferred_backup_window": true,
+                  "preferred_maintenance_window": true,
+                  "reader_endpoint": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "storage_encrypted": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "availability_zones": [],
+                  "cluster_members": [],
+                  "iam_roles": [],
+                  "master_password": true,
+                  "master_password_wo": true,
+                  "master_user_secret": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_rds_cluster.unsupported_log_type",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_rds_cluster",
+              "name": "unsupported_log_type",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "allow_major_version_upgrade": null,
+                  "backtrack_window": null,
+                  "copy_tags_to_snapshot": false,
+                  "db_cluster_instance_class": null,
+                  "db_instance_parameter_group_name": null,
+                  "delete_automated_backups": true,
+                  "deletion_protection": null,
+                  "domain": null,
+                  "domain_iam_role_name": null,
+                  "enable_global_write_forwarding": false,
+                  "enable_http_endpoint": false,
+                  "enable_local_write_forwarding": false,
+                  "enabled_cloudwatch_logs_exports": [
+                    "audit"
+                  ],
+                  "engine": "postgres",
+                  "engine_mode": "provisioned",
+                  "final_snapshot_identifier": null,
+                  "global_cluster_identifier": null,
+                  "iam_database_authentication_enabled": null,
+                  "iops": null,
+                  "manage_master_user_password": null,
+                  "master_password": null,
+                  "master_password_wo": null,
+                  "master_password_wo_version": null,
+                  "performance_insights_enabled": null,
+                  "replication_source_identifier": null,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "skip_final_snapshot": false,
+                  "snapshot_identifier": null,
+                  "source_region": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "allocated_storage": true,
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zones": true,
+                  "backup_retention_period": true,
+                  "ca_certificate_identifier": true,
+                  "ca_certificate_valid_till": true,
+                  "cluster_identifier": true,
+                  "cluster_identifier_prefix": true,
+                  "cluster_members": true,
+                  "cluster_resource_id": true,
+                  "cluster_scalability_type": true,
+                  "database_insights_mode": true,
+                  "database_name": true,
+                  "db_cluster_parameter_group_name": true,
+                  "db_subnet_group_name": true,
+                  "db_system_id": true,
+                  "enabled_cloudwatch_logs_exports": [
+                    false
+                  ],
+                  "endpoint": true,
+                  "engine_lifecycle_support": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "hosted_zone_id": true,
+                  "iam_roles": true,
+                  "id": true,
+                  "kms_key_id": true,
+                  "master_user_secret": true,
+                  "master_user_secret_kms_key_id": true,
+                  "master_username": true,
+                  "monitoring_interval": true,
+                  "monitoring_role_arn": true,
+                  "network_type": true,
+                  "performance_insights_kms_key_id": true,
+                  "performance_insights_retention_period": true,
+                  "port": true,
+                  "preferred_backup_window": true,
+                  "preferred_maintenance_window": true,
+                  "reader_endpoint": true,
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "storage_encrypted": true,
+                  "storage_type": true,
+                  "tags_all": true,
+                  "vpc_security_group_ids": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "availability_zones": [],
+                  "cluster_members": [],
+                  "enabled_cloudwatch_logs_exports": [
+                    false
+                  ],
+                  "iam_roles": [],
+                  "master_password": true,
+                  "master_password_wo": true,
+                  "master_user_secret": [],
+                  "restore_to_point_in_time": [],
+                  "s3_import": [],
+                  "scaling_configuration": [],
+                  "serverlessv2_scaling_configuration": [],
+                  "tags_all": {},
+                  "vpc_security_group_ids": []
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_rds_cluster.empty_list",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "empty_list",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled_cloudwatch_logs_exports": {
+                            "constant_value": []
+                          },
+                          "engine": {
+                            "constant_value": "postgres"
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.missing_log_types",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "missing_log_types",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled_cloudwatch_logs_exports": {
+                            "constant_value": [
+                              "upgrade"
+                            ]
+                          },
+                          "engine": {
+                            "constant_value": "postgres"
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.unspecified",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "unspecified",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "engine": {
+                            "constant_value": "postgres"
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.unsupported_log_type",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "unsupported_log_type",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled_cloudwatch_logs_exports": {
+                            "constant_value": [
+                              "audit"
+                            ]
+                          },
+                          "engine": {
+                            "constant_value": "postgres"
+                          }
+                        },
+                        "schema_version": 1
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_rds_cluster.all_aurora_postgres_log_types",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "all_aurora_postgres_log_types",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled_cloudwatch_logs_exports": {
+                            "constant_value": [
+                              "postgresql"
+                            ]
+                          },
+                          "engine": {
+                            "references": [
+                              "each.value"
+                            ]
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.all_mysql_log_types",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "all_mysql_log_types",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled_cloudwatch_logs_exports": {
+                            "constant_value": [
+                              "audit",
+                              "error",
+                              "general",
+                              "slowquery"
+                            ]
+                          },
+                          "engine": {
+                            "references": [
+                              "each.value"
+                            ]
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.all_postgres_log_types",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "all_postgres_log_types",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "enabled_cloudwatch_logs_exports": {
+                            "constant_value": [
+                              "postgresql",
+                              "upgrade"
+                            ]
+                          },
+                          "engine": {
+                            "references": [
+                              "each.value"
+                            ]
+                          }
+                        },
+                        "schema_version": 1
+                      },
+                      {
+                        "address": "aws_rds_cluster.unsupported_engine",
+                        "mode": "managed",
+                        "type": "aws_rds_cluster",
+                        "name": "unsupported_engine",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "engine": {
+                            "constant_value": "custom-sqlserver-ee"
+                          }
+                        },
+                        "schema_version": 1
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-21T21:12:14Z",
+          "errored": false
+        }
+      },
       "3": {
         "pass": {
           "format_version": "1.2",

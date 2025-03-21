@@ -100,13 +100,18 @@ valid_event_subscription(resource) if {
 }
 
 supported_log_types(engine) := log_types if {
-	engine in {"mysql", "mariadb"}
+	engine in {"mysql", "mariadb", "aurora", "aurora-mysql"}
 	log_types := ["audit", "error", "general", "slowquery"]
 }
 
 supported_log_types(engine) := log_types if {
 	engine == "postgres"
 	log_types := ["postgresql", "upgrade"]
+}
+
+supported_log_types(engine) := log_types if {
+	engine == "aurora-postgresql"
+	log_types := ["postgresql"]
 }
 
 supported_log_types(engine) := log_types if {

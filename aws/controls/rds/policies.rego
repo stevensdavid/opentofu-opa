@@ -316,3 +316,17 @@ evaluate_rds_23(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds23",
 	}
 }
+
+evaluate_rds_24(plan) := {violation |
+	some cluster in utils.resources(plan, "aws_rds_cluster")
+	cluster.configuration.engine in {"aurora-mysql", "aurora-postgresql", "aurora", "mysql", "postgres"}
+	not valid_log_configuration(cluster)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.24", "control_tower": "CT.RDS.PR.25"},
+		"reason": "Require an Amazon RDS database cluster to export logs to Amazon CloudWatch Logs by means of the EnableCloudwatchLogsExports property",
+		"resource": cluster.address,
+		"severity": "medium",
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds24",
+	}
+}
