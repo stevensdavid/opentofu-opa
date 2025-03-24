@@ -17,3 +17,16 @@ evaluate_lambda_1(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolslambda1",
 	}
 }
+
+evaluate_lambda_2(plan) := {violation |
+	some {"configuration": configuration, "address": address} in utils.resources(plan, "aws_lambda_function")
+	not valid_vpc_config(configuration)
+
+	violation := {
+		"id": {"opa": "aws.controls.lambda.2", "control_tower": "CT.LAMBDA.PR.3"},
+		"reason": "Require an AWS Lambda function to be in a customer-managed Amazon Virtual Private Cloud (VPC)",
+		"resource": address,
+		"severity": "low",
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolslambda2",
+	}
+}

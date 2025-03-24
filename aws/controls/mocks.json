@@ -9874,6 +9874,1272 @@
           "timestamp": "2025-03-24T08:49:44Z",
           "errored": false
         }
+      },
+      "2": {
+        "pass": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.pass.aws_lambda_function.valid",
+                      "mode": "managed",
+                      "type": "aws_lambda_function",
+                      "name": "valid",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "code_signing_config_arn": null,
+                        "dead_letter_config": [],
+                        "description": null,
+                        "environment": [],
+                        "file_system_config": [],
+                        "filename": "bundle.zip",
+                        "function_name": "lambda",
+                        "handler": "index.Handler",
+                        "image_config": [],
+                        "image_uri": null,
+                        "kms_key_arn": null,
+                        "layers": null,
+                        "memory_size": 128,
+                        "package_type": "Zip",
+                        "publish": false,
+                        "replace_security_groups_on_destroy": null,
+                        "replacement_security_group_ids": null,
+                        "reserved_concurrent_executions": -1,
+                        "role": "arn:aws:iam::123456789012:role/example",
+                        "runtime": "nodejs22.x",
+                        "s3_bucket": null,
+                        "s3_key": null,
+                        "s3_object_version": null,
+                        "skip_destroy": false,
+                        "snap_start": [],
+                        "tags": null,
+                        "timeout": 3,
+                        "timeouts": null,
+                        "vpc_config": [
+                          {
+                            "ipv6_allowed_for_dual_stack": false,
+                            "security_group_ids": [
+                              "sg-01234567890abcdef"
+                            ],
+                            "subnet_ids": [
+                              "subnet-01234567890abcdef"
+                            ]
+                          }
+                        ]
+                      },
+                      "sensitive_values": {
+                        "architectures": [],
+                        "dead_letter_config": [],
+                        "environment": [],
+                        "ephemeral_storage": [],
+                        "file_system_config": [],
+                        "image_config": [],
+                        "logging_config": [],
+                        "snap_start": [],
+                        "tags_all": {},
+                        "tracing_config": [],
+                        "vpc_config": [
+                          {
+                            "security_group_ids": [
+                              false
+                            ],
+                            "subnet_ids": [
+                              false
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "address": "module.pass"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.pass.aws_lambda_function.valid",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_lambda_function",
+              "name": "valid",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "code_signing_config_arn": null,
+                  "dead_letter_config": [],
+                  "description": null,
+                  "environment": [],
+                  "file_system_config": [],
+                  "filename": "bundle.zip",
+                  "function_name": "lambda",
+                  "handler": "index.Handler",
+                  "image_config": [],
+                  "image_uri": null,
+                  "kms_key_arn": null,
+                  "layers": null,
+                  "memory_size": 128,
+                  "package_type": "Zip",
+                  "publish": false,
+                  "replace_security_groups_on_destroy": null,
+                  "replacement_security_group_ids": null,
+                  "reserved_concurrent_executions": -1,
+                  "role": "arn:aws:iam::123456789012:role/example",
+                  "runtime": "nodejs22.x",
+                  "s3_bucket": null,
+                  "s3_key": null,
+                  "s3_object_version": null,
+                  "skip_destroy": false,
+                  "snap_start": [],
+                  "tags": null,
+                  "timeout": 3,
+                  "timeouts": null,
+                  "vpc_config": [
+                    {
+                      "ipv6_allowed_for_dual_stack": false,
+                      "security_group_ids": [
+                        "sg-01234567890abcdef"
+                      ],
+                      "subnet_ids": [
+                        "subnet-01234567890abcdef"
+                      ]
+                    }
+                  ]
+                },
+                "after_unknown": {
+                  "architectures": true,
+                  "arn": true,
+                  "code_sha256": true,
+                  "dead_letter_config": [],
+                  "environment": [],
+                  "ephemeral_storage": true,
+                  "file_system_config": [],
+                  "id": true,
+                  "image_config": [],
+                  "invoke_arn": true,
+                  "last_modified": true,
+                  "logging_config": true,
+                  "qualified_arn": true,
+                  "qualified_invoke_arn": true,
+                  "signing_job_arn": true,
+                  "signing_profile_version_arn": true,
+                  "snap_start": [],
+                  "source_code_hash": true,
+                  "source_code_size": true,
+                  "tags_all": true,
+                  "tracing_config": true,
+                  "version": true,
+                  "vpc_config": [
+                    {
+                      "security_group_ids": [
+                        false
+                      ],
+                      "subnet_ids": [
+                        false
+                      ],
+                      "vpc_id": true
+                    }
+                  ]
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "architectures": [],
+                  "dead_letter_config": [],
+                  "environment": [],
+                  "ephemeral_storage": [],
+                  "file_system_config": [],
+                  "image_config": [],
+                  "logging_config": [],
+                  "snap_start": [],
+                  "tags_all": {},
+                  "tracing_config": [],
+                  "vpc_config": [
+                    {
+                      "security_group_ids": [
+                        false
+                      ],
+                      "subnet_ids": [
+                        false
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_function.missing_both",
+                        "mode": "managed",
+                        "type": "aws_lambda_function",
+                        "name": "missing_both",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "filename": {
+                            "constant_value": "bundle.zip"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "handler": {
+                            "constant_value": "index.Handler"
+                          },
+                          "role": {
+                            "constant_value": "arn:aws:iam::123456789012:role/example"
+                          },
+                          "runtime": {
+                            "constant_value": "nodejs22.x"
+                          },
+                          "vpc_config": [
+                            {
+                              "security_group_ids": {
+                                "constant_value": []
+                              },
+                              "subnet_ids": {
+                                "constant_value": []
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function.missing_sg_ids",
+                        "mode": "managed",
+                        "type": "aws_lambda_function",
+                        "name": "missing_sg_ids",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "filename": {
+                            "constant_value": "bundle.zip"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "handler": {
+                            "constant_value": "index.Handler"
+                          },
+                          "role": {
+                            "constant_value": "arn:aws:iam::123456789012:role/example"
+                          },
+                          "runtime": {
+                            "constant_value": "nodejs22.x"
+                          },
+                          "vpc_config": [
+                            {
+                              "security_group_ids": {
+                                "constant_value": []
+                              },
+                              "subnet_ids": {
+                                "constant_value": [
+                                  "subnet-01234567890abcdef"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function.missing_subnet_ids",
+                        "mode": "managed",
+                        "type": "aws_lambda_function",
+                        "name": "missing_subnet_ids",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "filename": {
+                            "constant_value": "bundle.zip"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "handler": {
+                            "constant_value": "index.Handler"
+                          },
+                          "role": {
+                            "constant_value": "arn:aws:iam::123456789012:role/example"
+                          },
+                          "runtime": {
+                            "constant_value": "nodejs22.x"
+                          },
+                          "vpc_config": [
+                            {
+                              "security_group_ids": {
+                                "constant_value": [
+                                  "sg-0123456789abcdef"
+                                ]
+                              },
+                              "subnet_ids": {
+                                "constant_value": []
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function.missing_vpc_config",
+                        "mode": "managed",
+                        "type": "aws_lambda_function",
+                        "name": "missing_vpc_config",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "filename": {
+                            "constant_value": "bundle.zip"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "handler": {
+                            "constant_value": "index.Handler"
+                          },
+                          "role": {
+                            "constant_value": "arn:aws:iam::123456789012:role/example"
+                          },
+                          "runtime": {
+                            "constant_value": "nodejs22.x"
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_function.valid",
+                        "mode": "managed",
+                        "type": "aws_lambda_function",
+                        "name": "valid",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "filename": {
+                            "constant_value": "bundle.zip"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "handler": {
+                            "constant_value": "index.Handler"
+                          },
+                          "role": {
+                            "constant_value": "arn:aws:iam::123456789012:role/example"
+                          },
+                          "runtime": {
+                            "constant_value": "nodejs22.x"
+                          },
+                          "vpc_config": [
+                            {
+                              "security_group_ids": {
+                                "constant_value": [
+                                  "sg-01234567890abcdef"
+                                ]
+                              },
+                              "subnet_ids": {
+                                "constant_value": [
+                                  "subnet-01234567890abcdef"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-24T09:35:09Z",
+          "errored": false
+        },
+        "fail": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.fail.aws_lambda_function.missing_both",
+                      "mode": "managed",
+                      "type": "aws_lambda_function",
+                      "name": "missing_both",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "code_signing_config_arn": null,
+                        "dead_letter_config": [],
+                        "description": null,
+                        "environment": [],
+                        "file_system_config": [],
+                        "filename": "bundle.zip",
+                        "function_name": "lambda",
+                        "handler": "index.Handler",
+                        "image_config": [],
+                        "image_uri": null,
+                        "kms_key_arn": null,
+                        "layers": null,
+                        "memory_size": 128,
+                        "package_type": "Zip",
+                        "publish": false,
+                        "replace_security_groups_on_destroy": null,
+                        "replacement_security_group_ids": null,
+                        "reserved_concurrent_executions": -1,
+                        "role": "arn:aws:iam::123456789012:role/example",
+                        "runtime": "nodejs22.x",
+                        "s3_bucket": null,
+                        "s3_key": null,
+                        "s3_object_version": null,
+                        "skip_destroy": false,
+                        "snap_start": [],
+                        "tags": null,
+                        "timeout": 3,
+                        "timeouts": null,
+                        "vpc_config": [
+                          {
+                            "ipv6_allowed_for_dual_stack": false,
+                            "security_group_ids": null,
+                            "subnet_ids": null
+                          }
+                        ]
+                      },
+                      "sensitive_values": {
+                        "architectures": [],
+                        "dead_letter_config": [],
+                        "environment": [],
+                        "ephemeral_storage": [],
+                        "file_system_config": [],
+                        "image_config": [],
+                        "logging_config": [],
+                        "snap_start": [],
+                        "tags_all": {},
+                        "tracing_config": [],
+                        "vpc_config": [
+                          {}
+                        ]
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_lambda_function.missing_sg_ids",
+                      "mode": "managed",
+                      "type": "aws_lambda_function",
+                      "name": "missing_sg_ids",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "code_signing_config_arn": null,
+                        "dead_letter_config": [],
+                        "description": null,
+                        "environment": [],
+                        "file_system_config": [],
+                        "filename": "bundle.zip",
+                        "function_name": "lambda",
+                        "handler": "index.Handler",
+                        "image_config": [],
+                        "image_uri": null,
+                        "kms_key_arn": null,
+                        "layers": null,
+                        "memory_size": 128,
+                        "package_type": "Zip",
+                        "publish": false,
+                        "replace_security_groups_on_destroy": null,
+                        "replacement_security_group_ids": null,
+                        "reserved_concurrent_executions": -1,
+                        "role": "arn:aws:iam::123456789012:role/example",
+                        "runtime": "nodejs22.x",
+                        "s3_bucket": null,
+                        "s3_key": null,
+                        "s3_object_version": null,
+                        "skip_destroy": false,
+                        "snap_start": [],
+                        "tags": null,
+                        "timeout": 3,
+                        "timeouts": null,
+                        "vpc_config": [
+                          {
+                            "ipv6_allowed_for_dual_stack": false,
+                            "security_group_ids": null,
+                            "subnet_ids": [
+                              "subnet-01234567890abcdef"
+                            ]
+                          }
+                        ]
+                      },
+                      "sensitive_values": {
+                        "architectures": [],
+                        "dead_letter_config": [],
+                        "environment": [],
+                        "ephemeral_storage": [],
+                        "file_system_config": [],
+                        "image_config": [],
+                        "logging_config": [],
+                        "snap_start": [],
+                        "tags_all": {},
+                        "tracing_config": [],
+                        "vpc_config": [
+                          {
+                            "subnet_ids": [
+                              false
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_lambda_function.missing_subnet_ids",
+                      "mode": "managed",
+                      "type": "aws_lambda_function",
+                      "name": "missing_subnet_ids",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "code_signing_config_arn": null,
+                        "dead_letter_config": [],
+                        "description": null,
+                        "environment": [],
+                        "file_system_config": [],
+                        "filename": "bundle.zip",
+                        "function_name": "lambda",
+                        "handler": "index.Handler",
+                        "image_config": [],
+                        "image_uri": null,
+                        "kms_key_arn": null,
+                        "layers": null,
+                        "memory_size": 128,
+                        "package_type": "Zip",
+                        "publish": false,
+                        "replace_security_groups_on_destroy": null,
+                        "replacement_security_group_ids": null,
+                        "reserved_concurrent_executions": -1,
+                        "role": "arn:aws:iam::123456789012:role/example",
+                        "runtime": "nodejs22.x",
+                        "s3_bucket": null,
+                        "s3_key": null,
+                        "s3_object_version": null,
+                        "skip_destroy": false,
+                        "snap_start": [],
+                        "tags": null,
+                        "timeout": 3,
+                        "timeouts": null,
+                        "vpc_config": [
+                          {
+                            "ipv6_allowed_for_dual_stack": false,
+                            "security_group_ids": [
+                              "sg-0123456789abcdef"
+                            ],
+                            "subnet_ids": null
+                          }
+                        ]
+                      },
+                      "sensitive_values": {
+                        "architectures": [],
+                        "dead_letter_config": [],
+                        "environment": [],
+                        "ephemeral_storage": [],
+                        "file_system_config": [],
+                        "image_config": [],
+                        "logging_config": [],
+                        "snap_start": [],
+                        "tags_all": {},
+                        "tracing_config": [],
+                        "vpc_config": [
+                          {
+                            "security_group_ids": [
+                              false
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_lambda_function.missing_vpc_config",
+                      "mode": "managed",
+                      "type": "aws_lambda_function",
+                      "name": "missing_vpc_config",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "code_signing_config_arn": null,
+                        "dead_letter_config": [],
+                        "description": null,
+                        "environment": [],
+                        "file_system_config": [],
+                        "filename": "bundle.zip",
+                        "function_name": "lambda",
+                        "handler": "index.Handler",
+                        "image_config": [],
+                        "image_uri": null,
+                        "kms_key_arn": null,
+                        "layers": null,
+                        "memory_size": 128,
+                        "package_type": "Zip",
+                        "publish": false,
+                        "replace_security_groups_on_destroy": null,
+                        "replacement_security_group_ids": null,
+                        "reserved_concurrent_executions": -1,
+                        "role": "arn:aws:iam::123456789012:role/example",
+                        "runtime": "nodejs22.x",
+                        "s3_bucket": null,
+                        "s3_key": null,
+                        "s3_object_version": null,
+                        "skip_destroy": false,
+                        "snap_start": [],
+                        "tags": null,
+                        "timeout": 3,
+                        "timeouts": null,
+                        "vpc_config": []
+                      },
+                      "sensitive_values": {
+                        "architectures": [],
+                        "dead_letter_config": [],
+                        "environment": [],
+                        "ephemeral_storage": [],
+                        "file_system_config": [],
+                        "image_config": [],
+                        "logging_config": [],
+                        "snap_start": [],
+                        "tags_all": {},
+                        "tracing_config": [],
+                        "vpc_config": []
+                      }
+                    }
+                  ],
+                  "address": "module.fail"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.fail.aws_lambda_function.missing_both",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_lambda_function",
+              "name": "missing_both",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "code_signing_config_arn": null,
+                  "dead_letter_config": [],
+                  "description": null,
+                  "environment": [],
+                  "file_system_config": [],
+                  "filename": "bundle.zip",
+                  "function_name": "lambda",
+                  "handler": "index.Handler",
+                  "image_config": [],
+                  "image_uri": null,
+                  "kms_key_arn": null,
+                  "layers": null,
+                  "memory_size": 128,
+                  "package_type": "Zip",
+                  "publish": false,
+                  "replace_security_groups_on_destroy": null,
+                  "replacement_security_group_ids": null,
+                  "reserved_concurrent_executions": -1,
+                  "role": "arn:aws:iam::123456789012:role/example",
+                  "runtime": "nodejs22.x",
+                  "s3_bucket": null,
+                  "s3_key": null,
+                  "s3_object_version": null,
+                  "skip_destroy": false,
+                  "snap_start": [],
+                  "tags": null,
+                  "timeout": 3,
+                  "timeouts": null,
+                  "vpc_config": [
+                    {
+                      "ipv6_allowed_for_dual_stack": false,
+                      "security_group_ids": null,
+                      "subnet_ids": null
+                    }
+                  ]
+                },
+                "after_unknown": {
+                  "architectures": true,
+                  "arn": true,
+                  "code_sha256": true,
+                  "dead_letter_config": [],
+                  "environment": [],
+                  "ephemeral_storage": true,
+                  "file_system_config": [],
+                  "id": true,
+                  "image_config": [],
+                  "invoke_arn": true,
+                  "last_modified": true,
+                  "logging_config": true,
+                  "qualified_arn": true,
+                  "qualified_invoke_arn": true,
+                  "signing_job_arn": true,
+                  "signing_profile_version_arn": true,
+                  "snap_start": [],
+                  "source_code_hash": true,
+                  "source_code_size": true,
+                  "tags_all": true,
+                  "tracing_config": true,
+                  "version": true,
+                  "vpc_config": [
+                    {
+                      "vpc_id": true
+                    }
+                  ]
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "architectures": [],
+                  "dead_letter_config": [],
+                  "environment": [],
+                  "ephemeral_storage": [],
+                  "file_system_config": [],
+                  "image_config": [],
+                  "logging_config": [],
+                  "snap_start": [],
+                  "tags_all": {},
+                  "tracing_config": [],
+                  "vpc_config": [
+                    {}
+                  ]
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_lambda_function.missing_sg_ids",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_lambda_function",
+              "name": "missing_sg_ids",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "code_signing_config_arn": null,
+                  "dead_letter_config": [],
+                  "description": null,
+                  "environment": [],
+                  "file_system_config": [],
+                  "filename": "bundle.zip",
+                  "function_name": "lambda",
+                  "handler": "index.Handler",
+                  "image_config": [],
+                  "image_uri": null,
+                  "kms_key_arn": null,
+                  "layers": null,
+                  "memory_size": 128,
+                  "package_type": "Zip",
+                  "publish": false,
+                  "replace_security_groups_on_destroy": null,
+                  "replacement_security_group_ids": null,
+                  "reserved_concurrent_executions": -1,
+                  "role": "arn:aws:iam::123456789012:role/example",
+                  "runtime": "nodejs22.x",
+                  "s3_bucket": null,
+                  "s3_key": null,
+                  "s3_object_version": null,
+                  "skip_destroy": false,
+                  "snap_start": [],
+                  "tags": null,
+                  "timeout": 3,
+                  "timeouts": null,
+                  "vpc_config": [
+                    {
+                      "ipv6_allowed_for_dual_stack": false,
+                      "security_group_ids": null,
+                      "subnet_ids": [
+                        "subnet-01234567890abcdef"
+                      ]
+                    }
+                  ]
+                },
+                "after_unknown": {
+                  "architectures": true,
+                  "arn": true,
+                  "code_sha256": true,
+                  "dead_letter_config": [],
+                  "environment": [],
+                  "ephemeral_storage": true,
+                  "file_system_config": [],
+                  "id": true,
+                  "image_config": [],
+                  "invoke_arn": true,
+                  "last_modified": true,
+                  "logging_config": true,
+                  "qualified_arn": true,
+                  "qualified_invoke_arn": true,
+                  "signing_job_arn": true,
+                  "signing_profile_version_arn": true,
+                  "snap_start": [],
+                  "source_code_hash": true,
+                  "source_code_size": true,
+                  "tags_all": true,
+                  "tracing_config": true,
+                  "version": true,
+                  "vpc_config": [
+                    {
+                      "subnet_ids": [
+                        false
+                      ],
+                      "vpc_id": true
+                    }
+                  ]
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "architectures": [],
+                  "dead_letter_config": [],
+                  "environment": [],
+                  "ephemeral_storage": [],
+                  "file_system_config": [],
+                  "image_config": [],
+                  "logging_config": [],
+                  "snap_start": [],
+                  "tags_all": {},
+                  "tracing_config": [],
+                  "vpc_config": [
+                    {
+                      "subnet_ids": [
+                        false
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_lambda_function.missing_subnet_ids",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_lambda_function",
+              "name": "missing_subnet_ids",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "code_signing_config_arn": null,
+                  "dead_letter_config": [],
+                  "description": null,
+                  "environment": [],
+                  "file_system_config": [],
+                  "filename": "bundle.zip",
+                  "function_name": "lambda",
+                  "handler": "index.Handler",
+                  "image_config": [],
+                  "image_uri": null,
+                  "kms_key_arn": null,
+                  "layers": null,
+                  "memory_size": 128,
+                  "package_type": "Zip",
+                  "publish": false,
+                  "replace_security_groups_on_destroy": null,
+                  "replacement_security_group_ids": null,
+                  "reserved_concurrent_executions": -1,
+                  "role": "arn:aws:iam::123456789012:role/example",
+                  "runtime": "nodejs22.x",
+                  "s3_bucket": null,
+                  "s3_key": null,
+                  "s3_object_version": null,
+                  "skip_destroy": false,
+                  "snap_start": [],
+                  "tags": null,
+                  "timeout": 3,
+                  "timeouts": null,
+                  "vpc_config": [
+                    {
+                      "ipv6_allowed_for_dual_stack": false,
+                      "security_group_ids": [
+                        "sg-0123456789abcdef"
+                      ],
+                      "subnet_ids": null
+                    }
+                  ]
+                },
+                "after_unknown": {
+                  "architectures": true,
+                  "arn": true,
+                  "code_sha256": true,
+                  "dead_letter_config": [],
+                  "environment": [],
+                  "ephemeral_storage": true,
+                  "file_system_config": [],
+                  "id": true,
+                  "image_config": [],
+                  "invoke_arn": true,
+                  "last_modified": true,
+                  "logging_config": true,
+                  "qualified_arn": true,
+                  "qualified_invoke_arn": true,
+                  "signing_job_arn": true,
+                  "signing_profile_version_arn": true,
+                  "snap_start": [],
+                  "source_code_hash": true,
+                  "source_code_size": true,
+                  "tags_all": true,
+                  "tracing_config": true,
+                  "version": true,
+                  "vpc_config": [
+                    {
+                      "security_group_ids": [
+                        false
+                      ],
+                      "vpc_id": true
+                    }
+                  ]
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "architectures": [],
+                  "dead_letter_config": [],
+                  "environment": [],
+                  "ephemeral_storage": [],
+                  "file_system_config": [],
+                  "image_config": [],
+                  "logging_config": [],
+                  "snap_start": [],
+                  "tags_all": {},
+                  "tracing_config": [],
+                  "vpc_config": [
+                    {
+                      "security_group_ids": [
+                        false
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_lambda_function.missing_vpc_config",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_lambda_function",
+              "name": "missing_vpc_config",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "code_signing_config_arn": null,
+                  "dead_letter_config": [],
+                  "description": null,
+                  "environment": [],
+                  "file_system_config": [],
+                  "filename": "bundle.zip",
+                  "function_name": "lambda",
+                  "handler": "index.Handler",
+                  "image_config": [],
+                  "image_uri": null,
+                  "kms_key_arn": null,
+                  "layers": null,
+                  "memory_size": 128,
+                  "package_type": "Zip",
+                  "publish": false,
+                  "replace_security_groups_on_destroy": null,
+                  "replacement_security_group_ids": null,
+                  "reserved_concurrent_executions": -1,
+                  "role": "arn:aws:iam::123456789012:role/example",
+                  "runtime": "nodejs22.x",
+                  "s3_bucket": null,
+                  "s3_key": null,
+                  "s3_object_version": null,
+                  "skip_destroy": false,
+                  "snap_start": [],
+                  "tags": null,
+                  "timeout": 3,
+                  "timeouts": null,
+                  "vpc_config": []
+                },
+                "after_unknown": {
+                  "architectures": true,
+                  "arn": true,
+                  "code_sha256": true,
+                  "dead_letter_config": [],
+                  "environment": [],
+                  "ephemeral_storage": true,
+                  "file_system_config": [],
+                  "id": true,
+                  "image_config": [],
+                  "invoke_arn": true,
+                  "last_modified": true,
+                  "logging_config": true,
+                  "qualified_arn": true,
+                  "qualified_invoke_arn": true,
+                  "signing_job_arn": true,
+                  "signing_profile_version_arn": true,
+                  "snap_start": [],
+                  "source_code_hash": true,
+                  "source_code_size": true,
+                  "tags_all": true,
+                  "tracing_config": true,
+                  "version": true,
+                  "vpc_config": []
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "architectures": [],
+                  "dead_letter_config": [],
+                  "environment": [],
+                  "ephemeral_storage": [],
+                  "file_system_config": [],
+                  "image_config": [],
+                  "logging_config": [],
+                  "snap_start": [],
+                  "tags_all": {},
+                  "tracing_config": [],
+                  "vpc_config": []
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_function.missing_both",
+                        "mode": "managed",
+                        "type": "aws_lambda_function",
+                        "name": "missing_both",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "filename": {
+                            "constant_value": "bundle.zip"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "handler": {
+                            "constant_value": "index.Handler"
+                          },
+                          "role": {
+                            "constant_value": "arn:aws:iam::123456789012:role/example"
+                          },
+                          "runtime": {
+                            "constant_value": "nodejs22.x"
+                          },
+                          "vpc_config": [
+                            {
+                              "security_group_ids": {
+                                "constant_value": []
+                              },
+                              "subnet_ids": {
+                                "constant_value": []
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function.missing_sg_ids",
+                        "mode": "managed",
+                        "type": "aws_lambda_function",
+                        "name": "missing_sg_ids",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "filename": {
+                            "constant_value": "bundle.zip"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "handler": {
+                            "constant_value": "index.Handler"
+                          },
+                          "role": {
+                            "constant_value": "arn:aws:iam::123456789012:role/example"
+                          },
+                          "runtime": {
+                            "constant_value": "nodejs22.x"
+                          },
+                          "vpc_config": [
+                            {
+                              "security_group_ids": {
+                                "constant_value": []
+                              },
+                              "subnet_ids": {
+                                "constant_value": [
+                                  "subnet-01234567890abcdef"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function.missing_subnet_ids",
+                        "mode": "managed",
+                        "type": "aws_lambda_function",
+                        "name": "missing_subnet_ids",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "filename": {
+                            "constant_value": "bundle.zip"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "handler": {
+                            "constant_value": "index.Handler"
+                          },
+                          "role": {
+                            "constant_value": "arn:aws:iam::123456789012:role/example"
+                          },
+                          "runtime": {
+                            "constant_value": "nodejs22.x"
+                          },
+                          "vpc_config": [
+                            {
+                              "security_group_ids": {
+                                "constant_value": [
+                                  "sg-0123456789abcdef"
+                                ]
+                              },
+                              "subnet_ids": {
+                                "constant_value": []
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function.missing_vpc_config",
+                        "mode": "managed",
+                        "type": "aws_lambda_function",
+                        "name": "missing_vpc_config",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "filename": {
+                            "constant_value": "bundle.zip"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "handler": {
+                            "constant_value": "index.Handler"
+                          },
+                          "role": {
+                            "constant_value": "arn:aws:iam::123456789012:role/example"
+                          },
+                          "runtime": {
+                            "constant_value": "nodejs22.x"
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_function.valid",
+                        "mode": "managed",
+                        "type": "aws_lambda_function",
+                        "name": "valid",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "filename": {
+                            "constant_value": "bundle.zip"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "handler": {
+                            "constant_value": "index.Handler"
+                          },
+                          "role": {
+                            "constant_value": "arn:aws:iam::123456789012:role/example"
+                          },
+                          "runtime": {
+                            "constant_value": "nodejs22.x"
+                          },
+                          "vpc_config": [
+                            {
+                              "security_group_ids": {
+                                "constant_value": [
+                                  "sg-01234567890abcdef"
+                                ]
+                              },
+                              "subnet_ids": {
+                                "constant_value": [
+                                  "subnet-01234567890abcdef"
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-24T09:35:12Z",
+          "errored": false
+        }
       }
     },
     "rds": {

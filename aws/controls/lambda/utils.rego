@@ -14,3 +14,9 @@ public_access(permission) if {
 }
 
 public_access(permission) if permission.function_url_auth_type == "NONE"
+
+valid_vpc_config(lambda) if {
+	count(lambda.vpc_config) == 1
+	count(lambda.vpc_config[0].security_group_ids) > 0
+	count(lambda.vpc_config[0].subnet_ids) > 0
+}

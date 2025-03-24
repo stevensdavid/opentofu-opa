@@ -8,3 +8,7 @@ import data.aws.controls.lambda
 test_evaluate_lambda_1_valid_input if count(lambda.evaluate_lambda_1(controls.mocks.lambda["1"].pass)) == 0
 
 test_evaluate_lambda_1_invalid_input if count(lambda.evaluate_lambda_1(controls.mocks.lambda["1"].fail)) == 3
+
+test_evaluate_lambda_2_valid_input if count(lambda.evaluate_lambda_2(controls.mocks.lambda["2"].pass)) == 0
+
+test_evaluate_lambda_2_invalid_input if count(lambda.evaluate_lambda_2(controls.mocks.lambda["2"].fail)) == 4
