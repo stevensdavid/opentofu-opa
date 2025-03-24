@@ -40,12 +40,12 @@ docs_link="https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscon
 cat <<EOF >>"../${service}/policies.rego"
 
 $function_name(plan) := {violation |
-	some resource in utils.resources(plan, "aws_")
+	some {"configuration": configuration, "address": address} in utils.resources(plan, "aws_")
 
 	violation := {
 		"id": {"opa": "$control_id"},
 		"reason": "",
-		"resource": resource.address,
+		"resource": address,
 		"docs": "$docs_link",
 	}
 }
