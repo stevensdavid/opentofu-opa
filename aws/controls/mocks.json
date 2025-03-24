@@ -8740,6 +8740,1142 @@
         }
       }
     },
+    "lambda": {
+      "1": {
+        "pass": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.pass.aws_lambda_permission.account_principal",
+                      "mode": "managed",
+                      "type": "aws_lambda_permission",
+                      "name": "account_principal",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:InvokeFunction",
+                        "event_source_token": null,
+                        "function_name": "lambda",
+                        "function_url_auth_type": null,
+                        "principal": "123456789012",
+                        "principal_org_id": null,
+                        "qualifier": null,
+                        "source_account": null,
+                        "source_arn": null
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_lambda_permission.function_url_auth",
+                      "mode": "managed",
+                      "type": "aws_lambda_permission",
+                      "name": "function_url_auth",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:InvokeFunctionUrl",
+                        "event_source_token": null,
+                        "function_name": "lambda",
+                        "function_url_auth_type": "AWS_IAM",
+                        "principal": "*",
+                        "principal_org_id": null,
+                        "qualifier": null,
+                        "source_account": null,
+                        "source_arn": null
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_lambda_permission.iam_principal",
+                      "mode": "managed",
+                      "type": "aws_lambda_permission",
+                      "name": "iam_principal",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:InvokeFunction",
+                        "event_source_token": null,
+                        "function_name": "lambda",
+                        "function_url_auth_type": null,
+                        "principal": "arn:aws:iam::123456789012:role/example",
+                        "principal_org_id": null,
+                        "qualifier": null,
+                        "source_account": null,
+                        "source_arn": null
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_lambda_permission.source_account[\"*\"]",
+                      "mode": "managed",
+                      "type": "aws_lambda_permission",
+                      "name": "source_account",
+                      "index": "*",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:InvokeFunction",
+                        "event_source_token": null,
+                        "function_name": "lambda",
+                        "function_url_auth_type": null,
+                        "principal": "*",
+                        "principal_org_id": null,
+                        "qualifier": null,
+                        "source_account": "123456789012",
+                        "source_arn": null
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_lambda_permission.source_account[\"sns.amazonaws.com\"]",
+                      "mode": "managed",
+                      "type": "aws_lambda_permission",
+                      "name": "source_account",
+                      "index": "sns.amazonaws.com",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:InvokeFunction",
+                        "event_source_token": null,
+                        "function_name": "lambda",
+                        "function_url_auth_type": null,
+                        "principal": "sns.amazonaws.com",
+                        "principal_org_id": null,
+                        "qualifier": null,
+                        "source_account": "123456789012",
+                        "source_arn": null
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_lambda_permission.source_arn[\"*\"]",
+                      "mode": "managed",
+                      "type": "aws_lambda_permission",
+                      "name": "source_arn",
+                      "index": "*",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:InvokeFunction",
+                        "event_source_token": null,
+                        "function_name": "lambda",
+                        "function_url_auth_type": null,
+                        "principal": "*",
+                        "principal_org_id": null,
+                        "qualifier": null,
+                        "source_account": null,
+                        "source_arn": "arn:aws:s3:::example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_lambda_permission.source_arn[\"sns.amazonaws.com\"]",
+                      "mode": "managed",
+                      "type": "aws_lambda_permission",
+                      "name": "source_arn",
+                      "index": "sns.amazonaws.com",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:InvokeFunction",
+                        "event_source_token": null,
+                        "function_name": "lambda",
+                        "function_url_auth_type": null,
+                        "principal": "sns.amazonaws.com",
+                        "principal_org_id": null,
+                        "qualifier": null,
+                        "source_account": null,
+                        "source_arn": "arn:aws:s3:::example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_lambda_permission.source_org[\"*\"]",
+                      "mode": "managed",
+                      "type": "aws_lambda_permission",
+                      "name": "source_org",
+                      "index": "*",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:InvokeFunction",
+                        "event_source_token": null,
+                        "function_name": "lambda",
+                        "function_url_auth_type": null,
+                        "principal": "*",
+                        "principal_org_id": "o-a1b2c3d4e5f",
+                        "qualifier": null,
+                        "source_account": null,
+                        "source_arn": null
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_lambda_permission.source_org[\"sns.amazonaws.com\"]",
+                      "mode": "managed",
+                      "type": "aws_lambda_permission",
+                      "name": "source_org",
+                      "index": "sns.amazonaws.com",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:InvokeFunction",
+                        "event_source_token": null,
+                        "function_name": "lambda",
+                        "function_url_auth_type": null,
+                        "principal": "sns.amazonaws.com",
+                        "principal_org_id": "o-a1b2c3d4e5f",
+                        "qualifier": null,
+                        "source_account": null,
+                        "source_arn": null
+                      },
+                      "sensitive_values": {}
+                    }
+                  ],
+                  "address": "module.pass"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.pass.aws_lambda_permission.account_principal",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_lambda_permission",
+              "name": "account_principal",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:InvokeFunction",
+                  "event_source_token": null,
+                  "function_name": "lambda",
+                  "function_url_auth_type": null,
+                  "principal": "123456789012",
+                  "principal_org_id": null,
+                  "qualifier": null,
+                  "source_account": null,
+                  "source_arn": null
+                },
+                "after_unknown": {
+                  "id": true,
+                  "statement_id": true,
+                  "statement_id_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_lambda_permission.function_url_auth",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_lambda_permission",
+              "name": "function_url_auth",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:InvokeFunctionUrl",
+                  "event_source_token": null,
+                  "function_name": "lambda",
+                  "function_url_auth_type": "AWS_IAM",
+                  "principal": "*",
+                  "principal_org_id": null,
+                  "qualifier": null,
+                  "source_account": null,
+                  "source_arn": null
+                },
+                "after_unknown": {
+                  "id": true,
+                  "statement_id": true,
+                  "statement_id_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_lambda_permission.iam_principal",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_lambda_permission",
+              "name": "iam_principal",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:InvokeFunction",
+                  "event_source_token": null,
+                  "function_name": "lambda",
+                  "function_url_auth_type": null,
+                  "principal": "arn:aws:iam::123456789012:role/example",
+                  "principal_org_id": null,
+                  "qualifier": null,
+                  "source_account": null,
+                  "source_arn": null
+                },
+                "after_unknown": {
+                  "id": true,
+                  "statement_id": true,
+                  "statement_id_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_lambda_permission.source_account[\"*\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_lambda_permission",
+              "name": "source_account",
+              "index": "*",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:InvokeFunction",
+                  "event_source_token": null,
+                  "function_name": "lambda",
+                  "function_url_auth_type": null,
+                  "principal": "*",
+                  "principal_org_id": null,
+                  "qualifier": null,
+                  "source_account": "123456789012",
+                  "source_arn": null
+                },
+                "after_unknown": {
+                  "id": true,
+                  "statement_id": true,
+                  "statement_id_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_lambda_permission.source_account[\"sns.amazonaws.com\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_lambda_permission",
+              "name": "source_account",
+              "index": "sns.amazonaws.com",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:InvokeFunction",
+                  "event_source_token": null,
+                  "function_name": "lambda",
+                  "function_url_auth_type": null,
+                  "principal": "sns.amazonaws.com",
+                  "principal_org_id": null,
+                  "qualifier": null,
+                  "source_account": "123456789012",
+                  "source_arn": null
+                },
+                "after_unknown": {
+                  "id": true,
+                  "statement_id": true,
+                  "statement_id_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_lambda_permission.source_arn[\"*\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_lambda_permission",
+              "name": "source_arn",
+              "index": "*",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:InvokeFunction",
+                  "event_source_token": null,
+                  "function_name": "lambda",
+                  "function_url_auth_type": null,
+                  "principal": "*",
+                  "principal_org_id": null,
+                  "qualifier": null,
+                  "source_account": null,
+                  "source_arn": "arn:aws:s3:::example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "statement_id": true,
+                  "statement_id_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_lambda_permission.source_arn[\"sns.amazonaws.com\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_lambda_permission",
+              "name": "source_arn",
+              "index": "sns.amazonaws.com",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:InvokeFunction",
+                  "event_source_token": null,
+                  "function_name": "lambda",
+                  "function_url_auth_type": null,
+                  "principal": "sns.amazonaws.com",
+                  "principal_org_id": null,
+                  "qualifier": null,
+                  "source_account": null,
+                  "source_arn": "arn:aws:s3:::example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "statement_id": true,
+                  "statement_id_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_lambda_permission.source_org[\"*\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_lambda_permission",
+              "name": "source_org",
+              "index": "*",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:InvokeFunction",
+                  "event_source_token": null,
+                  "function_name": "lambda",
+                  "function_url_auth_type": null,
+                  "principal": "*",
+                  "principal_org_id": "o-a1b2c3d4e5f",
+                  "qualifier": null,
+                  "source_account": null,
+                  "source_arn": null
+                },
+                "after_unknown": {
+                  "id": true,
+                  "statement_id": true,
+                  "statement_id_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_lambda_permission.source_org[\"sns.amazonaws.com\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_lambda_permission",
+              "name": "source_org",
+              "index": "sns.amazonaws.com",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:InvokeFunction",
+                  "event_source_token": null,
+                  "function_name": "lambda",
+                  "function_url_auth_type": null,
+                  "principal": "sns.amazonaws.com",
+                  "principal_org_id": "o-a1b2c3d4e5f",
+                  "qualifier": null,
+                  "source_account": null,
+                  "source_arn": null
+                },
+                "after_unknown": {
+                  "id": true,
+                  "statement_id": true,
+                  "statement_id_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_permission.empty_source",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "empty_source",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "constant_value": "sns.amazonaws.com"
+                          },
+                          "principal_org_id": {
+                            "constant_value": ""
+                          },
+                          "source_arn": {
+                            "constant_value": ""
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.function_auth_none",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "function_auth_none",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunctionUrl"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "function_url_auth_type": {
+                            "constant_value": "NONE"
+                          },
+                          "principal": {
+                            "constant_value": "123456789012"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.missing_source",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "missing_source",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "constant_value": "*"
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_permission.account_principal",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "account_principal",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "constant_value": "123456789012"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.function_url_auth",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "function_url_auth",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunctionUrl"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "function_url_auth_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "principal": {
+                            "constant_value": "*"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.iam_principal",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "iam_principal",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "constant_value": "arn:aws:iam::123456789012:role/example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.source_account",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "source_account",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "source_account": {
+                            "constant_value": "123456789012"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.source_arn",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "source_arn",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "source_arn": {
+                            "constant_value": "arn:aws:s3:::example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.source_org",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "source_org",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "principal_org_id": {
+                            "constant_value": "o-a1b2c3d4e5f"
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-24T08:49:41Z",
+          "errored": false
+        },
+        "fail": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.fail.aws_lambda_permission.empty_source",
+                      "mode": "managed",
+                      "type": "aws_lambda_permission",
+                      "name": "empty_source",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:InvokeFunction",
+                        "event_source_token": null,
+                        "function_name": "lambda",
+                        "function_url_auth_type": null,
+                        "principal": "sns.amazonaws.com",
+                        "principal_org_id": "",
+                        "qualifier": null,
+                        "source_account": null,
+                        "source_arn": ""
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.fail.aws_lambda_permission.function_auth_none",
+                      "mode": "managed",
+                      "type": "aws_lambda_permission",
+                      "name": "function_auth_none",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:InvokeFunctionUrl",
+                        "event_source_token": null,
+                        "function_name": "lambda",
+                        "function_url_auth_type": "NONE",
+                        "principal": "123456789012",
+                        "principal_org_id": null,
+                        "qualifier": null,
+                        "source_account": null,
+                        "source_arn": null
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.fail.aws_lambda_permission.missing_source",
+                      "mode": "managed",
+                      "type": "aws_lambda_permission",
+                      "name": "missing_source",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:InvokeFunction",
+                        "event_source_token": null,
+                        "function_name": "lambda",
+                        "function_url_auth_type": null,
+                        "principal": "*",
+                        "principal_org_id": null,
+                        "qualifier": null,
+                        "source_account": null,
+                        "source_arn": null
+                      },
+                      "sensitive_values": {}
+                    }
+                  ],
+                  "address": "module.fail"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.fail.aws_lambda_permission.empty_source",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_lambda_permission",
+              "name": "empty_source",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:InvokeFunction",
+                  "event_source_token": null,
+                  "function_name": "lambda",
+                  "function_url_auth_type": null,
+                  "principal": "sns.amazonaws.com",
+                  "principal_org_id": "",
+                  "qualifier": null,
+                  "source_account": null,
+                  "source_arn": ""
+                },
+                "after_unknown": {
+                  "id": true,
+                  "statement_id": true,
+                  "statement_id_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.fail.aws_lambda_permission.function_auth_none",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_lambda_permission",
+              "name": "function_auth_none",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:InvokeFunctionUrl",
+                  "event_source_token": null,
+                  "function_name": "lambda",
+                  "function_url_auth_type": "NONE",
+                  "principal": "123456789012",
+                  "principal_org_id": null,
+                  "qualifier": null,
+                  "source_account": null,
+                  "source_arn": null
+                },
+                "after_unknown": {
+                  "id": true,
+                  "statement_id": true,
+                  "statement_id_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.fail.aws_lambda_permission.missing_source",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_lambda_permission",
+              "name": "missing_source",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:InvokeFunction",
+                  "event_source_token": null,
+                  "function_name": "lambda",
+                  "function_url_auth_type": null,
+                  "principal": "*",
+                  "principal_org_id": null,
+                  "qualifier": null,
+                  "source_account": null,
+                  "source_arn": null
+                },
+                "after_unknown": {
+                  "id": true,
+                  "statement_id": true,
+                  "statement_id_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_permission.empty_source",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "empty_source",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "constant_value": "sns.amazonaws.com"
+                          },
+                          "principal_org_id": {
+                            "constant_value": ""
+                          },
+                          "source_arn": {
+                            "constant_value": ""
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.function_auth_none",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "function_auth_none",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunctionUrl"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "function_url_auth_type": {
+                            "constant_value": "NONE"
+                          },
+                          "principal": {
+                            "constant_value": "123456789012"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.missing_source",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "missing_source",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "constant_value": "*"
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_permission.account_principal",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "account_principal",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "constant_value": "123456789012"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.function_url_auth",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "function_url_auth",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunctionUrl"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "function_url_auth_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "principal": {
+                            "constant_value": "*"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.iam_principal",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "iam_principal",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "constant_value": "arn:aws:iam::123456789012:role/example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.source_account",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "source_account",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "source_account": {
+                            "constant_value": "123456789012"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.source_arn",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "source_arn",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "source_arn": {
+                            "constant_value": "arn:aws:s3:::example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_permission.source_org",
+                        "mode": "managed",
+                        "type": "aws_lambda_permission",
+                        "name": "source_org",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:InvokeFunction"
+                          },
+                          "function_name": {
+                            "constant_value": "lambda"
+                          },
+                          "principal": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "principal_org_id": {
+                            "constant_value": "o-a1b2c3d4e5f"
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-24T08:49:44Z",
+          "errored": false
+        }
+      }
+    },
     "rds": {
       "1": {
         "pass": {
