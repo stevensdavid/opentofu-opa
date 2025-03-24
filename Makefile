@@ -7,7 +7,7 @@ debug:
 
 .PHONY: test
 test: aws/controls/mocks.json
-	opa test -v .
+	opa test .
 
 # In Makefile
 aws/controls/mocks.json: $(MOCK_FILES) aws/controls/test_data/combine_mocks.sh
