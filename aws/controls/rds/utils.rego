@@ -175,3 +175,13 @@ parameter_group_requires_tls(family, parameters) if {
 		"on", "On", "ON",
 	]
 }
+
+invalid_kms_configuration(instance) if {
+	instance.kms_key_id == ""
+}
+
+invalid_kms_configuration(instance) if {
+	is_null(instance.kms_key_id)
+}
+
+invalid_kms_configuration(instance) if not instance.kms_key_id

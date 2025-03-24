@@ -374,3 +374,17 @@ evaluate_rds_27(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds27",
 	}
 }
+
+evaluate_rds_28(plan) := {violation |
+	some instance in utils.resources(plan, "aws_db_instance")
+	standard_engine(instance.configuration.engine)
+	invalid_kms_configuration(instance.configuration)
+
+	violation := {
+		"id": {"opa": "aws.controls.rds.28", "control_tower": "CT.RDS.PR.30"},
+		"reason": "Require that an Amazon RDS database instance has encryption at rest configured to use a KMS key that you specify for supported engine types",
+		"severity": "low",
+		"resource": instance.address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsrds28",
+	}
+}
