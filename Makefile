@@ -23,7 +23,7 @@ aws/controls/mocks.json: $(MOCK_FILES) aws/controls/test_data/combine_mocks.sh
 	cd $* && tofu plan --exclude module.pass --out=fail.tfplan
 
 %/mock.json: %/pass.json %/fail.json
-	echo "{\"pass\":$$(cat $*/pass.json),\"fail\":$$(cat $*/fail.json)}" > $@ && \
+	jq -n '{pass: input, fail: input}' $*/pass.json $*/fail.json > $@ && \
 	   rm $*/pass.json $*/fail.json # thse two files could cause conflicts otherwise
 
 
