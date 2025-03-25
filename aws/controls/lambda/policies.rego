@@ -30,3 +30,17 @@ evaluate_lambda_2(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolslambda2",
 	}
 }
+
+evaluate_lambda_3(plan) := {violation |
+	some {"configuration": configuration, "address": address} in utils.resources(plan, "aws_lambda_layer_version_permission")
+	configuration.principal = "*"
+	utils.falsy(configuration.organization_id)
+
+	violation := {
+		"id": {"opa": "aws.controls.lambda.3", "control_tower": "CT.LAMBDA.PR.4"},
+		"reason": "Require an AWS Lambda layer permission to grant access to an AWS organization or specific AWS account",
+		"severity": "critical",
+		"resource": address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolslambda3",
+	}
+}

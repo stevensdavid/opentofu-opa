@@ -11140,6 +11140,408 @@
           "timestamp": "2025-03-24T09:35:12Z",
           "errored": false
         }
+      },
+      "3": {
+        "pass": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.pass.aws_lambda_layer_version_permission.org_id",
+                      "mode": "managed",
+                      "type": "aws_lambda_layer_version_permission",
+                      "name": "org_id",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:GetLayerVersion",
+                        "layer_name": "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1",
+                        "organization_id": "o-a1b2c3d4e5f",
+                        "principal": "*",
+                        "skip_destroy": false,
+                        "statement_id": "example",
+                        "version_number": 1
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_lambda_layer_version_permission.principal",
+                      "mode": "managed",
+                      "type": "aws_lambda_layer_version_permission",
+                      "name": "principal",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:GetLayerVersion",
+                        "layer_name": "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1",
+                        "organization_id": null,
+                        "principal": "123456789012",
+                        "skip_destroy": false,
+                        "statement_id": "example",
+                        "version_number": 1
+                      },
+                      "sensitive_values": {}
+                    }
+                  ],
+                  "address": "module.pass"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.pass.aws_lambda_layer_version_permission.org_id",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_lambda_layer_version_permission",
+              "name": "org_id",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:GetLayerVersion",
+                  "layer_name": "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1",
+                  "organization_id": "o-a1b2c3d4e5f",
+                  "principal": "*",
+                  "skip_destroy": false,
+                  "statement_id": "example",
+                  "version_number": 1
+                },
+                "after_unknown": {
+                  "id": true,
+                  "policy": true,
+                  "revision_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_lambda_layer_version_permission.principal",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_lambda_layer_version_permission",
+              "name": "principal",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:GetLayerVersion",
+                  "layer_name": "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1",
+                  "organization_id": null,
+                  "principal": "123456789012",
+                  "skip_destroy": false,
+                  "statement_id": "example",
+                  "version_number": 1
+                },
+                "after_unknown": {
+                  "id": true,
+                  "policy": true,
+                  "revision_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_layer_version_permission.invalid",
+                        "mode": "managed",
+                        "type": "aws_lambda_layer_version_permission",
+                        "name": "invalid",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:GetLayerVersion"
+                          },
+                          "layer_name": {
+                            "constant_value": "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1"
+                          },
+                          "principal": {
+                            "constant_value": "*"
+                          },
+                          "statement_id": {
+                            "constant_value": "example"
+                          },
+                          "version_number": {
+                            "constant_value": 1
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_layer_version_permission.org_id",
+                        "mode": "managed",
+                        "type": "aws_lambda_layer_version_permission",
+                        "name": "org_id",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:GetLayerVersion"
+                          },
+                          "layer_name": {
+                            "constant_value": "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1"
+                          },
+                          "organization_id": {
+                            "constant_value": "o-a1b2c3d4e5f"
+                          },
+                          "principal": {
+                            "constant_value": "*"
+                          },
+                          "statement_id": {
+                            "constant_value": "example"
+                          },
+                          "version_number": {
+                            "constant_value": 1
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_layer_version_permission.principal",
+                        "mode": "managed",
+                        "type": "aws_lambda_layer_version_permission",
+                        "name": "principal",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:GetLayerVersion"
+                          },
+                          "layer_name": {
+                            "constant_value": "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1"
+                          },
+                          "principal": {
+                            "constant_value": "123456789012"
+                          },
+                          "statement_id": {
+                            "constant_value": "example"
+                          },
+                          "version_number": {
+                            "constant_value": 1
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-25T10:24:37Z",
+          "errored": false
+        },
+        "fail": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.fail.aws_lambda_layer_version_permission.invalid",
+                      "mode": "managed",
+                      "type": "aws_lambda_layer_version_permission",
+                      "name": "invalid",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "action": "lambda:GetLayerVersion",
+                        "layer_name": "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1",
+                        "organization_id": null,
+                        "principal": "*",
+                        "skip_destroy": false,
+                        "statement_id": "example",
+                        "version_number": 1
+                      },
+                      "sensitive_values": {}
+                    }
+                  ],
+                  "address": "module.fail"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.fail.aws_lambda_layer_version_permission.invalid",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_lambda_layer_version_permission",
+              "name": "invalid",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "action": "lambda:GetLayerVersion",
+                  "layer_name": "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1",
+                  "organization_id": null,
+                  "principal": "*",
+                  "skip_destroy": false,
+                  "statement_id": "example",
+                  "version_number": 1
+                },
+                "after_unknown": {
+                  "id": true,
+                  "policy": true,
+                  "revision_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_layer_version_permission.invalid",
+                        "mode": "managed",
+                        "type": "aws_lambda_layer_version_permission",
+                        "name": "invalid",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:GetLayerVersion"
+                          },
+                          "layer_name": {
+                            "constant_value": "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1"
+                          },
+                          "principal": {
+                            "constant_value": "*"
+                          },
+                          "statement_id": {
+                            "constant_value": "example"
+                          },
+                          "version_number": {
+                            "constant_value": 1
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_layer_version_permission.org_id",
+                        "mode": "managed",
+                        "type": "aws_lambda_layer_version_permission",
+                        "name": "org_id",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:GetLayerVersion"
+                          },
+                          "layer_name": {
+                            "constant_value": "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1"
+                          },
+                          "organization_id": {
+                            "constant_value": "o-a1b2c3d4e5f"
+                          },
+                          "principal": {
+                            "constant_value": "*"
+                          },
+                          "statement_id": {
+                            "constant_value": "example"
+                          },
+                          "version_number": {
+                            "constant_value": 1
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_layer_version_permission.principal",
+                        "mode": "managed",
+                        "type": "aws_lambda_layer_version_permission",
+                        "name": "principal",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "action": {
+                            "constant_value": "lambda:GetLayerVersion"
+                          },
+                          "layer_name": {
+                            "constant_value": "arn:aws:lambda:us-west-2:123456654321:layer:test_layer1"
+                          },
+                          "principal": {
+                            "constant_value": "123456789012"
+                          },
+                          "statement_id": {
+                            "constant_value": "example"
+                          },
+                          "version_number": {
+                            "constant_value": 1
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-25T10:24:39Z",
+          "errored": false
+        }
       }
     },
     "rds": {
