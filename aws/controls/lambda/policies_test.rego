@@ -16,3 +16,7 @@ test_evaluate_lambda_2_invalid_input if count(lambda.evaluate_lambda_2(controls.
 test_evaluate_lambda_3_valid_input if count(lambda.evaluate_lambda_3(controls.mocks.lambda["3"].pass)) == 0
 
 test_evaluate_lambda_3_invalid_input if count(lambda.evaluate_lambda_3(controls.mocks.lambda["3"].fail)) == 1
+
+test_evaluate_lambda_4_valid_input if count(lambda.evaluate_lambda_4(controls.mocks.lambda["4"].pass)) == 0
+
+test_evaluate_lambda_4_invalid_input if count(lambda.evaluate_lambda_4(controls.mocks.lambda["4"].fail)) == 1

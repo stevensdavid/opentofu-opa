@@ -44,3 +44,16 @@ evaluate_lambda_3(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolslambda3",
 	}
 }
+
+evaluate_lambda_4(plan) := {violation |
+	some {"configuration": configuration, "address": address} in utils.resources(plan, "aws_lambda_function_url")
+	configuration.authorization_type != "AWS_IAM"
+
+	violation := {
+		"id": {"opa": "aws.controls.lambda.4"},
+		"reason": "Require an AWS Lambda function URL to use AWS IAM-based authentication",
+		"resource": address,
+		"severity": "critical",
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolslambda4",
+	}
+}
