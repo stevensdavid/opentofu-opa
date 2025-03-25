@@ -11812,6 +11812,923 @@
           "timestamp": "2025-03-25T10:29:17Z",
           "errored": false
         }
+      },
+      "5": {
+        "pass": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.pass.aws_lambda_function_url.valid",
+                      "mode": "managed",
+                      "type": "aws_lambda_function_url",
+                      "name": "valid",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "authorization_type": "AWS_IAM",
+                        "cors": [
+                          {
+                            "allow_credentials": null,
+                            "allow_headers": null,
+                            "allow_methods": null,
+                            "allow_origins": [
+                              "example.com"
+                            ],
+                            "expose_headers": null,
+                            "max_age": null
+                          }
+                        ],
+                        "function_name": "example",
+                        "invoke_mode": "BUFFERED",
+                        "qualifier": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "cors": [
+                          {
+                            "allow_origins": [
+                              false
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "address": "module.pass"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.pass.aws_lambda_function_url.valid",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_lambda_function_url",
+              "name": "valid",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "authorization_type": "AWS_IAM",
+                  "cors": [
+                    {
+                      "allow_credentials": null,
+                      "allow_headers": null,
+                      "allow_methods": null,
+                      "allow_origins": [
+                        "example.com"
+                      ],
+                      "expose_headers": null,
+                      "max_age": null
+                    }
+                  ],
+                  "function_name": "example",
+                  "invoke_mode": "BUFFERED",
+                  "qualifier": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "cors": [
+                    {
+                      "allow_origins": [
+                        false
+                      ]
+                    }
+                  ],
+                  "function_arn": true,
+                  "function_url": true,
+                  "id": true,
+                  "url_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "cors": [
+                    {
+                      "allow_origins": [
+                        false
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_function_url.http_wildcard",
+                        "mode": "managed",
+                        "type": "aws_lambda_function_url",
+                        "name": "http_wildcard",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "authorization_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "cors": [
+                            {
+                              "allow_origins": {
+                                "constant_value": [
+                                  "example.com",
+                                  "http://*"
+                                ]
+                              }
+                            }
+                          ],
+                          "function_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function_url.https_wildcard",
+                        "mode": "managed",
+                        "type": "aws_lambda_function_url",
+                        "name": "https_wildcard",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "authorization_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "cors": [
+                            {
+                              "allow_origins": {
+                                "constant_value": [
+                                  "example.com",
+                                  "https://*"
+                                ]
+                              }
+                            }
+                          ],
+                          "function_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function_url.no_cors",
+                        "mode": "managed",
+                        "type": "aws_lambda_function_url",
+                        "name": "no_cors",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "authorization_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "function_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function_url.no_origin_restriction",
+                        "mode": "managed",
+                        "type": "aws_lambda_function_url",
+                        "name": "no_origin_restriction",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "authorization_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "cors": [
+                            {
+                              "allow_methods": {
+                                "constant_value": [
+                                  "GET"
+                                ]
+                              }
+                            }
+                          ],
+                          "function_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function_url.wildcard",
+                        "mode": "managed",
+                        "type": "aws_lambda_function_url",
+                        "name": "wildcard",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "authorization_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "cors": [
+                            {
+                              "allow_origins": {
+                                "constant_value": [
+                                  "example.com",
+                                  "*"
+                                ]
+                              }
+                            }
+                          ],
+                          "function_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_function_url.valid",
+                        "mode": "managed",
+                        "type": "aws_lambda_function_url",
+                        "name": "valid",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "authorization_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "cors": [
+                            {
+                              "allow_origins": {
+                                "constant_value": [
+                                  "example.com"
+                                ]
+                              }
+                            }
+                          ],
+                          "function_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-25T10:45:46Z",
+          "errored": false
+        },
+        "fail": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.fail.aws_lambda_function_url.http_wildcard",
+                      "mode": "managed",
+                      "type": "aws_lambda_function_url",
+                      "name": "http_wildcard",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "authorization_type": "AWS_IAM",
+                        "cors": [
+                          {
+                            "allow_credentials": null,
+                            "allow_headers": null,
+                            "allow_methods": null,
+                            "allow_origins": [
+                              "example.com",
+                              "http://*"
+                            ],
+                            "expose_headers": null,
+                            "max_age": null
+                          }
+                        ],
+                        "function_name": "example",
+                        "invoke_mode": "BUFFERED",
+                        "qualifier": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "cors": [
+                          {
+                            "allow_origins": [
+                              false,
+                              false
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_lambda_function_url.https_wildcard",
+                      "mode": "managed",
+                      "type": "aws_lambda_function_url",
+                      "name": "https_wildcard",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "authorization_type": "AWS_IAM",
+                        "cors": [
+                          {
+                            "allow_credentials": null,
+                            "allow_headers": null,
+                            "allow_methods": null,
+                            "allow_origins": [
+                              "example.com",
+                              "https://*"
+                            ],
+                            "expose_headers": null,
+                            "max_age": null
+                          }
+                        ],
+                        "function_name": "example",
+                        "invoke_mode": "BUFFERED",
+                        "qualifier": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "cors": [
+                          {
+                            "allow_origins": [
+                              false,
+                              false
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_lambda_function_url.no_cors",
+                      "mode": "managed",
+                      "type": "aws_lambda_function_url",
+                      "name": "no_cors",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "authorization_type": "AWS_IAM",
+                        "cors": [],
+                        "function_name": "example",
+                        "invoke_mode": "BUFFERED",
+                        "qualifier": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "cors": []
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_lambda_function_url.no_origin_restriction",
+                      "mode": "managed",
+                      "type": "aws_lambda_function_url",
+                      "name": "no_origin_restriction",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "authorization_type": "AWS_IAM",
+                        "cors": [
+                          {
+                            "allow_credentials": null,
+                            "allow_headers": null,
+                            "allow_methods": [
+                              "GET"
+                            ],
+                            "allow_origins": null,
+                            "expose_headers": null,
+                            "max_age": null
+                          }
+                        ],
+                        "function_name": "example",
+                        "invoke_mode": "BUFFERED",
+                        "qualifier": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "cors": [
+                          {
+                            "allow_methods": [
+                              false
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_lambda_function_url.wildcard",
+                      "mode": "managed",
+                      "type": "aws_lambda_function_url",
+                      "name": "wildcard",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "authorization_type": "AWS_IAM",
+                        "cors": [
+                          {
+                            "allow_credentials": null,
+                            "allow_headers": null,
+                            "allow_methods": null,
+                            "allow_origins": [
+                              "*",
+                              "example.com"
+                            ],
+                            "expose_headers": null,
+                            "max_age": null
+                          }
+                        ],
+                        "function_name": "example",
+                        "invoke_mode": "BUFFERED",
+                        "qualifier": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "cors": [
+                          {
+                            "allow_origins": [
+                              false,
+                              false
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "address": "module.fail"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.fail.aws_lambda_function_url.http_wildcard",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_lambda_function_url",
+              "name": "http_wildcard",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "authorization_type": "AWS_IAM",
+                  "cors": [
+                    {
+                      "allow_credentials": null,
+                      "allow_headers": null,
+                      "allow_methods": null,
+                      "allow_origins": [
+                        "example.com",
+                        "http://*"
+                      ],
+                      "expose_headers": null,
+                      "max_age": null
+                    }
+                  ],
+                  "function_name": "example",
+                  "invoke_mode": "BUFFERED",
+                  "qualifier": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "cors": [
+                    {
+                      "allow_origins": [
+                        false,
+                        false
+                      ]
+                    }
+                  ],
+                  "function_arn": true,
+                  "function_url": true,
+                  "id": true,
+                  "url_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "cors": [
+                    {
+                      "allow_origins": [
+                        false,
+                        false
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_lambda_function_url.https_wildcard",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_lambda_function_url",
+              "name": "https_wildcard",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "authorization_type": "AWS_IAM",
+                  "cors": [
+                    {
+                      "allow_credentials": null,
+                      "allow_headers": null,
+                      "allow_methods": null,
+                      "allow_origins": [
+                        "example.com",
+                        "https://*"
+                      ],
+                      "expose_headers": null,
+                      "max_age": null
+                    }
+                  ],
+                  "function_name": "example",
+                  "invoke_mode": "BUFFERED",
+                  "qualifier": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "cors": [
+                    {
+                      "allow_origins": [
+                        false,
+                        false
+                      ]
+                    }
+                  ],
+                  "function_arn": true,
+                  "function_url": true,
+                  "id": true,
+                  "url_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "cors": [
+                    {
+                      "allow_origins": [
+                        false,
+                        false
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_lambda_function_url.no_cors",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_lambda_function_url",
+              "name": "no_cors",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "authorization_type": "AWS_IAM",
+                  "cors": [],
+                  "function_name": "example",
+                  "invoke_mode": "BUFFERED",
+                  "qualifier": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "cors": [],
+                  "function_arn": true,
+                  "function_url": true,
+                  "id": true,
+                  "url_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "cors": []
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_lambda_function_url.no_origin_restriction",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_lambda_function_url",
+              "name": "no_origin_restriction",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "authorization_type": "AWS_IAM",
+                  "cors": [
+                    {
+                      "allow_credentials": null,
+                      "allow_headers": null,
+                      "allow_methods": [
+                        "GET"
+                      ],
+                      "allow_origins": null,
+                      "expose_headers": null,
+                      "max_age": null
+                    }
+                  ],
+                  "function_name": "example",
+                  "invoke_mode": "BUFFERED",
+                  "qualifier": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "cors": [
+                    {
+                      "allow_methods": [
+                        false
+                      ]
+                    }
+                  ],
+                  "function_arn": true,
+                  "function_url": true,
+                  "id": true,
+                  "url_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "cors": [
+                    {
+                      "allow_methods": [
+                        false
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_lambda_function_url.wildcard",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_lambda_function_url",
+              "name": "wildcard",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "authorization_type": "AWS_IAM",
+                  "cors": [
+                    {
+                      "allow_credentials": null,
+                      "allow_headers": null,
+                      "allow_methods": null,
+                      "allow_origins": [
+                        "*",
+                        "example.com"
+                      ],
+                      "expose_headers": null,
+                      "max_age": null
+                    }
+                  ],
+                  "function_name": "example",
+                  "invoke_mode": "BUFFERED",
+                  "qualifier": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "cors": [
+                    {
+                      "allow_origins": [
+                        false,
+                        false
+                      ]
+                    }
+                  ],
+                  "function_arn": true,
+                  "function_url": true,
+                  "id": true,
+                  "url_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "cors": [
+                    {
+                      "allow_origins": [
+                        false,
+                        false
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_function_url.http_wildcard",
+                        "mode": "managed",
+                        "type": "aws_lambda_function_url",
+                        "name": "http_wildcard",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "authorization_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "cors": [
+                            {
+                              "allow_origins": {
+                                "constant_value": [
+                                  "example.com",
+                                  "http://*"
+                                ]
+                              }
+                            }
+                          ],
+                          "function_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function_url.https_wildcard",
+                        "mode": "managed",
+                        "type": "aws_lambda_function_url",
+                        "name": "https_wildcard",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "authorization_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "cors": [
+                            {
+                              "allow_origins": {
+                                "constant_value": [
+                                  "example.com",
+                                  "https://*"
+                                ]
+                              }
+                            }
+                          ],
+                          "function_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function_url.no_cors",
+                        "mode": "managed",
+                        "type": "aws_lambda_function_url",
+                        "name": "no_cors",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "authorization_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "function_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function_url.no_origin_restriction",
+                        "mode": "managed",
+                        "type": "aws_lambda_function_url",
+                        "name": "no_origin_restriction",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "authorization_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "cors": [
+                            {
+                              "allow_methods": {
+                                "constant_value": [
+                                  "GET"
+                                ]
+                              }
+                            }
+                          ],
+                          "function_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_lambda_function_url.wildcard",
+                        "mode": "managed",
+                        "type": "aws_lambda_function_url",
+                        "name": "wildcard",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "authorization_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "cors": [
+                            {
+                              "allow_origins": {
+                                "constant_value": [
+                                  "example.com",
+                                  "*"
+                                ]
+                              }
+                            }
+                          ],
+                          "function_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_lambda_function_url.valid",
+                        "mode": "managed",
+                        "type": "aws_lambda_function_url",
+                        "name": "valid",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "authorization_type": {
+                            "constant_value": "AWS_IAM"
+                          },
+                          "cors": [
+                            {
+                              "allow_origins": {
+                                "constant_value": [
+                                  "example.com"
+                                ]
+                              }
+                            }
+                          ],
+                          "function_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-25T10:45:48Z",
+          "errored": false
+        }
       }
     },
     "rds": {

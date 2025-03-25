@@ -57,3 +57,16 @@ evaluate_lambda_4(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolslambda4",
 	}
 }
+
+evaluate_lambda_5(plan) := {violation |
+	some {"configuration": configuration, "address": address} in utils.resources(plan, "aws_lambda_function_url")
+	wildcard_cors_origin(configuration)
+
+	violation := {
+		"id": {"opa": "aws.controls.lambda.5", "control_tower": "CT.LAMBDA.PR.5"},
+		"reason": "Require an AWS Lambda function URL CORS policy to restrict access to specific origins",
+		"resource": address,
+		"severity": "high",
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolslambda5",
+	}
+}
