@@ -47,3 +47,19 @@ statement_allows_action(statement, action) if statement.Action == action
 statement_allows_resource(statement, resource) if resource in statement.Resource
 
 statement_allows_resource(statement, resource) if resource == statement.Resource
+
+statement_allows_wildcard_service_actions(statement) if {
+	statement.Effect == "Allow"
+	some action in statement.Action
+	regex.match(`^[\w]*[:]*\*$`, action)
+}
+
+statement_allows_wildcard_service_actions(statement) if {
+	statement.Effect == "Allow"
+	regex.match(`^[\w]*[:]*\*$`, statement.Action)
+}
+
+statement_allows_wildcard_service_actions(statement) if {
+	statement.Effect == "Allow"
+	not utils.falsy(statement.NotAction)
+}

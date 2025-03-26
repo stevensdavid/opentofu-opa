@@ -19,3 +19,16 @@ evaluate_iam_1(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsiam1",
 	}
 }
+
+evaluate_iam_2(plan) := {violation |
+	some [statement, address] in all_iam_statements(plan)
+	statement_allows_wildcard_service_actions(statement)
+
+	violation := {
+		"id": {"opa": "aws.controls.iam.2", "control_tower": "CT.IAM.PR.3"},
+		"reason": "Require that AWS Identity and Access Management (IAM) customer-managed policies do not have wildcard service actions",
+		"severity": "low",
+		"resource": address,
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsiam2",
+	}
+}
