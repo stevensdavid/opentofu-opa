@@ -12306,6 +12306,728 @@
           "timestamp": "2025-03-26T09:48:13Z",
           "errored": false
         }
+      },
+      "3": {
+        "pass": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.pass.aws_iam_group.group",
+                      "mode": "managed",
+                      "type": "aws_iam_group",
+                      "name": "group",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "name": "example",
+                        "path": "/"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_group_policy_attachment.attachment",
+                      "mode": "managed",
+                      "type": "aws_iam_group_policy_attachment",
+                      "name": "attachment",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "group": "example",
+                        "policy_arn": "arn:aws:iam::123456789012:policy/example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_user.user",
+                      "mode": "managed",
+                      "type": "aws_iam_user",
+                      "name": "user",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "force_destroy": false,
+                        "name": "example",
+                        "path": "/",
+                        "permissions_boundary": null,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_iam_user_group_membership.group_membership",
+                      "mode": "managed",
+                      "type": "aws_iam_user_group_membership",
+                      "name": "group_membership",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "groups": [
+                          "example"
+                        ],
+                        "user": "example"
+                      },
+                      "sensitive_values": {
+                        "groups": [
+                          false
+                        ]
+                      }
+                    }
+                  ],
+                  "address": "module.pass"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.pass.aws_iam_group.group",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_group",
+              "name": "group",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "name": "example",
+                  "path": "/"
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "unique_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_group_policy_attachment.attachment",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_group_policy_attachment",
+              "name": "attachment",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "group": "example",
+                  "policy_arn": "arn:aws:iam::123456789012:policy/example"
+                },
+                "after_unknown": {
+                  "id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_user.user",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_user",
+              "name": "user",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "force_destroy": false,
+                  "name": "example",
+                  "path": "/",
+                  "permissions_boundary": null,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "id": true,
+                  "tags_all": true,
+                  "unique_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_user_group_membership.group_membership",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_user_group_membership",
+              "name": "group_membership",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "groups": [
+                    "example"
+                  ],
+                  "user": "example"
+                },
+                "after_unknown": {
+                  "groups": [
+                    false
+                  ],
+                  "id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "groups": [
+                    false
+                  ]
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_iam_user_policies_exclusive.inline_policies_exclusive",
+                        "mode": "managed",
+                        "type": "aws_iam_user_policies_exclusive",
+                        "name": "inline_policies_exclusive",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "policy_names": {
+                            "constant_value": [
+                              "example"
+                            ]
+                          },
+                          "user_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_iam_user_policy.inline_policy",
+                        "mode": "managed",
+                        "type": "aws_iam_user_policy",
+                        "name": "inline_policy",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "policy": {},
+                          "user": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_iam_user_policy_attachment.policy_attachment",
+                        "mode": "managed",
+                        "type": "aws_iam_user_policy_attachment",
+                        "name": "policy_attachment",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "policy_arn": {
+                            "constant_value": "arn:aws:iam::123456789012:policy/example"
+                          },
+                          "user": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_iam_user_policy_attachments_exclusive.exclusive_policy_attachment",
+                        "mode": "managed",
+                        "type": "aws_iam_user_policy_attachments_exclusive",
+                        "name": "exclusive_policy_attachment",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "policy_arns": {
+                            "constant_value": [
+                              "arn:aws:iam::123456789012:policy/example"
+                            ]
+                          },
+                          "user_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_iam_group.group",
+                        "mode": "managed",
+                        "type": "aws_iam_group",
+                        "name": "group",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_iam_group_policy_attachment.attachment",
+                        "mode": "managed",
+                        "type": "aws_iam_group_policy_attachment",
+                        "name": "attachment",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "group": {
+                            "references": [
+                              "aws_iam_group.group.name",
+                              "aws_iam_group.group"
+                            ]
+                          },
+                          "policy_arn": {
+                            "constant_value": "arn:aws:iam::123456789012:policy/example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_iam_user.user",
+                        "mode": "managed",
+                        "type": "aws_iam_user",
+                        "name": "user",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_iam_user_group_membership.group_membership",
+                        "mode": "managed",
+                        "type": "aws_iam_user_group_membership",
+                        "name": "group_membership",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "groups": {
+                            "references": [
+                              "aws_iam_group.group.name",
+                              "aws_iam_group.group"
+                            ]
+                          },
+                          "user": {
+                            "references": [
+                              "aws_iam_user.user.name",
+                              "aws_iam_user.user"
+                            ]
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "relevant_attributes": [
+            {
+              "resource": "module.pass.aws_iam_group.group",
+              "attribute": [
+                "name"
+              ]
+            },
+            {
+              "resource": "module.pass.aws_iam_user.user",
+              "attribute": [
+                "name"
+              ]
+            }
+          ],
+          "timestamp": "2025-03-26T12:14:37Z",
+          "errored": false
+        },
+        "fail": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.fail.aws_iam_user_policies_exclusive.inline_policies_exclusive",
+                      "mode": "managed",
+                      "type": "aws_iam_user_policies_exclusive",
+                      "name": "inline_policies_exclusive",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy_names": [
+                          "example"
+                        ],
+                        "user_name": "example"
+                      },
+                      "sensitive_values": {
+                        "policy_names": [
+                          false
+                        ]
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_iam_user_policy.inline_policy",
+                      "mode": "managed",
+                      "type": "aws_iam_user_policy",
+                      "name": "inline_policy",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy": "",
+                        "user": "example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.fail.aws_iam_user_policy_attachment.policy_attachment",
+                      "mode": "managed",
+                      "type": "aws_iam_user_policy_attachment",
+                      "name": "policy_attachment",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy_arn": "arn:aws:iam::123456789012:policy/example",
+                        "user": "example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.fail.aws_iam_user_policy_attachments_exclusive.exclusive_policy_attachment",
+                      "mode": "managed",
+                      "type": "aws_iam_user_policy_attachments_exclusive",
+                      "name": "exclusive_policy_attachment",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy_arns": [
+                          "arn:aws:iam::123456789012:policy/example"
+                        ],
+                        "user_name": "example"
+                      },
+                      "sensitive_values": {
+                        "policy_arns": [
+                          false
+                        ]
+                      }
+                    }
+                  ],
+                  "address": "module.fail"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.fail.aws_iam_user_policies_exclusive.inline_policies_exclusive",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_iam_user_policies_exclusive",
+              "name": "inline_policies_exclusive",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy_names": [
+                    "example"
+                  ],
+                  "user_name": "example"
+                },
+                "after_unknown": {},
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "policy_names": [
+                    false
+                  ]
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_iam_user_policy.inline_policy",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_iam_user_policy",
+              "name": "inline_policy",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy": "",
+                  "user": "example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.fail.aws_iam_user_policy_attachment.policy_attachment",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_iam_user_policy_attachment",
+              "name": "policy_attachment",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy_arn": "arn:aws:iam::123456789012:policy/example",
+                  "user": "example"
+                },
+                "after_unknown": {
+                  "id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.fail.aws_iam_user_policy_attachments_exclusive.exclusive_policy_attachment",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_iam_user_policy_attachments_exclusive",
+              "name": "exclusive_policy_attachment",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy_arns": [
+                    "arn:aws:iam::123456789012:policy/example"
+                  ],
+                  "user_name": "example"
+                },
+                "after_unknown": {},
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "policy_arns": [
+                    false
+                  ]
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_iam_user_policies_exclusive.inline_policies_exclusive",
+                        "mode": "managed",
+                        "type": "aws_iam_user_policies_exclusive",
+                        "name": "inline_policies_exclusive",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "policy_names": {
+                            "constant_value": [
+                              "example"
+                            ]
+                          },
+                          "user_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_iam_user_policy.inline_policy",
+                        "mode": "managed",
+                        "type": "aws_iam_user_policy",
+                        "name": "inline_policy",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "policy": {},
+                          "user": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_iam_user_policy_attachment.policy_attachment",
+                        "mode": "managed",
+                        "type": "aws_iam_user_policy_attachment",
+                        "name": "policy_attachment",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "policy_arn": {
+                            "constant_value": "arn:aws:iam::123456789012:policy/example"
+                          },
+                          "user": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_iam_user_policy_attachments_exclusive.exclusive_policy_attachment",
+                        "mode": "managed",
+                        "type": "aws_iam_user_policy_attachments_exclusive",
+                        "name": "exclusive_policy_attachment",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "policy_arns": {
+                            "constant_value": [
+                              "arn:aws:iam::123456789012:policy/example"
+                            ]
+                          },
+                          "user_name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_iam_group.group",
+                        "mode": "managed",
+                        "type": "aws_iam_group",
+                        "name": "group",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_iam_group_policy_attachment.attachment",
+                        "mode": "managed",
+                        "type": "aws_iam_group_policy_attachment",
+                        "name": "attachment",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "group": {
+                            "references": [
+                              "aws_iam_group.group.name",
+                              "aws_iam_group.group"
+                            ]
+                          },
+                          "policy_arn": {
+                            "constant_value": "arn:aws:iam::123456789012:policy/example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_iam_user.user",
+                        "mode": "managed",
+                        "type": "aws_iam_user",
+                        "name": "user",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "name": {
+                            "constant_value": "example"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_iam_user_group_membership.group_membership",
+                        "mode": "managed",
+                        "type": "aws_iam_user_group_membership",
+                        "name": "group_membership",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "groups": {
+                            "references": [
+                              "aws_iam_group.group.name",
+                              "aws_iam_group.group"
+                            ]
+                          },
+                          "user": {
+                            "references": [
+                              "aws_iam_user.user.name",
+                              "aws_iam_user.user"
+                            ]
+                          }
+                        },
+                        "schema_version": 0
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-03-26T12:14:40Z",
+          "errored": false
+        }
       }
     },
     "lambda": {

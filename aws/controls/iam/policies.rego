@@ -32,3 +32,20 @@ evaluate_iam_2(plan) := {violation |
 		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsiam2",
 	}
 }
+
+evaluate_iam_3(plan) := {violation |
+	some {"configuration": configuration, "address": address} in utils.resources(plan, {
+		"aws_iam_user_policy",
+		"aws_iam_user_policies_exclusive",
+		"aws_iam_user_policy_attachment",
+		"aws_iam_user_policy_attachments_exclusive",
+	})
+
+	violation := {
+		"id": {"opa": "aws.controls.iam.3", "control_tower": "CT.IAM.PR.4"},
+		"reason": "Require that an AWS Identity and Access Management(IAM) user does not have an inline or managed policy attached",
+		"resource": address,
+		"severity": "low",
+		"docs": "https://github.com/stevensdavid/opentofu-opa/wiki/AWS-Controls#awscontrolsiam3",
+	}
+}

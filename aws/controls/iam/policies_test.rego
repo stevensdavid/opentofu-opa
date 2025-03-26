@@ -12,3 +12,7 @@ test_evaluate_iam_1_invalid_input if count(iam.evaluate_iam_1(controls.mocks.iam
 test_evaluate_iam_2_valid_input if count(iam.evaluate_iam_2(controls.mocks.iam["2"].pass)) == 0
 
 test_evaluate_iam_2_invalid_input if count(iam.evaluate_iam_2(controls.mocks.iam["2"].fail)) == 11
+
+test_evaluate_iam_3_valid_input if count(iam.evaluate_iam_3(controls.mocks.iam["3"].pass)) == 0
+
+test_evaluate_iam_3_invalid_input if count(iam.evaluate_iam_3(controls.mocks.iam["3"].fail)) == 4
