@@ -7,6 +7,8 @@ import rego.v1
 all_iam_statements(plan) := union({
 	{[statement, address] |
 		some resource in plan.resource_changes
+		some action in resource.change.actions
+		action in {"create", "update"}
 		resource.type in {"aws_iam_group_policy", "aws_iam_policy", "aws_iam_role_policy", "aws_iam_user_policy"}
 		policy := json.unmarshal(resource.change.after.policy)
 		some statement in policy.Statement
@@ -14,6 +16,8 @@ all_iam_statements(plan) := union({
 	},
 	{[statement, address] |
 		some resource in plan.resource_changes
+		some action in resource.change.actions
+		action in {"create", "update"}
 		resource.type == "aws_iam_role"
 		some inline_policy in resource.change.after.inline_policy
 		policy := json.unmarshal(inline_policy.policy)
