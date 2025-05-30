@@ -8740,6 +8740,1065 @@
         }
       }
     },
+    "elasticache": {
+      "1": {
+        "pass": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.pass.aws_elasticache_cluster.memcached",
+                      "mode": "managed",
+                      "type": "aws_elasticache_cluster",
+                      "name": "memcached",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "auto_minor_version_upgrade": "true",
+                        "cluster_id": "example",
+                        "engine": "memcached",
+                        "final_snapshot_identifier": null,
+                        "log_delivery_configuration": [],
+                        "node_type": "cache.t2.micro",
+                        "notification_topic_arn": null,
+                        "num_cache_nodes": 1,
+                        "outpost_mode": null,
+                        "parameter_group_name": "default.memcached1.4",
+                        "preferred_availability_zones": null,
+                        "snapshot_arns": null,
+                        "snapshot_name": null,
+                        "snapshot_retention_limit": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "cache_nodes": [],
+                        "log_delivery_configuration": [],
+                        "security_group_ids": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_elasticache_cluster.valid[\"redis\"]",
+                      "mode": "managed",
+                      "type": "aws_elasticache_cluster",
+                      "name": "valid",
+                      "index": "redis",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "auto_minor_version_upgrade": "true",
+                        "cluster_id": "example",
+                        "engine": "redis",
+                        "engine_version": "8.0",
+                        "final_snapshot_identifier": null,
+                        "log_delivery_configuration": [],
+                        "node_type": "cache.t2.micro",
+                        "notification_topic_arn": null,
+                        "num_cache_nodes": 1,
+                        "outpost_mode": null,
+                        "parameter_group_name": "default.redis6.x",
+                        "preferred_availability_zones": null,
+                        "snapshot_arns": null,
+                        "snapshot_name": null,
+                        "snapshot_retention_limit": 1,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "cache_nodes": [],
+                        "log_delivery_configuration": [],
+                        "security_group_ids": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_elasticache_cluster.valid[\"valkey\"]",
+                      "mode": "managed",
+                      "type": "aws_elasticache_cluster",
+                      "name": "valid",
+                      "index": "valkey",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "auto_minor_version_upgrade": "true",
+                        "cluster_id": "example",
+                        "engine": "valkey",
+                        "engine_version": "8.0",
+                        "final_snapshot_identifier": null,
+                        "log_delivery_configuration": [],
+                        "node_type": "cache.t2.micro",
+                        "notification_topic_arn": null,
+                        "num_cache_nodes": 1,
+                        "outpost_mode": null,
+                        "parameter_group_name": "default.redis6.x",
+                        "preferred_availability_zones": null,
+                        "snapshot_arns": null,
+                        "snapshot_name": null,
+                        "snapshot_retention_limit": 1,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "cache_nodes": [],
+                        "log_delivery_configuration": [],
+                        "security_group_ids": [],
+                        "tags_all": {}
+                      }
+                    }
+                  ],
+                  "address": "module.pass"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.pass.aws_elasticache_cluster.memcached",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_elasticache_cluster",
+              "name": "memcached",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "auto_minor_version_upgrade": "true",
+                  "cluster_id": "example",
+                  "engine": "memcached",
+                  "final_snapshot_identifier": null,
+                  "log_delivery_configuration": [],
+                  "node_type": "cache.t2.micro",
+                  "notification_topic_arn": null,
+                  "num_cache_nodes": 1,
+                  "outpost_mode": null,
+                  "parameter_group_name": "default.memcached1.4",
+                  "preferred_availability_zones": null,
+                  "snapshot_arns": null,
+                  "snapshot_name": null,
+                  "snapshot_retention_limit": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zone": true,
+                  "az_mode": true,
+                  "cache_nodes": true,
+                  "cluster_address": true,
+                  "configuration_endpoint": true,
+                  "engine_version": true,
+                  "engine_version_actual": true,
+                  "id": true,
+                  "ip_discovery": true,
+                  "log_delivery_configuration": [],
+                  "maintenance_window": true,
+                  "network_type": true,
+                  "port": true,
+                  "preferred_outpost_arn": true,
+                  "replication_group_id": true,
+                  "security_group_ids": true,
+                  "snapshot_window": true,
+                  "subnet_group_name": true,
+                  "tags_all": true,
+                  "transit_encryption_enabled": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "cache_nodes": [],
+                  "log_delivery_configuration": [],
+                  "security_group_ids": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_elasticache_cluster.valid[\"redis\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_elasticache_cluster",
+              "name": "valid",
+              "index": "redis",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "auto_minor_version_upgrade": "true",
+                  "cluster_id": "example",
+                  "engine": "redis",
+                  "engine_version": "8.0",
+                  "final_snapshot_identifier": null,
+                  "log_delivery_configuration": [],
+                  "node_type": "cache.t2.micro",
+                  "notification_topic_arn": null,
+                  "num_cache_nodes": 1,
+                  "outpost_mode": null,
+                  "parameter_group_name": "default.redis6.x",
+                  "preferred_availability_zones": null,
+                  "snapshot_arns": null,
+                  "snapshot_name": null,
+                  "snapshot_retention_limit": 1,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zone": true,
+                  "az_mode": true,
+                  "cache_nodes": true,
+                  "cluster_address": true,
+                  "configuration_endpoint": true,
+                  "engine_version_actual": true,
+                  "id": true,
+                  "ip_discovery": true,
+                  "log_delivery_configuration": [],
+                  "maintenance_window": true,
+                  "network_type": true,
+                  "port": true,
+                  "preferred_outpost_arn": true,
+                  "replication_group_id": true,
+                  "security_group_ids": true,
+                  "snapshot_window": true,
+                  "subnet_group_name": true,
+                  "tags_all": true,
+                  "transit_encryption_enabled": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "cache_nodes": [],
+                  "log_delivery_configuration": [],
+                  "security_group_ids": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_elasticache_cluster.valid[\"valkey\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_elasticache_cluster",
+              "name": "valid",
+              "index": "valkey",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "auto_minor_version_upgrade": "true",
+                  "cluster_id": "example",
+                  "engine": "valkey",
+                  "engine_version": "8.0",
+                  "final_snapshot_identifier": null,
+                  "log_delivery_configuration": [],
+                  "node_type": "cache.t2.micro",
+                  "notification_topic_arn": null,
+                  "num_cache_nodes": 1,
+                  "outpost_mode": null,
+                  "parameter_group_name": "default.redis6.x",
+                  "preferred_availability_zones": null,
+                  "snapshot_arns": null,
+                  "snapshot_name": null,
+                  "snapshot_retention_limit": 1,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zone": true,
+                  "az_mode": true,
+                  "cache_nodes": true,
+                  "cluster_address": true,
+                  "configuration_endpoint": true,
+                  "engine_version_actual": true,
+                  "id": true,
+                  "ip_discovery": true,
+                  "log_delivery_configuration": [],
+                  "maintenance_window": true,
+                  "network_type": true,
+                  "port": true,
+                  "preferred_outpost_arn": true,
+                  "replication_group_id": true,
+                  "security_group_ids": true,
+                  "snapshot_window": true,
+                  "subnet_group_name": true,
+                  "tags_all": true,
+                  "transit_encryption_enabled": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "cache_nodes": [],
+                  "log_delivery_configuration": [],
+                  "security_group_ids": [],
+                  "tags_all": {}
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_elasticache_cluster.explicit_zero",
+                        "mode": "managed",
+                        "type": "aws_elasticache_cluster",
+                        "name": "explicit_zero",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "cluster_id": {
+                            "constant_value": "example"
+                          },
+                          "engine": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "engine_version": {
+                            "constant_value": "8.0"
+                          },
+                          "node_type": {
+                            "constant_value": "cache.t2.micro"
+                          },
+                          "num_cache_nodes": {
+                            "constant_value": 1
+                          },
+                          "parameter_group_name": {
+                            "constant_value": "default.redis6.x"
+                          },
+                          "snapshot_retention_limit": {
+                            "constant_value": 0
+                          }
+                        },
+                        "schema_version": 0,
+                        "for_each_expression": {
+                          "references": [
+                            "local.engines"
+                          ]
+                        }
+                      },
+                      {
+                        "address": "aws_elasticache_cluster.missing_retention",
+                        "mode": "managed",
+                        "type": "aws_elasticache_cluster",
+                        "name": "missing_retention",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "cluster_id": {
+                            "constant_value": "example"
+                          },
+                          "engine": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "engine_version": {
+                            "constant_value": "8.0"
+                          },
+                          "node_type": {
+                            "constant_value": "cache.t2.micro"
+                          },
+                          "num_cache_nodes": {
+                            "constant_value": 1
+                          },
+                          "parameter_group_name": {
+                            "constant_value": "default.redis6.x"
+                          }
+                        },
+                        "schema_version": 0,
+                        "for_each_expression": {
+                          "references": [
+                            "local.engines"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_elasticache_cluster.memcached",
+                        "mode": "managed",
+                        "type": "aws_elasticache_cluster",
+                        "name": "memcached",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "cluster_id": {
+                            "constant_value": "example"
+                          },
+                          "engine": {
+                            "constant_value": "memcached"
+                          },
+                          "node_type": {
+                            "constant_value": "cache.t2.micro"
+                          },
+                          "num_cache_nodes": {
+                            "constant_value": 1
+                          },
+                          "parameter_group_name": {
+                            "constant_value": "default.memcached1.4"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_elasticache_cluster.valid",
+                        "mode": "managed",
+                        "type": "aws_elasticache_cluster",
+                        "name": "valid",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "cluster_id": {
+                            "constant_value": "example"
+                          },
+                          "engine": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "engine_version": {
+                            "constant_value": "8.0"
+                          },
+                          "node_type": {
+                            "constant_value": "cache.t2.micro"
+                          },
+                          "num_cache_nodes": {
+                            "constant_value": 1
+                          },
+                          "parameter_group_name": {
+                            "constant_value": "default.redis6.x"
+                          },
+                          "snapshot_retention_limit": {
+                            "constant_value": 1
+                          }
+                        },
+                        "schema_version": 0,
+                        "for_each_expression": {
+                          "references": [
+                            "local.engines"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-05-30T12:21:04Z",
+          "errored": false
+        },
+        "fail": {
+          "format_version": "1.2",
+          "terraform_version": "1.9.0",
+          "planned_values": {
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.fail.aws_elasticache_cluster.explicit_zero[\"redis\"]",
+                      "mode": "managed",
+                      "type": "aws_elasticache_cluster",
+                      "name": "explicit_zero",
+                      "index": "redis",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "auto_minor_version_upgrade": "true",
+                        "cluster_id": "example",
+                        "engine": "redis",
+                        "engine_version": "8.0",
+                        "final_snapshot_identifier": null,
+                        "log_delivery_configuration": [],
+                        "node_type": "cache.t2.micro",
+                        "notification_topic_arn": null,
+                        "num_cache_nodes": 1,
+                        "outpost_mode": null,
+                        "parameter_group_name": "default.redis6.x",
+                        "preferred_availability_zones": null,
+                        "snapshot_arns": null,
+                        "snapshot_name": null,
+                        "snapshot_retention_limit": 0,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "cache_nodes": [],
+                        "log_delivery_configuration": [],
+                        "security_group_ids": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_elasticache_cluster.explicit_zero[\"valkey\"]",
+                      "mode": "managed",
+                      "type": "aws_elasticache_cluster",
+                      "name": "explicit_zero",
+                      "index": "valkey",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "auto_minor_version_upgrade": "true",
+                        "cluster_id": "example",
+                        "engine": "valkey",
+                        "engine_version": "8.0",
+                        "final_snapshot_identifier": null,
+                        "log_delivery_configuration": [],
+                        "node_type": "cache.t2.micro",
+                        "notification_topic_arn": null,
+                        "num_cache_nodes": 1,
+                        "outpost_mode": null,
+                        "parameter_group_name": "default.redis6.x",
+                        "preferred_availability_zones": null,
+                        "snapshot_arns": null,
+                        "snapshot_name": null,
+                        "snapshot_retention_limit": 0,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "cache_nodes": [],
+                        "log_delivery_configuration": [],
+                        "security_group_ids": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_elasticache_cluster.missing_retention[\"redis\"]",
+                      "mode": "managed",
+                      "type": "aws_elasticache_cluster",
+                      "name": "missing_retention",
+                      "index": "redis",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "auto_minor_version_upgrade": "true",
+                        "cluster_id": "example",
+                        "engine": "redis",
+                        "engine_version": "8.0",
+                        "final_snapshot_identifier": null,
+                        "log_delivery_configuration": [],
+                        "node_type": "cache.t2.micro",
+                        "notification_topic_arn": null,
+                        "num_cache_nodes": 1,
+                        "outpost_mode": null,
+                        "parameter_group_name": "default.redis6.x",
+                        "preferred_availability_zones": null,
+                        "snapshot_arns": null,
+                        "snapshot_name": null,
+                        "snapshot_retention_limit": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "cache_nodes": [],
+                        "log_delivery_configuration": [],
+                        "security_group_ids": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.fail.aws_elasticache_cluster.missing_retention[\"valkey\"]",
+                      "mode": "managed",
+                      "type": "aws_elasticache_cluster",
+                      "name": "missing_retention",
+                      "index": "valkey",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "auto_minor_version_upgrade": "true",
+                        "cluster_id": "example",
+                        "engine": "valkey",
+                        "engine_version": "8.0",
+                        "final_snapshot_identifier": null,
+                        "log_delivery_configuration": [],
+                        "node_type": "cache.t2.micro",
+                        "notification_topic_arn": null,
+                        "num_cache_nodes": 1,
+                        "outpost_mode": null,
+                        "parameter_group_name": "default.redis6.x",
+                        "preferred_availability_zones": null,
+                        "snapshot_arns": null,
+                        "snapshot_name": null,
+                        "snapshot_retention_limit": null,
+                        "tags": null,
+                        "timeouts": null
+                      },
+                      "sensitive_values": {
+                        "cache_nodes": [],
+                        "log_delivery_configuration": [],
+                        "security_group_ids": [],
+                        "tags_all": {}
+                      }
+                    }
+                  ],
+                  "address": "module.fail"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.fail.aws_elasticache_cluster.explicit_zero[\"redis\"]",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_elasticache_cluster",
+              "name": "explicit_zero",
+              "index": "redis",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "auto_minor_version_upgrade": "true",
+                  "cluster_id": "example",
+                  "engine": "redis",
+                  "engine_version": "8.0",
+                  "final_snapshot_identifier": null,
+                  "log_delivery_configuration": [],
+                  "node_type": "cache.t2.micro",
+                  "notification_topic_arn": null,
+                  "num_cache_nodes": 1,
+                  "outpost_mode": null,
+                  "parameter_group_name": "default.redis6.x",
+                  "preferred_availability_zones": null,
+                  "snapshot_arns": null,
+                  "snapshot_name": null,
+                  "snapshot_retention_limit": 0,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zone": true,
+                  "az_mode": true,
+                  "cache_nodes": true,
+                  "cluster_address": true,
+                  "configuration_endpoint": true,
+                  "engine_version_actual": true,
+                  "id": true,
+                  "ip_discovery": true,
+                  "log_delivery_configuration": [],
+                  "maintenance_window": true,
+                  "network_type": true,
+                  "port": true,
+                  "preferred_outpost_arn": true,
+                  "replication_group_id": true,
+                  "security_group_ids": true,
+                  "snapshot_window": true,
+                  "subnet_group_name": true,
+                  "tags_all": true,
+                  "transit_encryption_enabled": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "cache_nodes": [],
+                  "log_delivery_configuration": [],
+                  "security_group_ids": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_elasticache_cluster.explicit_zero[\"valkey\"]",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_elasticache_cluster",
+              "name": "explicit_zero",
+              "index": "valkey",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "auto_minor_version_upgrade": "true",
+                  "cluster_id": "example",
+                  "engine": "valkey",
+                  "engine_version": "8.0",
+                  "final_snapshot_identifier": null,
+                  "log_delivery_configuration": [],
+                  "node_type": "cache.t2.micro",
+                  "notification_topic_arn": null,
+                  "num_cache_nodes": 1,
+                  "outpost_mode": null,
+                  "parameter_group_name": "default.redis6.x",
+                  "preferred_availability_zones": null,
+                  "snapshot_arns": null,
+                  "snapshot_name": null,
+                  "snapshot_retention_limit": 0,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zone": true,
+                  "az_mode": true,
+                  "cache_nodes": true,
+                  "cluster_address": true,
+                  "configuration_endpoint": true,
+                  "engine_version_actual": true,
+                  "id": true,
+                  "ip_discovery": true,
+                  "log_delivery_configuration": [],
+                  "maintenance_window": true,
+                  "network_type": true,
+                  "port": true,
+                  "preferred_outpost_arn": true,
+                  "replication_group_id": true,
+                  "security_group_ids": true,
+                  "snapshot_window": true,
+                  "subnet_group_name": true,
+                  "tags_all": true,
+                  "transit_encryption_enabled": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "cache_nodes": [],
+                  "log_delivery_configuration": [],
+                  "security_group_ids": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_elasticache_cluster.missing_retention[\"redis\"]",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_elasticache_cluster",
+              "name": "missing_retention",
+              "index": "redis",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "auto_minor_version_upgrade": "true",
+                  "cluster_id": "example",
+                  "engine": "redis",
+                  "engine_version": "8.0",
+                  "final_snapshot_identifier": null,
+                  "log_delivery_configuration": [],
+                  "node_type": "cache.t2.micro",
+                  "notification_topic_arn": null,
+                  "num_cache_nodes": 1,
+                  "outpost_mode": null,
+                  "parameter_group_name": "default.redis6.x",
+                  "preferred_availability_zones": null,
+                  "snapshot_arns": null,
+                  "snapshot_name": null,
+                  "snapshot_retention_limit": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zone": true,
+                  "az_mode": true,
+                  "cache_nodes": true,
+                  "cluster_address": true,
+                  "configuration_endpoint": true,
+                  "engine_version_actual": true,
+                  "id": true,
+                  "ip_discovery": true,
+                  "log_delivery_configuration": [],
+                  "maintenance_window": true,
+                  "network_type": true,
+                  "port": true,
+                  "preferred_outpost_arn": true,
+                  "replication_group_id": true,
+                  "security_group_ids": true,
+                  "snapshot_window": true,
+                  "subnet_group_name": true,
+                  "tags_all": true,
+                  "transit_encryption_enabled": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "cache_nodes": [],
+                  "log_delivery_configuration": [],
+                  "security_group_ids": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.fail.aws_elasticache_cluster.missing_retention[\"valkey\"]",
+              "module_address": "module.fail",
+              "mode": "managed",
+              "type": "aws_elasticache_cluster",
+              "name": "missing_retention",
+              "index": "valkey",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "auto_minor_version_upgrade": "true",
+                  "cluster_id": "example",
+                  "engine": "valkey",
+                  "engine_version": "8.0",
+                  "final_snapshot_identifier": null,
+                  "log_delivery_configuration": [],
+                  "node_type": "cache.t2.micro",
+                  "notification_topic_arn": null,
+                  "num_cache_nodes": 1,
+                  "outpost_mode": null,
+                  "parameter_group_name": "default.redis6.x",
+                  "preferred_availability_zones": null,
+                  "snapshot_arns": null,
+                  "snapshot_name": null,
+                  "snapshot_retention_limit": null,
+                  "tags": null,
+                  "timeouts": null
+                },
+                "after_unknown": {
+                  "apply_immediately": true,
+                  "arn": true,
+                  "availability_zone": true,
+                  "az_mode": true,
+                  "cache_nodes": true,
+                  "cluster_address": true,
+                  "configuration_endpoint": true,
+                  "engine_version_actual": true,
+                  "id": true,
+                  "ip_discovery": true,
+                  "log_delivery_configuration": [],
+                  "maintenance_window": true,
+                  "network_type": true,
+                  "port": true,
+                  "preferred_outpost_arn": true,
+                  "replication_group_id": true,
+                  "security_group_ids": true,
+                  "snapshot_window": true,
+                  "subnet_group_name": true,
+                  "tags_all": true,
+                  "transit_encryption_enabled": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "cache_nodes": [],
+                  "log_delivery_configuration": [],
+                  "security_group_ids": [],
+                  "tags_all": {}
+                }
+              }
+            }
+          ],
+          "configuration": {
+            "provider_config": {
+              "aws": {
+                "name": "aws",
+                "full_name": "registry.opentofu.org/hashicorp/aws",
+                "expressions": {
+                  "region": {
+                    "constant_value": "eu-north-1"
+                  }
+                }
+              }
+            },
+            "root_module": {
+              "module_calls": {
+                "fail": {
+                  "source": "./fail",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_elasticache_cluster.explicit_zero",
+                        "mode": "managed",
+                        "type": "aws_elasticache_cluster",
+                        "name": "explicit_zero",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "cluster_id": {
+                            "constant_value": "example"
+                          },
+                          "engine": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "engine_version": {
+                            "constant_value": "8.0"
+                          },
+                          "node_type": {
+                            "constant_value": "cache.t2.micro"
+                          },
+                          "num_cache_nodes": {
+                            "constant_value": 1
+                          },
+                          "parameter_group_name": {
+                            "constant_value": "default.redis6.x"
+                          },
+                          "snapshot_retention_limit": {
+                            "constant_value": 0
+                          }
+                        },
+                        "schema_version": 0,
+                        "for_each_expression": {
+                          "references": [
+                            "local.engines"
+                          ]
+                        }
+                      },
+                      {
+                        "address": "aws_elasticache_cluster.missing_retention",
+                        "mode": "managed",
+                        "type": "aws_elasticache_cluster",
+                        "name": "missing_retention",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "cluster_id": {
+                            "constant_value": "example"
+                          },
+                          "engine": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "engine_version": {
+                            "constant_value": "8.0"
+                          },
+                          "node_type": {
+                            "constant_value": "cache.t2.micro"
+                          },
+                          "num_cache_nodes": {
+                            "constant_value": 1
+                          },
+                          "parameter_group_name": {
+                            "constant_value": "default.redis6.x"
+                          }
+                        },
+                        "schema_version": 0,
+                        "for_each_expression": {
+                          "references": [
+                            "local.engines"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                "pass": {
+                  "source": "./pass",
+                  "module": {
+                    "resources": [
+                      {
+                        "address": "aws_elasticache_cluster.memcached",
+                        "mode": "managed",
+                        "type": "aws_elasticache_cluster",
+                        "name": "memcached",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "cluster_id": {
+                            "constant_value": "example"
+                          },
+                          "engine": {
+                            "constant_value": "memcached"
+                          },
+                          "node_type": {
+                            "constant_value": "cache.t2.micro"
+                          },
+                          "num_cache_nodes": {
+                            "constant_value": 1
+                          },
+                          "parameter_group_name": {
+                            "constant_value": "default.memcached1.4"
+                          }
+                        },
+                        "schema_version": 0
+                      },
+                      {
+                        "address": "aws_elasticache_cluster.valid",
+                        "mode": "managed",
+                        "type": "aws_elasticache_cluster",
+                        "name": "valid",
+                        "provider_config_key": "aws",
+                        "expressions": {
+                          "cluster_id": {
+                            "constant_value": "example"
+                          },
+                          "engine": {
+                            "references": [
+                              "each.value"
+                            ]
+                          },
+                          "engine_version": {
+                            "constant_value": "8.0"
+                          },
+                          "node_type": {
+                            "constant_value": "cache.t2.micro"
+                          },
+                          "num_cache_nodes": {
+                            "constant_value": 1
+                          },
+                          "parameter_group_name": {
+                            "constant_value": "default.redis6.x"
+                          },
+                          "snapshot_retention_limit": {
+                            "constant_value": 1
+                          }
+                        },
+                        "schema_version": 0,
+                        "for_each_expression": {
+                          "references": [
+                            "local.engines"
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "timestamp": "2025-05-30T12:21:06Z",
+          "errored": false
+        }
+      }
+    },
     "iam": {
       "1": {
         "pass": {
