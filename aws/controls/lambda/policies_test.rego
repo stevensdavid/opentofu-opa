@@ -23,4 +23,4 @@ test_evaluate_lambda_4_invalid_input if count(lambda.evaluate_lambda_4(controls.
 
 test_evaluate_lambda_5_valid_input if count(lambda.evaluate_lambda_5(controls.mocks.lambda["5"].pass)) == 0
 
-test_evaluate_lambda_5_invalid_input if count(lambda.evaluate_lambda_5(controls.mocks.lambda["5"].fail)) == 5
+test_evaluate_lambda_5_invalid_input if count(lambda.evaluate_lambda_5(controls.mocks.lambda["5"].fail)) == 3

@@ -20,12 +20,3 @@ valid_vpc_config(lambda) if {
 	count(lambda.vpc_config[0].security_group_ids) > 0
 	count(lambda.vpc_config[0].subnet_ids) > 0
 }
-
-wildcard_cors_origin(function_url) if count(function_url.cors) == 0
-
-wildcard_cors_origin(function_url) if utils.falsy(function_url.cors[0].allow_origins)
-
-wildcard_cors_origin(function_url) if {
-	some origin in function_url.cors[0].allow_origins
-	origin in {"*", "https://*", "http://*"}
-}

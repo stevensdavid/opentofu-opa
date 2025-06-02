@@ -60,7 +60,9 @@ evaluate_lambda_4(plan) := {violation |
 
 evaluate_lambda_5(plan) := {violation |
 	some {"configuration": configuration, "address": address} in utils.resources(plan, "aws_lambda_function_url")
-	wildcard_cors_origin(configuration)
+	some cors in configuration.cors
+	some origin in cors.allow_origins
+	origin in {"*", "https://*", "http://*"}
 
 	violation := {
 		"id": {"opa": "aws.controls.lambda.5", "control_tower": "CT.LAMBDA.PR.5"},
