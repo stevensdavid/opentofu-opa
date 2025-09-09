@@ -8,6 +8,7 @@ import rego.v1
 evaluate_iam_1(plan) := {violation |
 	some [statement, address] in all_iam_statements(plan)
 
+	statement.Effect == "Allow"
 	statement_allows_action(statement, "*")
 	statement_allows_resource(statement, "*")
 
