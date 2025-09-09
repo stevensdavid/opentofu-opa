@@ -10869,7 +10869,1741 @@
           "format_version": "1.2",
           "terraform_version": "1.9.0",
           "planned_values": {
-            "root_module": {}
+            "root_module": {
+              "child_modules": [
+                {
+                  "resources": [
+                    {
+                      "address": "module.pass.aws_iam_group_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_group_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "group": "example",
+                        "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_group_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_group_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "group": "example",
+                        "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_group_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Deny\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_group_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "group": "example",
+                        "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_group_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example/*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_group_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "group": "example",
+                        "policy": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_group_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:GetObject\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_group_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "group": "example",
+                        "policy": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_group_policy.valid[\"{\\\"Statement\\\":[{\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_group_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "group": "example",
+                        "policy": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": null,
+                        "path": "/",
+                        "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_iam_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": null,
+                        "path": "/",
+                        "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_iam_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Deny\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": null,
+                        "path": "/",
+                        "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_iam_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example/*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": null,
+                        "path": "/",
+                        "policy": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_iam_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:GetObject\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": null,
+                        "path": "/",
+                        "policy": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_iam_policy.valid[\"{\\\"Statement\\\":[{\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "description": null,
+                        "path": "/",
+                        "policy": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_iam_role.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_role",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "assume_role_policy": "",
+                        "description": null,
+                        "force_detach_policies": false,
+                        "inline_policy": [
+                          {
+                            "name": "",
+                            "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}"
+                          }
+                        ],
+                        "max_session_duration": 3600,
+                        "path": "/",
+                        "permissions_boundary": null,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "inline_policy": [
+                          {}
+                        ],
+                        "managed_policy_arns": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_iam_role.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_role",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "assume_role_policy": "",
+                        "description": null,
+                        "force_detach_policies": false,
+                        "inline_policy": [
+                          {
+                            "name": "",
+                            "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}"
+                          }
+                        ],
+                        "max_session_duration": 3600,
+                        "path": "/",
+                        "permissions_boundary": null,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "inline_policy": [
+                          {}
+                        ],
+                        "managed_policy_arns": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_iam_role.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Deny\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_role",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "assume_role_policy": "",
+                        "description": null,
+                        "force_detach_policies": false,
+                        "inline_policy": [
+                          {
+                            "name": "",
+                            "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}"
+                          }
+                        ],
+                        "max_session_duration": 3600,
+                        "path": "/",
+                        "permissions_boundary": null,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "inline_policy": [
+                          {}
+                        ],
+                        "managed_policy_arns": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_iam_role.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example/*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_role",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "assume_role_policy": "",
+                        "description": null,
+                        "force_detach_policies": false,
+                        "inline_policy": [
+                          {
+                            "name": "",
+                            "policy": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}"
+                          }
+                        ],
+                        "max_session_duration": 3600,
+                        "path": "/",
+                        "permissions_boundary": null,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "inline_policy": [
+                          {}
+                        ],
+                        "managed_policy_arns": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_iam_role.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:GetObject\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_role",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "assume_role_policy": "",
+                        "description": null,
+                        "force_detach_policies": false,
+                        "inline_policy": [
+                          {
+                            "name": "",
+                            "policy": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}"
+                          }
+                        ],
+                        "max_session_duration": 3600,
+                        "path": "/",
+                        "permissions_boundary": null,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "inline_policy": [
+                          {}
+                        ],
+                        "managed_policy_arns": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_iam_role.valid[\"{\\\"Statement\\\":[{\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_role",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "assume_role_policy": "",
+                        "description": null,
+                        "force_detach_policies": false,
+                        "inline_policy": [
+                          {
+                            "name": "",
+                            "policy": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}"
+                          }
+                        ],
+                        "max_session_duration": 3600,
+                        "path": "/",
+                        "permissions_boundary": null,
+                        "tags": null
+                      },
+                      "sensitive_values": {
+                        "inline_policy": [
+                          {}
+                        ],
+                        "managed_policy_arns": [],
+                        "tags_all": {}
+                      }
+                    },
+                    {
+                      "address": "module.pass.aws_iam_role_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_role_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+                        "role": "example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_role_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_role_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+                        "role": "example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_role_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Deny\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_role_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                        "role": "example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_role_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example/*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_role_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+                        "role": "example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_role_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:GetObject\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_role_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                        "role": "example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_role_policy.valid[\"{\\\"Statement\\\":[{\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_role_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                        "role": "example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_user_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_user_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+                        "user": "example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_user_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_user_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+                        "user": "example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_user_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Deny\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_user_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                        "user": "example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_user_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example/*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_user_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+                        "user": "example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_user_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:GetObject\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_user_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                        "user": "example"
+                      },
+                      "sensitive_values": {}
+                    },
+                    {
+                      "address": "module.pass.aws_iam_user_policy.valid[\"{\\\"Statement\\\":[{\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+                      "mode": "managed",
+                      "type": "aws_iam_user_policy",
+                      "name": "valid",
+                      "index": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                      "provider_name": "registry.opentofu.org/hashicorp/aws",
+                      "schema_version": 0,
+                      "values": {
+                        "policy": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                        "user": "example"
+                      },
+                      "sensitive_values": {}
+                    }
+                  ],
+                  "address": "module.pass"
+                }
+              ]
+            }
+          },
+          "resource_changes": [
+            {
+              "address": "module.pass.aws_iam_group_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_group_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "group": "example",
+                  "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_group_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_group_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "group": "example",
+                  "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_group_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Deny\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_group_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "group": "example",
+                  "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_group_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example/*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_group_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "group": "example",
+                  "policy": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_group_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:GetObject\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_group_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "group": "example",
+                  "policy": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_group_policy.valid[\"{\\\"Statement\\\":[{\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_group_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "group": "example",
+                  "policy": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": null,
+                  "path": "/",
+                  "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "attachment_count": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "policy_id": true,
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": null,
+                  "path": "/",
+                  "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "attachment_count": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "policy_id": true,
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Deny\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": null,
+                  "path": "/",
+                  "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "attachment_count": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "policy_id": true,
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example/*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": null,
+                  "path": "/",
+                  "policy": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "attachment_count": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "policy_id": true,
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:GetObject\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": null,
+                  "path": "/",
+                  "policy": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "attachment_count": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "policy_id": true,
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_policy.valid[\"{\\\"Statement\\\":[{\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "description": null,
+                  "path": "/",
+                  "policy": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "attachment_count": true,
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "policy_id": true,
+                  "tags_all": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_role.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_role",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "assume_role_policy": "",
+                  "description": null,
+                  "force_detach_policies": false,
+                  "inline_policy": [
+                    {
+                      "name": "",
+                      "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}"
+                    }
+                  ],
+                  "max_session_duration": 3600,
+                  "path": "/",
+                  "permissions_boundary": null,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "create_date": true,
+                  "id": true,
+                  "inline_policy": [
+                    {}
+                  ],
+                  "managed_policy_arns": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "tags_all": true,
+                  "unique_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "inline_policy": [
+                    {}
+                  ],
+                  "managed_policy_arns": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_role.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_role",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "assume_role_policy": "",
+                  "description": null,
+                  "force_detach_policies": false,
+                  "inline_policy": [
+                    {
+                      "name": "",
+                      "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}"
+                    }
+                  ],
+                  "max_session_duration": 3600,
+                  "path": "/",
+                  "permissions_boundary": null,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "create_date": true,
+                  "id": true,
+                  "inline_policy": [
+                    {}
+                  ],
+                  "managed_policy_arns": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "tags_all": true,
+                  "unique_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "inline_policy": [
+                    {}
+                  ],
+                  "managed_policy_arns": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_role.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Deny\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_role",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "assume_role_policy": "",
+                  "description": null,
+                  "force_detach_policies": false,
+                  "inline_policy": [
+                    {
+                      "name": "",
+                      "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}"
+                    }
+                  ],
+                  "max_session_duration": 3600,
+                  "path": "/",
+                  "permissions_boundary": null,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "create_date": true,
+                  "id": true,
+                  "inline_policy": [
+                    {}
+                  ],
+                  "managed_policy_arns": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "tags_all": true,
+                  "unique_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "inline_policy": [
+                    {}
+                  ],
+                  "managed_policy_arns": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_role.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example/*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_role",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "assume_role_policy": "",
+                  "description": null,
+                  "force_detach_policies": false,
+                  "inline_policy": [
+                    {
+                      "name": "",
+                      "policy": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}"
+                    }
+                  ],
+                  "max_session_duration": 3600,
+                  "path": "/",
+                  "permissions_boundary": null,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "create_date": true,
+                  "id": true,
+                  "inline_policy": [
+                    {}
+                  ],
+                  "managed_policy_arns": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "tags_all": true,
+                  "unique_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "inline_policy": [
+                    {}
+                  ],
+                  "managed_policy_arns": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_role.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:GetObject\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_role",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "assume_role_policy": "",
+                  "description": null,
+                  "force_detach_policies": false,
+                  "inline_policy": [
+                    {
+                      "name": "",
+                      "policy": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}"
+                    }
+                  ],
+                  "max_session_duration": 3600,
+                  "path": "/",
+                  "permissions_boundary": null,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "create_date": true,
+                  "id": true,
+                  "inline_policy": [
+                    {}
+                  ],
+                  "managed_policy_arns": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "tags_all": true,
+                  "unique_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "inline_policy": [
+                    {}
+                  ],
+                  "managed_policy_arns": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_role.valid[\"{\\\"Statement\\\":[{\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_role",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "assume_role_policy": "",
+                  "description": null,
+                  "force_detach_policies": false,
+                  "inline_policy": [
+                    {
+                      "name": "",
+                      "policy": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}"
+                    }
+                  ],
+                  "max_session_duration": 3600,
+                  "path": "/",
+                  "permissions_boundary": null,
+                  "tags": null
+                },
+                "after_unknown": {
+                  "arn": true,
+                  "create_date": true,
+                  "id": true,
+                  "inline_policy": [
+                    {}
+                  ],
+                  "managed_policy_arns": true,
+                  "name": true,
+                  "name_prefix": true,
+                  "tags_all": true,
+                  "unique_id": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {
+                  "inline_policy": [
+                    {}
+                  ],
+                  "managed_policy_arns": [],
+                  "tags_all": {}
+                }
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_role_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_role_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+                  "role": "example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_role_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_role_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+                  "role": "example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_role_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Deny\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_role_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                  "role": "example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_role_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example/*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_role_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+                  "role": "example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_role_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:GetObject\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_role_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                  "role": "example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_role_policy.valid[\"{\\\"Statement\\\":[{\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_role_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                  "role": "example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_user_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_user_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example\"}],\"Version\":\"20212-10-17\"}",
+                  "user": "example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_user_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Allow\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_user_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Allow\"}],\"Version\":\"20212-10-17\"}",
+                  "user": "example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_user_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"*\\\",\\\"Effect\\\":\\\"Deny\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_user_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy": "{\"Statement\":[{\"Action\":\"*\",\"Effect\":\"Deny\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                  "user": "example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_user_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:*\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"arn:aws:s3:::example/*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_user_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy": "{\"Statement\":[{\"Action\":\"s3:*\",\"Effect\":\"Allow\",\"Resource\":\"arn:aws:s3:::example/*\"}],\"Version\":\"20212-10-17\"}",
+                  "user": "example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_user_policy.valid[\"{\\\"Statement\\\":[{\\\"Action\\\":\\\"s3:GetObject\\\",\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_user_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy": "{\"Statement\":[{\"Action\":\"s3:GetObject\",\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                  "user": "example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            },
+            {
+              "address": "module.pass.aws_iam_user_policy.valid[\"{\\\"Statement\\\":[{\\\"Effect\\\":\\\"Allow\\\",\\\"Resource\\\":\\\"*\\\"}],\\\"Version\\\":\\\"20212-10-17\\\"}\"]",
+              "module_address": "module.pass",
+              "mode": "managed",
+              "type": "aws_iam_user_policy",
+              "name": "valid",
+              "index": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+              "provider_name": "registry.opentofu.org/hashicorp/aws",
+              "change": {
+                "actions": [
+                  "create"
+                ],
+                "before": null,
+                "after": {
+                  "policy": "{\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"}],\"Version\":\"20212-10-17\"}",
+                  "user": "example"
+                },
+                "after_unknown": {
+                  "id": true,
+                  "name": true,
+                  "name_prefix": true
+                },
+                "before_sensitive": false,
+                "after_sensitive": {}
+              }
+            }
+          ],
+          "prior_state": {
+            "format_version": "1.0",
+            "terraform_version": "1.9.0",
+            "values": {
+              "root_module": {
+                "child_modules": [
+                  {
+                    "resources": [
+                      {
+                        "address": "module.pass.data.aws_iam_policy_document.valid",
+                        "mode": "data",
+                        "type": "aws_iam_policy_document",
+                        "name": "valid",
+                        "provider_name": "registry.opentofu.org/hashicorp/aws",
+                        "schema_version": 0,
+                        "values": {
+                          "id": "658789856",
+                          "json": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Effect\": \"Allow\",\n      \"Resource\": \"*\"\n    },\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\"\n    },\n    {\n      \"Effect\": \"Deny\",\n      \"Action\": \"*\",\n      \"Resource\": \"*\"\n    },\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"*\",\n      \"Resource\": \"arn:aws:s3:::example\"\n    },\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:GetObject\",\n      \"Resource\": \"*\"\n    },\n    {\n      \"Effect\": \"Allow\",\n      \"Action\": \"s3:*\",\n      \"Resource\": \"arn:aws:s3:::example/*\"\n    }\n  ]\n}",
+                          "minified_json": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Resource\":\"*\"},{\"Effect\":\"Allow\",\"Action\":\"*\"},{\"Effect\":\"Deny\",\"Action\":\"*\",\"Resource\":\"*\"},{\"Effect\":\"Allow\",\"Action\":\"*\",\"Resource\":\"arn:aws:s3:::example\"},{\"Effect\":\"Allow\",\"Action\":\"s3:GetObject\",\"Resource\":\"*\"},{\"Effect\":\"Allow\",\"Action\":\"s3:*\",\"Resource\":\"arn:aws:s3:::example/*\"}]}",
+                          "override_json": null,
+                          "override_policy_documents": null,
+                          "policy_id": null,
+                          "source_json": null,
+                          "source_policy_documents": null,
+                          "statement": [
+                            {
+                              "actions": [],
+                              "condition": [],
+                              "effect": "Allow",
+                              "not_actions": [],
+                              "not_principals": [],
+                              "not_resources": [],
+                              "principals": [],
+                              "resources": [
+                                "*"
+                              ],
+                              "sid": ""
+                            },
+                            {
+                              "actions": [
+                                "*"
+                              ],
+                              "condition": [],
+                              "effect": "Allow",
+                              "not_actions": [],
+                              "not_principals": [],
+                              "not_resources": [],
+                              "principals": [],
+                              "resources": [],
+                              "sid": ""
+                            },
+                            {
+                              "actions": [
+                                "*"
+                              ],
+                              "condition": [],
+                              "effect": "Deny",
+                              "not_actions": [],
+                              "not_principals": [],
+                              "not_resources": [],
+                              "principals": [],
+                              "resources": [
+                                "*"
+                              ],
+                              "sid": ""
+                            },
+                            {
+                              "actions": [
+                                "*"
+                              ],
+                              "condition": [],
+                              "effect": "Allow",
+                              "not_actions": [],
+                              "not_principals": [],
+                              "not_resources": [],
+                              "principals": [],
+                              "resources": [
+                                "arn:aws:s3:::example"
+                              ],
+                              "sid": ""
+                            },
+                            {
+                              "actions": [
+                                "s3:GetObject"
+                              ],
+                              "condition": [],
+                              "effect": "Allow",
+                              "not_actions": [],
+                              "not_principals": [],
+                              "not_resources": [],
+                              "principals": [],
+                              "resources": [
+                                "*"
+                              ],
+                              "sid": ""
+                            },
+                            {
+                              "actions": [
+                                "s3:*"
+                              ],
+                              "condition": [],
+                              "effect": "Allow",
+                              "not_actions": [],
+                              "not_principals": [],
+                              "not_resources": [],
+                              "principals": [],
+                              "resources": [
+                                "arn:aws:s3:::example/*"
+                              ],
+                              "sid": ""
+                            }
+                          ],
+                          "version": "2012-10-17"
+                        },
+                        "sensitive_values": {
+                          "statement": [
+                            {
+                              "actions": [],
+                              "condition": [],
+                              "not_actions": [],
+                              "not_principals": [],
+                              "not_resources": [],
+                              "principals": [],
+                              "resources": [
+                                false
+                              ]
+                            },
+                            {
+                              "actions": [
+                                false
+                              ],
+                              "condition": [],
+                              "not_actions": [],
+                              "not_principals": [],
+                              "not_resources": [],
+                              "principals": [],
+                              "resources": []
+                            },
+                            {
+                              "actions": [
+                                false
+                              ],
+                              "condition": [],
+                              "not_actions": [],
+                              "not_principals": [],
+                              "not_resources": [],
+                              "principals": [],
+                              "resources": [
+                                false
+                              ]
+                            },
+                            {
+                              "actions": [
+                                false
+                              ],
+                              "condition": [],
+                              "not_actions": [],
+                              "not_principals": [],
+                              "not_resources": [],
+                              "principals": [],
+                              "resources": [
+                                false
+                              ]
+                            },
+                            {
+                              "actions": [
+                                false
+                              ],
+                              "condition": [],
+                              "not_actions": [],
+                              "not_principals": [],
+                              "not_resources": [],
+                              "principals": [],
+                              "resources": [
+                                false
+                              ]
+                            },
+                            {
+                              "actions": [
+                                false
+                              ],
+                              "condition": [],
+                              "not_actions": [],
+                              "not_principals": [],
+                              "not_resources": [],
+                              "principals": [],
+                              "resources": [
+                                false
+                              ]
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "address": "module.pass"
+                  }
+                ]
+              }
+            }
           },
           "configuration": {
             "provider_config": {
@@ -11253,8 +12987,8 @@
               }
             }
           },
-          "timestamp": "2025-03-26T08:29:15Z",
-          "errored": true
+          "timestamp": "2025-09-09T10:16:32Z",
+          "errored": false
         },
         "fail": {
           "format_version": "1.2",
@@ -12230,7 +13964,7 @@
               }
             }
           },
-          "timestamp": "2025-03-26T08:32:17Z",
+          "timestamp": "2025-09-09T10:16:35Z",
           "errored": false
         }
       },
